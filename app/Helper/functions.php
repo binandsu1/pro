@@ -96,3 +96,8 @@ function uniquArr($array,$para){
 }
 
 
+function array_get($array, $key, $default = null)
+{
+    return Arr::get($array, $key, $default);
+}
+

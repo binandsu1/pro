@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">解决方案</label>
             <div class="col-sm-10">
-                <textarea name="desc" class="form-control" rows="3" placeholder="脚本简介">{{return_data($data,'desc')}} </textarea>
+                <textarea name="desc" class="form-control" rows="3" placeholder="解决方案">{{return_data($data,'desc')}} </textarea>
             </div>
         </div>
         <div class="form-group">

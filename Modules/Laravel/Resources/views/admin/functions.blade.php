@@ -28,7 +28,7 @@
                 <x-s :resetUrl="route('admin.laravel.functions')">
                     <div class="form-group">
                         <label class="control-label fw300">类型:</label>
-                        <select class="select2-selection__rendered" name="type-like">
+                        <select class="select2-selection" name="type-like">
                             <option value="">全部</option>
                             @foreach(config('laravel.functions') as $key=>$value)
                                 <option value="{{$key}}">{{$value}}</option>

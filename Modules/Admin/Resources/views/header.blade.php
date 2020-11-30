@@ -76,9 +76,9 @@ $user = auth('web')->user();
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.58pic.com/" target="_blank" class="text-success">
+                                <a href="https://www.highcharts.com.cn/demo/highcharts/pie-gradient/grid-light" target="_blank" class="text-success">
                                     <i class="fa  fa-search"></i>
-                                    <span style="margin-left:1em;">千图</span>
+                                    <span style="margin-left:1em;">highcharts</span>
                                 </a>
                             </li>
                             <li>

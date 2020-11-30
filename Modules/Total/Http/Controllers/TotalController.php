@@ -23,7 +23,7 @@ class TotalController extends Controller
      */
     public function totalB()
     {
-        return view('total::create');
+        return view('total::b');
     }
 
     /**

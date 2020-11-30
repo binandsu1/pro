@@ -29,15 +29,21 @@
                 <i class="glyphicon glyphicon-eye-close"></i> 关闭调试
               </a>
               @endif
+              <a class="btn btn-app" href="{{route('admin.laravel.question')}}">
+                <i class="fa fa-list"></i> 常用问题
+              </a>
+              <a class="btn btn-app" href="{{route('admin.laravel.functions')}}">
+                <i class="fa fa-tag"></i> 常用函数
+              </a>
               <a class="btn btn-app" href="">
                 <i class="fa fa-user"></i> 管理员
               </a>
               <a class="btn btn-app" href="">
                 <i class="fa fa-graduation-cap"></i> 老师管理
               </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-user-plus"></i> 潜在用户
-              </a>
+              {{--<a class="btn btn-app" href="">--}}
+                {{--<i class="fa fa-user-plus"></i> 潜在用户--}}
+              {{--</a>--}}
               <a class="btn btn-app" href="">
                 <i class="fa fa-child"></i> 付费用户
               </a>

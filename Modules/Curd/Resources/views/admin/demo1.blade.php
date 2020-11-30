@@ -50,7 +50,7 @@
             </div>
 
             <div class="no-padding box-body" style="overflow:hidden;">
-                <table class="table table-bordered">
+                <table class="table table-bordered ">
                     <thead>
                     <tr>
                         <th width="30" class="tcc ">ID</th>

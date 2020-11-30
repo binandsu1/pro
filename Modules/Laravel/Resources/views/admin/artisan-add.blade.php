@@ -1,5 +1,6 @@
 <form class="form-horizontal" method="post" action="<?=route('admin.laravel.artisan-add')?>">
     <input type="hidden" name="id" value="{{return_data($data,'id')}}"/>
+    <input type="hidden" name="artisan" value="question"/>
     @csrf
     <div class="box-body">
         <div class="form-group">

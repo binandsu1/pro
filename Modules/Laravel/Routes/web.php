@@ -20,4 +20,13 @@ Route::prefix('laravel')->group(function() {
     Route::match(['get','post'],'/artisan-sel', 'LaravelController@artisanSel')->name('admin.laravel.artisan-sel');
     Route::get('/user', 'LaravelController@user')->name('admin.laravel.user');
     Route::get('/queue', 'LaravelController@queue')->name('admin.laravel.queue');
+    Route::get('/question', 'QuestionController@question')->name('admin.laravel.question');
+    Route::match(['get','post'],'/question-add', 'QuestionController@questionAdd')->name('admin.laravel.question-add');
+    Route::match(['get','post'],'/question-del', 'QuestionController@questionDel')->name('admin.laravel.question-del');
+    Route::match(['get','post'],'/question-sel', 'QuestionController@questionSel')->name('admin.laravel.question-sel');
+    Route::get('/functions', 'FunctionController@functions')->name('admin.laravel.functions');
+    Route::match(['get','post'],'/functions-add', 'FunctionController@functionsAdd')->name('admin.laravel.functions-add');
+    Route::match(['get','post'],'/functions-del', 'FunctionController@functionsDel')->name('admin.laravel.functions-del');
+    Route::match(['get','post'],'/functions-sel', 'FunctionController@functionsSel')->name('admin.laravel.functions-sel');
+
 });

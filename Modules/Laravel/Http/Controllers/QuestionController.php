@@ -8,50 +8,32 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Modules\Laravel\Http\Middleware\ArtisanMidd;
+use Modules\Laravel\Http\Middleware\QuestionMidd;
 use Modules\Laravel\Models\XdoArtisan;
 
-class LaravelController extends AdminController
+class QuestionController extends AdminController
 {
-    /**
-     * @name 请求生命周期
-     * @is_menu 1
-     */
-    public function index()
-    {
-        return view('laravel::admin.index');
-    }
 
     /**
-     * @name 脚本命令
+     * @name 问题汇总
      * @is_menu 1
      */
-    #https://www.jb51.net/article/191741.htm
-    # toRawSql  dumpSql  ddSql
-    public function artisan(Request $request)
+    public function question(Request $request)
     {
-        $query = XdoArtisan::where("type",'artisan')->orderBy('id','desc');
+        $query = XdoArtisan::where("type",'question')->orderBy('id','desc');
         $where = $this->getParasSel($request->all());
         $list = $query->where($where)->paginate(10)->appends($request->all());
-        return view('laravel::admin.artisan',compact('list'));
+        return view('laravel::admin.question',compact('list'));
     }
 
-    /**
-     * @name 脚本介绍
-     * @is_menu 1
-     */
-    public function artisanInfo()
-    {
-        return view('laravel::admin.artisan-info');
-    }
-
-    public function artisanAdd(Request $request)
+    public function questionAdd(Request $request)
     {
         $id = $request->input('id');
         $data = XdoArtisan::find($id);
         if($request->method() == 'GET'){
-            return view('laravel::admin.artisan-add',compact('data'));
+            return view('laravel::admin.question-add',compact('data'));
         }
-        app()->make(ArtisanMidd::class);
+        app()->make(QuestionMidd::class);
         $data = $this->getParas($request,$data);
         $add_re = $id ? $data->save() : XdoArtisan::create($data);
         if($add_re){
@@ -60,19 +42,17 @@ class LaravelController extends AdminController
         return $this->returnError("脚本保存失败");
     }
 
-    public function artisanSel(Request $request)
+    public function questionSel(Request $request)
     {
         $id = $request->input('id');
         $data = XdoArtisan::find($id);
         if($request->method() == 'GET'){
-            return view('laravel::admin.artisan-sel',compact('data'));
+            return view('laravel::admin.question-sel',compact('data'));
         }
     }
 
-
-
     #https://blog.csdn.net/lixing1359199697/article/details/81202268 软删除文档查看
-    public function artisanDel(Request $request)
+    public function questionDel(Request $request)
     {
         $id = $request->input('id');
         $del_re = XdoArtisan::find($id)->delete();
@@ -81,22 +61,5 @@ class LaravelController extends AdminController
         }
     }
 
-    /**
-     * @name 用户认证
-     * @is_menu 1
-     */
-    public function user(Request $request)
-    {
-        return view('laravel::admin.artisan');
-    }
-
-    /**
-     * @name 队列
-     * @is_menu 1
-     */
-    public function queue(Request $request)
-    {
-        return view('laravel::admin.artisan');
-    }
 
 }

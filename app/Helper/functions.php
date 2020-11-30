@@ -101,3 +101,8 @@ function array_get($array, $key, $default = null)
     return Arr::get($array, $key, $default);
 }
 
+function str_limit($value, $limit = 100, $end = '...')
+{
+    return Str::limit($value, $limit, $end);
+}
+

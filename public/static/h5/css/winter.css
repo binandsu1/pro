@@ -1,0 +1,834 @@
+.img{
+    display: block;
+    margin: 0 auto;
+}
+.banner{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin:0 auto;
+}
+.shuang11{
+    width: 18.5rem;
+    height: 8.25rem;
+    margin-top: -2.5rem;
+}
+.winter-titlesm{
+    font-size: 0.9rem;
+    color:#fff;margin-top: 1.25rem;
+}
+.winter-buttons-row {
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 1rem 1.4rem 2.25rem;
+}
+.winter-buttons-row .button {
+    border-radius: 1rem;
+    width: 5rem;
+    height: 2rem;
+    border-color: #0040ff;
+    background-color: #0040ff;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 2rem;
+    margin-bottom: 0.6rem;
+}
+.winter-buttons-row .button.active {
+    background-color: #ffde22;
+    border-color: #ffde22;
+    color: #000;
+}
+.winter-buttons-row .button:first-child {
+    border-radius:1rem;
+}
+.winter-buttons-row .button:last-child {
+    border-radius: 1rem;
+}
+.winter-title{
+    font-size: 1.2rem;
+    color:#fff;
+    line-height: 1.5rem;
+}
+.winter-title-blue{
+    font-size: 1.2rem;
+    color:#003fff;
+    line-height: 1.5rem;
+}
+.winter-title1{
+    background: url(../image/winter/title1.png)no-repeat center bottom;
+    background-size: 12.15rem 0.75rem;
+}
+.winter-title2{
+    background: url(../image/winter/title2.png)no-repeat center bottom;
+    background-size: 9.7rem 0.75rem;
+}
+.winter-title3{
+    background: url(../image/winter/title3.png)no-repeat center bottom;
+    background-size: 9.7rem 0.75rem;
+}
+.winter-title-sub{
+    font-size: 0.6rem;
+    color:#003fff;
+    margin-top: 0.6rem;
+}
+.winter-part .winter-title-sub{
+    color:#6795e2;
+}
+.winter-time{
+    font-size: 0.75rem;
+    color:#6795e2;
+    padding-left: 0.9rem;
+    margin-top: 2rem;
+}
+.timeimg{
+    width:17.5rem ;
+    height: 2.125rem;
+    margin-top: 0.6rem;
+}
+.selectbox-list{
+    padding: 1.65rem 0 1.35rem;
+}
+.selectbox{
+    width: 17.5rem;
+    /* height: 2rem; */
+    margin:0 auto;
+    border-radius: 0.75rem 0.75rem 0 0;
+    line-height: 1.3rem;
+    color:#6795e2;
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+    background-color:#e7f5ff;
+    padding: 0.4rem 0 0.3rem;
+}
+.selectbox-name{
+    /* width: 1.65rem; */
+    width: 1.5rem;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+}
+.selectbox-name label{
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.selectbox-price{
+    /* width: 3.9rem; */
+    width: 3.8rem;
+    /* padding-left: 0.5rem; */
+    padding-left: 0.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.selectbox-kemu{
+    width: 4.1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .selectbox-time span{
+    font-weight: bold;
+} */
+.selectbox.act{
+    color:#0362ff;
+    background-color: #ffde22;
+}
+.selectbox.act .selectbox-name label{
+    background: url(../image/winter/check.png)no-repeat center center;
+    background-size: 0.7rem 0.525rem;
+    background-color: #0362ff;
+    border-radius: 0.125rem;
+    display: inline-block;
+}
+.winter-tip{
+    font-size: 0.6rem;
+    color: #fff;
+}
+.tealist-wrap{
+    background-color: #e7f5ff;
+    padding: 1.7rem 0 1.85rem;
+    margin-top: 2rem;
+}
+.tealist{
+    margin-top: 2rem;
+    padding:0 0.65rem;
+}
+.winterteabox{
+    position: relative;
+    width: 15.25rem;
+    font-size: 0.5rem;
+    color: #fff;
+    background:#0036ff;
+    background: -webkit-linear-gradient(left, #0036ff , #0082ff);
+    background: -o-linear-gradient(left, #0036ff, #0082ff);
+    background: -moz-linear-gradient(left, #0036ff, #0082ff);
+    background: linear-gradient(to right, #0036ff , #0082ff);
+    margin-bottom: 1.6rem;
+    border-radius: 0.25rem;
+}
+.winterteabox-right{
+    float: right;
+    padding:0.55rem 0.75rem 0.65rem 3.15rem;
+    margin-left: 2.9rem;
+}
+.winterteabox-left{
+    float: left;
+    padding:0.55rem 3.15rem 0.65rem 0.75rem;
+}
+.winterteabox-name{
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding-bottom: 0.4rem;
+    border-bottom: dashed 1px #4ba7ff;
+}
+.winterteabox-name span{
+    font-size: 0.45rem;
+    margin:0 0.5rem;
+}
+.winterteabox-txt{
+    padding-top: 0.75rem;
+    line-height:0.8rem;
+}
+.winterteabox-txt span{
+    background-color:#ffde22;
+    color: #333;
+}
+.winterteabox img{
+    display: block;
+    position: absolute;
+    width: 5.5rem;
+    height: 6.9rem;
+    bottom: 0;
+   
+}
+.winterteabox-right img{
+    left: -2.6rem;
+}
+.winterteabox-left img{
+    right: -2.6rem;
+}
+/* .junior1-tea1{
+    left: -1rem;
+} */
+img.high1-tea1{
+    width: 4rem;
+    height: 6.9rem;
+    left:-1.7rem
+}
+img.high1-tea2{
+    width: 3.875rem;
+    height: 6.825rem;
+    right:-1.6rem
+}
+img.high1-tea5{
+    width: 4.025rem;
+    height: 6.6rem;
+    left:-2.15rem
+}
+.winter-btn{
+    width: 15rem;
+    height: 2rem;
+    display: block;
+    margin:0 auto;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    color: #fff;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: #0040ff;
+}
+.winter-btn:active{
+    color:#fff;
+}
+.winter-part{
+    padding-top: 1.9rem;
+    color:#fff;
+}
+
+.winter-buttons-row-two {
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0.6rem;
+    font-size: 0.75rem;
+    background-color:#002983;
+    border-radius: 0.25rem;
+    padding: 0.6rem 2rem;
+    margin-top: 1.25rem;
+}
+.winter-buttons-row-two .button {
+    border-radius: 0.5rem;
+    width: auto;
+    padding: 0 0.2rem;
+    height: 1rem;
+    border-color: transparent;
+    background-color: transparent;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 0.6rem;
+}
+.winter-buttons-row-two .button.active {
+    background-color: #ffde22;
+    border-color: #ffde22;
+    color: #000;
+}
+.winter-buttons-row-two .button:first-child {
+    border-radius:0.5rem;
+}
+.winter-buttons-row-two .button:last-child {
+    border-radius: 0.5rem;
+}
+.winter-tablewrap{
+    margin: 0 0.6rem;
+    margin-top: 0.9rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+table{
+    width: 100%;
+    font-size: 0.6rem;
+    color:#666;
+}
+table th{
+    background-color: #0071ff;
+    color:#fff;
+    height: 1.75rem;
+    text-align: center;
+}
+table th:first-child{
+    border-right: solid 1px #fff;
+}
+table tr{
+    background-color: #ebeffe;
+    min-height: 1.75rem;
+    border-bottom: solid 1px #fff;
+}
+table thead tr:last-child{
+    border-bottom:none;
+}
+table th:first-child,table td:first-child{
+    width: 2.35rem;
+}
+table td:first-child{
+   color: #0071ff;
+   text-align: center;
+   border-right: solid 1px #fff;
+}
+table td:last-child{
+    padding:0.4rem 0.4rem 0.4rem 1.2rem;
+ }
+ .winter-txt1{
+     width: 16.3rem;
+     height: 4.25rem;
+     margin-top: 1.25rem;
+ }
+ .winter-txt2{
+    width: 17.5rem;
+    height: 5rem;
+    margin-top: 1.25rem;
+ }
+ .winter-xuzhi{
+     padding:1.25rem 0.6rem;
+     font-size: 0.5rem;
+     color:#6795e2;
+     line-height: 0.8rem;
+     background-color: #002983;
+     margin-top: 1.95rem;
+ }
+ .winter-xuzhi-title{
+     display: block;
+     font-size: 0.9rem;
+     color:#fff;
+     margin-bottom: 0.5rem;
+     text-align: center;
+ }
+ .winter-xuzhi-txt{
+     margin-bottom:0.75rem;
+ }
+ .winter-xuzhi-txt span{
+     color:#fff;
+ }
+ .winter-footer{
+     padding:1.8rem 0 4.8rem;
+ }
+ .footerimg{
+     width: 13.025rem;
+     height: 4.675rem;
+ }
+ .high2-card{
+     width:17.15rem;
+     height: 10.175rem;
+     margin-top: 1.5rem;
+ }
+/* 小学数学 */
+.math-banner{
+    height: 26.3rem;
+    padding-top: 23.75rem;
+    background: url(../image/winter/math_banner.png)no-repeat;
+    background-size: 100% auto;
+}
+.en-banner{
+    height: 26.3rem;
+    padding-top: 23.75rem;
+    background: url(../image/winter/en_banner.png)no-repeat;
+    background-size: 100% auto;
+}
+.shuang11-math{
+    width: 18.5rem;
+    height: 8.25rem;
+}
+.shuang11-yuwen{
+    width: 18.5rem;
+    height: 8.25rem;
+    margin-top: -4.8rem;
+}
+.math-btn{
+    padding: 1.5rem 0.6rem 0 0.6rem;
+    margin-bottom: 1.5rem;
+}
+.math-btn a{
+    display: block;
+    width: 5.5rem;
+    height: 2rem;
+    border:solid 1px #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color:#fff;
+    line-height: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.math-btn a.active{
+    border:solid 1px #ffcc31;
+    color:#0054e3;
+    background-color: #ffcc31;
+}
+.en-btn a.active{
+    border:solid 1px #ffde22;
+    color:#8d32d5;
+    background-color: #ffde22;
+}
+.math-title1,.en-title1{
+    font-size: 1.2rem;
+    color:#fff
+}
+.math-title1 .math-title-two{
+    width: 10.35rem;
+    margin: 0 auto;
+    background: url(../image/winter/title1_math.png) no-repeat center center;
+    background-size: 10.35rem 0.6rem;
+}
+.math-title1 .math-title-two span{
+    padding:0.1rem 0.6rem 0.1rem 0.6rem;
+    background-color: #2361ff;
+    border-radius: 0.35rem;
+}
+.en-title1 .math-title-two span{
+    padding:0.1rem 0.4rem 0.1rem 0.4rem;
+    background-color: #8d32d5;
+    border-radius: 0.35rem;
+}
+.math-title2 .math-title-two{
+    width: 8.65rem;
+    margin: 0 auto;
+    background: url(../image/winter/title2_math.png) no-repeat center center;
+    background-size: 8.65rem 0.6rem;
+}
+.math-title4 .math-title-two{
+    width: 9.85rem;
+    margin: 0 auto;
+    background: url(../image/winter/title4_math.png) no-repeat center center;
+    background-size: 9.85rem 0.6rem;
+}
+.math-title3 .math-title-two{
+    width: 16.75rem;
+    margin: 0 auto;
+    background: url(../image/winter/title3_math.png) no-repeat center center;
+    background-size: 16.75rem 0.6rem;
+}
+.en-title1 .math-title-two{
+    width: 10.35rem;
+    margin: 0 auto;
+    background: url(../image/winter/title1_en.png) no-repeat center center;
+    background-size: 10.35rem 0.6rem;
+}
+.en-title2 .math-title-two{
+    width: 8.65rem;
+    margin: 0 auto;
+    background: url(../image/winter/title2_en.png) no-repeat center center;
+    background-size: 8.65rem 0.6rem;
+}
+.en-title3 .math-title-two{
+    width: 13.95rem;
+    margin: 0 auto;
+    background: url(../image/winter/title3_en.png) no-repeat center center;
+    background-size: 9.85rem 0.6rem;
+}
+.en-title4 .math-title-two{
+    width: 16.75rem;
+    margin: 0 auto;
+    background: url(../image/winter/title4_en.png) no-repeat center center;
+    background-size: 16.75rem 0.6rem;
+}
+.math-title2 .math-title-one{
+    color:#2361ff;
+}
+.en-title2 .math-title-one{
+    color:#8d32d5;
+}
+.math-part1{
+    background-color: #fff;
+    border-radius: 0.35rem;
+    padding: 1rem 0 0.75rem;
+    margin: 0.85rem 0.4rem 0;
+}
+.math_img1{
+    width: 17.8rem;
+    height: 15rem;
+}
+.math-part1-info{
+    width: 16.25rem;
+    height: 4.75rem;
+    padding-top: 0.5rem;
+    font-size: 0.75rem;
+    background-color: #d9eeff;
+    margin: 0 auto;
+    border-radius: 0.35rem;
+    line-height: 1.25rem;
+    margin-top: 0.4rem;
+}
+.math-part2{
+    padding-top:1.25rem;
+    background-color: #fff;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.math-titlesub{
+    font-size: 0.6rem;
+    color:#0081ff;
+    margin-top: 0.5rem;
+}
+.en-titlesub{
+    font-size: 0.6rem;
+    color:#5f0da1;
+    margin-top: 0.5rem;
+}
+.math-titlesub-w{
+    color:#bfdfff
+}
+.en-titlesub-w{
+    color:#5f0da1
+}
+.math-teawrap{
+    margin-top: 1.35rem;
+    padding: 0 0.7rem 0 1.125rem;
+}
+.math-tea1{
+    width: 4.625rem;
+    height: 8.05rem;
+}
+.math-tea2{
+    width: 4.95rem;
+    height: 8rem;
+}
+.math-tea3{
+    width: 5.65rem;
+    height: 8.05rem;
+}
+.math-teainfo{
+    margin:0.5rem 1.1rem 0 1.1rem
+}
+.math-teainfo-item{
+    width: 5rem;
+    font-size: 0.45rem;
+    color:#888;
+    word-break: break-all;
+    hyphens:auto;
+-webkit-hyphens:auto;
+-moz-hyphens:auto;
+}
+.math-teainfo-item span{
+    display: block;
+    text-align: center;
+    font-size: 0.6rem;
+    color:#333
+}
+.math-part3{
+    padding:1.4rem 0 2.25rem;
+
+}
+.math-img3{
+    max-width: 100%;
+    height: 9.5rem;
+}
+.math-part4{
+    background-color: #fff;
+    padding: 1.75rem 0 1.5rem;
+}
+.math-img2{
+    width: 17.425rem;
+    height: 6.5rem;
+    margin-top: 1.5rem;
+}
+.math-timetxt{
+    font-size: 0.75rem;
+    color:#fff;
+    padding-left: 0.9rem;
+    margin-top: 1.25rem;
+}
+.yuwen-timetxt{
+    color:#cb9864;
+}
+.math-time{
+    width: 17.5rem;
+    height: 2.125rem;
+    margin-top: 0.6rem;
+}
+.math-part5{
+    padding-top:1.5rem;
+}
+.math-part6{
+    padding: 1rem 0;
+    background: #fff;
+}
+.buttons-row-xiao .button{
+    margin-bottom: 0;
+}
+.math-part7-main{
+    margin:0.95rem 0.4rem 1.15rem 0.4rem;
+    padding: 1.1rem 0 1.5rem;
+    background-color: #2361ff;
+    border-radius: 0.35rem;
+}
+.math-img4{
+    width: 17.075rem;
+    height: 4.525rem;
+}
+.math-part7{
+    padding-top: 1.5rem;
+}
+.winter-xuzhi-math{
+    background-color: #2361ff;
+}
+.winter-xuzhi-math .winter-xuzhi-txt p{
+    color: #95bdff;
+}
+/* 语文 */
+.yuwen-banner{
+    max-width: 100%;
+    height: 28.55rem;
+}
+.yuwen-btn{
+    background-color: #cc9866;
+    padding:1.75rem 0.6rem;
+    /* margin-top:0.85rem ; */
+}
+.yuwen-btn a.active {
+    border: solid 1px #f4e4cb;
+    color: #cc9866;
+    background-color: #f4e4cb;
+}
+.bg-f{
+    background-color: #fff;
+}
+.yuwen-part{
+    padding-top:1.75rem ;
+    padding-bottom: 1.25rem;
+}
+.yuwen-part1{
+    padding-bottom: 0;
+}
+.yuwen-title1{
+    width: 13.325rem;
+    height:2.825rem;
+    margin-bottom: 1.5rem;
+}
+.yuwen-title2{
+    width: 11.85rem;
+    height:4.55rem;
+    margin-bottom: 1.9rem;
+}
+.yuwen-title3{
+    width: 13.35rem;
+    height:2.825rem;
+    margin-bottom: 2rem;
+}
+.yuwen-title4{
+    width: 9.7rem;
+    height:2.6rem;
+    margin-bottom: 1.5rem;
+}
+.yuwen-title5{
+    width: 8.85rem;
+    height:1.35rem;
+    margin-bottom: 1.5rem;
+}
+.yuwen-title6{
+    width: 5.85rem;
+    height:1.3rem;
+    margin-bottom: 1.5rem;
+}
+.yuwen-title7{
+    width: 16.35rem;
+    height:1.3rem;
+    margin-bottom: 1.5rem;
+}
+.yuwen_part1img{
+    width: 18.7rem;
+    height: 17.85rem;
+}
+.yuwen-tea1{
+    width: 5.1rem;
+    height: 8.25rem;
+}
+.yuwen-tea2{
+    width: 5.15rem;
+    height: 8.25rem;
+}
+.yuwen-tea3{
+    width: 6.1rem;
+    height: 8.25rem;
+}
+.yuwen-teawrap{
+    margin: 0;
+    padding:0 0.7rem 0 0.75rem;
+}
+.yuwen_part3img{
+    width: 18.4rem;
+    height: 5.6rem;
+}
+.yuwen_part3img3{
+    height: 6.5rem;
+}
+.yuwen-part4img{
+    width: 15.65rem;
+    height: 5.2rem;
+}
+.winter-xuzhi-yuwen{
+    margin-top: 0;
+}
+.yuwen-selectbox-list .selectbox {
+    color: #cb9864;
+    background-color: #fff;
+}
+.yuwen-selectbox-list .selectbox.act {
+    color: #fff;
+    background-color: #cb9864;
+}
+.yuwen-selectbox-list .selectbox.act .selectbox-name label {
+    background-color: #a86f35;
+}
+.yuwen-buttons-row{
+    padding:0.6rem 0.5rem;
+    background-color: #cb9864;
+}
+.winter-tablewrap-yuwen table th {
+    background-color: #c8a037;
+}
+.winter-tablewrap-yuwen table tr {
+    background-color: #faf8ef;
+}
+.winter-tablewrap-yuwen table td:first-child {
+    color: #cb9864;
+}
+.yuwen-part7-main {
+    background-color: #cb9864;
+}
+.winter-xuzhi-yuwen{
+    background-color: #cb9864;
+}
+.winter-xuzhi-yuwen .winter-xuzhi-txt p{
+    color: #f0e6cb;
+}
+
+/* 英语 */
+.en-img1wrap{
+    margin:0 1.15rem;
+    padding:0.1rem 0;
+    background-color: #ebebeb;
+    border-radius: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+.en_img1{
+    width: 10.4rem;
+    height: 5.2rem;
+}
+.en-part1-info{
+    padding-left:1.15rem;
+    color:#5f0da1;
+    font-size: 0.75rem;
+}
+.en-part1-info span,.en-part1-info p{
+    display: block;
+    margin-bottom: 0.75rem;
+}
+.en-teawrap{
+    margin-top: 1.35rem;
+}
+.en-tea{
+    width: 17.35rem;
+    height: 8.4rem;
+}
+.en-part3img{
+    width:17.65rem;
+    height:11.75rem;
+}
+.en-part4img{
+    width: 16.85rem;
+    height: 5.35rem;
+    margin-top: 1.25rem;
+}
+.entime-title{
+    color:#fff;
+    padding-left: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+.font36{
+    font-size:0.9rem
+}
+.font24{
+    font-size:0.6rem
+}
+.entime-title p span{
+    color:#ffde22;
+}
+.en-selectbox-list .selectbox {
+    color:#8d32d5;
+    background-color: #fff;
+}
+.en-selectbox-list .selectbox.act {
+    color:#fff;
+    background-color: #8d32d5;
+}
+.en-selectbox-list .selectbox.act .selectbox-name label {
+    background-color: #8d32d5;
+}
+.font24-f{
+font-size: 0.6rem;
+color:#fff;
+margin:1rem 0;
+}
+.buttons-row-en{
+    background-color: #8d32d5;
+}
+.winter-tablewrap-en table th {
+    background-color: #8d32d5;
+}
+.winter-tablewrap-en table tr {
+    background-color: #f7effa;
+}
+.winter-tablewrap-en table td:first-child {
+    color: #ac5ece;
+}
+.en-part7-main{
+    background-color:#8d32d5 ;
+}
+.winter-xuzhi-en{
+    background-color:#8d32d5 ;
+    color:#f097ff;
+}

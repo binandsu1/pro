@@ -1,0 +1,303 @@
+.popup-apply-title{
+    color:#4a4a4a;
+    font-size: 1rem;
+}
+.transfer-apply-box .input-box{
+    margin-top: 0.75rem;
+}
+.transfer-apply-box .smscode-btn,.transfer-apply-box .submit-btn{
+    background-color: #6390f7;
+    box-shadow: 0 0.05rem 1px rgba(65, 14, 14, 0.43);
+}
+.transfer-apply-box .smscode-btn:active,.transfer-apply-box .submit-btn:active{
+    background-color: #0952f8;
+}
+.transfer-logo{
+    width: 6.35rem;
+    height: 1.95rem;
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: -3.175rem;
+    z-index: 2;
+}
+.transfer-top{
+    background: url(../image/transfer/true_bg.jpg) no-repeat top center;
+    background-size: 100% auto;
+    padding-top: 3.3rem;
+    position: relative;
+}
+.beintro-transfer-top{
+    /* background: url(../image/transfer/beintro_truebg.jpg) no-repeat top center;
+    background-size: 100% auto; */
+    padding-top: 4.1rem;
+}
+.transfer-truetxt{
+    padding:0 3.05rem;
+    position: absolute;
+    width: 100%;
+    top: 4.1rem;
+    left: 0;
+}
+.beintro-transfer-truetxt{
+    padding:0 3.05rem;
+    
+}
+.transfer-bottom{
+    height: 16rem;
+    background: url(../image/transfer/true_bottombg.png)no-repeat top center;
+    background-size: auto 100%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.transfer-bottom-txt{
+    font-size: 0.85rem;
+    color:#287ede;
+    padding-top: 1.5rem;
+}
+.transfer-code{
+    width: 7.55rem;
+    height: 7.55rem;
+    margin: 0 auto;
+    background: #bae9ff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 1.25rem;
+}
+.transfer-code img{
+    width: 7.55rem;
+    height: 7.55rem;
+}
+.beintro-trueimg{
+    padding:0 2.825rem
+}
+
+.transfer-topimg{
+    position: relative;
+}
+.transfer-line{
+    width: 100%;
+    height: 2.7rem;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.master-apply-box{
+    margin-top: 1.1rem;
+}
+.master-apply-box .input-box {
+    border-bottom:solid 1px #fff;
+}
+.master-apply-box .select-box{
+    border-bottom:none;
+}
+.master-apply-box .input-box select {
+    border: solid 1px #fff;
+    color:#fff
+}
+.master-apply-box .input-box select option{
+    color:#666
+}
+.master-apply-box .smscode-btn{
+    color:#fff
+}
+.master-apply-box .input-box input::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .master-apply-box .input-box input:-moz-placeholder {
+    color: #fff;
+  }
+  .master-apply-box .input-box input::-moz-placeholder {
+    color: #fff;
+  }
+  .master-apply-box .input-box input:-ms-input-placeholder {
+    color: #fff;
+  }
+
+.transfernew-logwrap{
+    width: 6rem;
+    height: 1.45rem;
+    background: #FFFFFF;
+    border-radius: 0 0 1.25rem 1.25rem;
+    margin: 0 auto;
+}
+.transfer-logo-new{
+    width: 4.35rem;
+    height: 1.1rem;
+}
+.transfernew-topimgwrap{
+    margin-top: -1.45rem;
+}
+.transfer-form-wrap{
+    margin: 0 1.625rem;
+    padding: 0.5rem;
+    background: url(../image/transfer/line_new.png) no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    margin-top: -29%;
+}
+.transfer-form{
+    padding: 1.15rem 0.6rem 1.25rem;
+    background-color: #fff;
+    border-radius: 0px 0px 11px 11px;
+}
+.transfer-form .input-box{
+    height: 1.75rem;
+    background: #F7F6FF;
+    border-radius: 0.225rem;
+    border: solid 0.05rem #C2C5FF;
+    margin-top: 0;
+    margin-bottom: 0.95rem;
+}
+.transfer-form .input-box.select-box{
+    border: none;
+    background: #FFC500;
+}
+.transfer-form .input-box input,.transfer-form .input-box select{
+    border: none;
+    background-color: transparent;
+    font-size: 0.65rem;
+    color: #38218A;
+    padding-left: 0.4rem;
+}
+.transfer-form .input-box select{
+    background:transparent url(../image/transfer/select_bg.png)no-repeat right center;
+    background-size: auto 100%;
+}
+.transfer-form .input-box input::-webkit-input-placeholder {
+    color: #ADAAC7;
+}
+  .transfer-form .input-box input:-moz-placeholder {
+    color: #ADAAC7;
+  }
+  .transfer-form .input-box input::-moz-placeholder {
+    color: #ADAAC7;
+  }
+  .transfer-form .input-box input:-ms-input-placeholder {
+    color: #ADAAC7;
+  }
+.transfer-form .smscode-btn{
+    border: none;
+    width: 4rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: #FFC500;
+    border-radius: 0.15rem;
+    font-size: 0.6rem;
+    color: #38218A;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+}
+.transfer-form #smscode{
+    width: 60%;
+}
+.transfernew-submit-wrap button{
+    border: none;
+    display: block;
+    margin-top: 1.75rem;
+    width: 100%;
+    height: 2.35rem;
+    line-height: 2.35rem;
+    background: url(../image/transfer/btn_bg.png)no-repeat;
+    background-size: 100% 100%;
+    font-size: 1.05rem;
+    font-family: Reeji-CloudYuanCu-GBK-Regular, Reeji-CloudYuanCu-GBK;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+.transfernew-truebox{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 18.65rem;
+    background-color: #fff;
+    border-radius: 1.4rem 1.4rem 0px 0px;
+    padding: 1.2rem 0 2.05rem;
+    color: #383582;
+}
+.transfernew-truebox-title{
+    font-size: 0.95rem;
+    line-height: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+.transfernew-truebox-titlesub{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+.transfernew-codewrap{
+    margin: 0 auto;
+    margin-top: 0.65rem;
+    width: 12rem;
+    height: 7rem;
+    background: url(../image/transfer/codebg.png)no-repeat;
+    background-size: 100% 100%;
+}
+.transfernew-code{
+    width: 6.75rem;
+    height: 6.75rem;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 0.4rem;
+    border: 0.25rem solid #E4E3FF;
+}
+.transfernew-tip{
+    font-size: 0.65rem;
+    font-family: Reeji-CloudYuanCu-GBK-Regular, Reeji-CloudYuanCu-GBK;
+    font-weight: 400;
+    color: #7D7BAD;
+    line-height: 0.925rem;
+    margin-top: 0.65rem;
+}
+.transfernew-code img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.material-truebox{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 16.65rem;
+    background: #fff url(../image/transfer/material_success_bg.png) repeat;
+    /* background-size: 0.4rem 0.4rem; */
+    border-radius: 1.4rem 1.4rem 0px 0px;
+    padding: 0.9rem 0 1.8rem;
+    color: #095134;
+}
+.material-truebox-title{
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    color: #000;
+    font-weight: bold;
+}
+.material-codewrap{
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 14.3rem;
+    height: 8.65rem;
+    background: url(../image/transfer/material_success_codebg.png)no-repeat center 1.1rem;
+    background-size: 100% auto;
+}
+.material-code{
+    width: 8.65rem;
+    height: 8.65rem;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 0.4rem;
+    border: 0.25rem solid #CDEEC7;
+}
+.material-code img{
+    width: 8.15rem;
+    height: 8.15rem;
+}
+.material-tip{
+    font-size: 0.65rem;
+    margin-top: 1rem;
+}
+
+

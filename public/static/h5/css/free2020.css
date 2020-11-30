@@ -1,0 +1,315 @@
+.img{
+    display: block;
+    margin: 0 auto;
+}
+.apply-box{
+    margin-top: -9.6rem;
+}
+.free2020-wrap{
+    padding: 1rem 0.6rem;
+}
+.free-titlexg{
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #fff;
+}
+.free-titlelg{
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+}
+.free-titlesm{
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.freeselect-box{
+    margin-bottom: 1rem;
+}
+.freeselect-box span{
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+.freeselect-box ul{
+    flex-wrap: wrap;
+}
+.freeselect-box ul li{
+    width: 5rem;
+    height: 2rem;
+    background-color: #fdd875;
+    color: #333;
+    font-size: 0.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    border-radius: 1rem;
+    flex-shrink:0;
+    flex-grow:0;
+    cursor: pointer;
+}
+.freeselect-box ul li:active{
+    background-color: #f43939;
+    color:#fff;
+}
+.freeselect-box ul li.act{
+    background-color: #f43939;
+    color:#fff;
+}
+.input-box select {
+    width: 100%;
+    height: 100%;
+    border: solid 1px #e4e2e2;
+    padding-left: 0.975rem;
+    border-radius: 1.1rem;
+    font-size: 0.75rem;
+    background:url(../image/select_bg.png)no-repeat center right;
+    background-size: auto 100%;
+}
+#sciencebox{
+    display: none;
+}
+.freetrue-top{
+    height:9.25rem;/* 加 */
+    padding-top: 4rem;/* 2 */
+    text-align: center;
+}
+.freetrue-top p{
+    font-size: 2.8rem;
+    color:#fdd875;
+}
+/* .freetrue-top span{
+    font-size: 0.8rem;
+} */
+.freeture-main{
+    /* height: 17.9rem; */
+    /* background: url(../image/free2020/bg_sm.jpg)no-repeat center center;
+    background-size: auto 100%; */
+    padding-top: 1.5rem;/*0.7 */
+    padding-bottom: 0.6rem;/* 加 */
+}
+.freeture-txtimg{
+    width: 12.2rem;
+    height:1.75rem
+}
+.freetrue-code{
+    width: 8.5rem;
+    height: 8.5rem;
+    margin:0 auto;
+    background-color: #fff;
+    margin-top: 0.7rem;
+    
+}
+.freetrue-code img{
+    width: 8.5rem;
+    height: 8.5rem;
+    display: block;
+}
+.freetrue-info{
+    width: 14rem;
+    margin:0 auto;
+    color:#333;
+    padding:0.25rem 0;
+    background: #fdd875;
+    border-radius: 0.5rem;
+    font-size: 0.6rem;
+    text-align: center;
+    margin-top: 1.7rem;
+}
+
+.freetrue-txt{
+    font-size: 0.45rem;
+    margin-top: 1.5rem;
+    color:#fff;
+    padding:0 1.25rem 0 1.75rem;
+}
+.freetrue-txt .freetrue-txt-title{
+    font-size: 0.6rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.55rem;
+}
+.freetrue-txt p{
+    line-height: 0.9rem;
+}
+.freetrue-txt p span{
+    color:#fdd875;
+}
+.freeture-logowrap{
+    padding-top: 2rem;
+    position: relative;
+}
+.freetrue-logo{
+    width: 9.5rem;
+    height: 0.95rem;
+    position: absolute;
+    bottom:0.9rem;
+    left: 50%;
+    margin-left: -4.75rem;
+}
+/* 上课 */
+
+.freeclass-top{
+    padding-top: 0.65rem;
+    background: url(../image/free2020/freeclass_topbg.png)no-repeat center top;
+    background-size:100% auto;
+}
+.freeclass-title{
+    width: 5.5rem;
+    height: 1rem;
+    margin: 0 auto;
+    background-color: #fddf38;
+    line-height: 1rem;
+    font-size: 0.75rem;
+    color:#333;
+    text-align: center;
+    border-radius: 0.5rem 0 0.5rem 0;
+    margin-top: 0.15rem;
+}
+.freeclass-topimg{
+    width: 15.4rem;
+    height: 6.1rem;
+}
+.freeclass-main{
+    padding-top: 0.85rem;
+}
+.freeclass-box{
+    width: 100%;
+    margin: 0 0.75rem;
+    padding:1rem 0.8rem 0.2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.75rem rgba(227,20,20,0.8);
+}
+.freeclass-box-wrap{
+    width: 100%;
+    margin: 0 0.75rem;
+}
+.freeclass-box-wrap .freeclass-box{
+    margin: 0;
+    margin-bottom: 0.6rem;
+}
+.freeclass-box-wrap .freeclass-box:last-child{
+    margin-bottom: 0;
+}
+.freeclass-box-top{
+    margin-bottom: 1rem;
+    line-height: 2.2rem;
+}
+.freeclass-box-top.freeclassbox-topnomar{
+    margin-bottom: 0;
+}
+.freeclass-box-top span{
+    font-size: 0.75rem;
+    color:#666;
+    float: left;
+}
+.freeclass-box-top select{
+    float: right;
+    width: 9.5rem;
+    height: 2.2rem;
+    border: solid 1px #e4e2e2;
+    padding-left: 1rem;
+    border-radius: 1.1rem;
+    font-size: 0.75rem;
+    background:url(../image/free2020/selectbg.png)no-repeat center right;
+    background-size: auto 100%;
+}
+.freeclass-box-item{
+    line-height: 2rem;
+    margin-bottom: 0.8rem;
+}
+.freeclass-box-item p{
+    float: left;
+    font-size: 0.8rem;
+}
+.freeclass-box-item p span{
+    color:#f43939;
+    font-weight: bold;
+    margin-right: 0.4rem;
+}
+.freeclass-box-item p label{
+    color:#333;
+}
+.freeclass-box-item button,.freeclass-box-item a{
+    width: 7rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    float: right;
+}
+.course-end{
+    background-color: #fc3060;
+}
+.course-end:active{
+    background-color: #eb2251;
+}
+.course-no{
+    background-color: #ccc;
+    box-shadow: none;
+}
+.course-no:active{
+    background-color: #ccc;
+}
+.freeclass-footer{
+    height: 3rem;
+    padding-top: 1.15rem;
+}
+.freeclass-logo{
+    width: 14.2rem;
+    height: 1.375rem;
+}
+.forget-psw{
+    margin-left: 1rem;
+    /* line-height: 1.3rem; */
+    margin-top: 0.4rem;
+}
+.register-txt{
+    text-align: center;
+    color: #f43939;
+    font-size: 0.8rem;
+    display: block;
+    line-height: 2.2rem;
+}
+/* 链接汇总 */
+.freelink-main{
+    padding-top: 0;
+}
+.freelink-top{
+    padding-top: 1.6rem;
+    background: url(../image/free2020/freelink_topbg.png)no-repeat center top;
+    background-size:100% auto;
+    padding-bottom: 2.5rem;
+}
+.freelink-wrap{
+    padding: 0.2rem 0.5rem 0  0.5rem;
+}
+.freelink-title{
+    color:#fff;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.freelink-wrap ul{
+    margin-bottom: 0.6rem;
+}
+.freelink-wrap ul li{
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.6rem;
+    text-align: center;
+    background-color: #fcd774;
+    margin-right: 1.25rem;
+    border-radius: 1rem;
+}
+.freelink-wrap ul li:last-child{
+    margin-right: 0;
+}
+.freelink-wrap ul li a{
+    display: block;
+}
+.freelink-mart{
+    margin-top: 1.6rem;
+}

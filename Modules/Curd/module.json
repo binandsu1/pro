@@ -1,0 +1,13 @@
+{
+    "name": "Curd",
+    "alias": "curd",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Curd\\Providers\\CurdServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

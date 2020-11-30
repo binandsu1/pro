@@ -1,0 +1,152 @@
+.tianjin-juniorexam-top{
+    padding:0 2.15rem;
+    margin-top:4.1rem
+}
+.tianjin-juniorexam-apply{
+    width: 11.7rem;
+    height: 3rem;
+    margin: 0 auto;
+    /* border-bottom: solid 0.25rem #f0b732;
+    border-right: solid 0.25rem #f0b732; */
+    font-size: 1.5rem;
+    color:#4f80ff;
+    background-color: #fbe290;
+    border-radius: 1.6rem;
+    line-height: 3rem;
+    margin-top: 2.75rem;
+    box-shadow: 0.25rem 0.25rem 0 #f0b732;
+}
+.tianjin-juniorexamtrue-top{
+    padding:0 2.2rem;
+    margin-top:4.2rem;
+}
+.tianjintrue-txt{
+    color:#fff3b6;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+.tianjintrue-codetxt{
+    margin-top: 3rem;
+}
+.tianjintrue-codetxt span{
+    font-size: 1.15rem;
+    color:#fff3b6;
+    padding: 0.4rem 0.9rem;
+    border:solid 0.15rem #fff3b6;
+    border-radius: 1.125rem;
+    
+}
+.tianjintrue-code img{
+    width: 6.95rem;
+    height: 6.95rem;
+    margin-top: 0.9rem;
+}
+.tianjintrue-info{
+    font-size: 0.65rem;
+    color:#fff3b6;
+    line-height: 1.1rem;
+    margin-top: 0.65rem;
+}
+
+.dalian-logo{
+    width: 3.75rem;
+    height: 1.2rem;
+}
+.dalian-logowrap{
+    padding-right: 1.25rem;
+    padding-top: 0.95rem;
+}
+.dalian-main{
+    padding:0 1.2rem;
+    margin-top: 2.05rem;
+}
+.dalian-apply{
+    width: 8.95rem;
+    height: 1.6rem;
+    margin: 0 auto;
+    /* border-bottom: solid 0.25rem #f0b732;
+    border-right: solid 0.25rem #f0b732; */
+    font-size: 1.05rem;
+    color:#0e050a;
+    background-color: #fff000;
+    border-radius: 0.8rem;
+    line-height: 1.6rem;
+    margin-top: 1.65rem;
+    box-shadow: 0 0.25rem 0 #e0c619;
+}
+.daliantrue-top{
+    padding:4.1rem  1.8rem 0;
+}
+.dalian-codetxt{
+    margin-top: 2.55rem;
+}
+.dalian-codetxt span{
+    font-size: 1.25rem;
+    color:#fff3b7;
+    padding: 0.45rem 1.05rem;
+    border:solid 0.1rem #fff3b7;
+    border-radius: 1.15rem;
+}
+.daliantrue-code{
+    width: 7.1rem;
+    height: 7.1rem;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 1rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+.daliantrue-code img{
+    width: 6.3rem;
+    height: 6.3rem;
+}
+.dalian-peo{
+    width: 8.1rem;
+    height: 13.85rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* 河北 */
+.hebei-wrap{
+    position: relative;
+    z-index: 10;
+}
+.hebeitrue-top{
+    padding:4.85rem  1.95rem 0;
+}
+.hebei-codetxt{
+    margin-top: 4rem;
+}
+.hebeitrue-info{
+   margin-top: 1.15rem;
+}
+.hebeitrue-info p{
+    margin-bottom: 0.5rem;
+}
+.hebeitrue-info p span{
+    font-size: 0.8rem;
+    padding: 0.2rem 0.75rem;
+    background-color: #fdf3b8;
+    border-radius: 0.65rem;
+}
+.hebeitrue-txt{
+    color:#fff3b6;
+    font-size: 0.6rem;
+    margin-top: 0.6rem;
+}
+.hebei-peo{
+    width: 7.15rem;
+    height: 13.85rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.hebeitrue-info2{
+    font-size: 0.55rem;
+    color: #fff;
+    padding-left: 2.5rem;
+    margin-top: 1.5rem;
+}

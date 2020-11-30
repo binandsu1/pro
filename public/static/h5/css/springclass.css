@@ -1,0 +1,272 @@
+.img{
+    display: block;
+    margin: 0 auto;
+}
+.springclass-top{
+    background:url(../image/springclass/top_bg.jpg) no-repeat center top;
+    background-size:auto 100%;
+}
+.springclass-banner{
+    width: 17.15rem;
+    height:22.85rem;
+}
+.top-txt{
+    font-size: 0.75rem;
+    color:#333;
+    margin-bottom: 2rem;
+}
+.top-txt span{
+    font-size: 1.1rem;
+    color:#2d8ef9;
+    font-weight: bold
+}
+.springclass-title1{
+    font-size: 1.15rem;
+    color:#fff;
+    background: url(../image/springclass/title1.png)no-repeat center center;
+    background-size: 11.95rem 2rem;
+}
+.springclass-title2{
+    font-size: 1.15rem;
+    color:#fff;
+    background: url(../image/springclass/title2.png)no-repeat center center;
+    background-size: 6.95rem 2rem;
+}
+.springclass-title3{
+    font-size: 1.15rem;
+    color:#fff;
+    background: url(../image/springclass/title3.png)no-repeat center center;
+    background-size: 15.2rem 2rem;
+}
+.springclass-buttons-row{
+    margin: 1rem  1rem 0 1rem;
+}
+.springclass-buttons-row .button {
+    width: 5.2rem;
+    height:2rem;
+    border-color: #9ed9f3;
+    background-color: #bceafe;
+    color: #333;
+    font-size:0.6rem;
+    line-height: 2rem;
+    margin-bottom:0.4rem;
+}
+.springclass-buttons-row .button.active {
+    background-color: #2d8ef9;
+    border-color: #fff;
+    color: #fff;
+}
+.gaosanbtn{
+    width: 5.2rem;
+    height:2rem;
+    border: solid 1px #9ed9f3;
+    background-color: #bceafe;
+    color: #333;
+    font-size:0.6rem;
+    line-height: 2rem;
+    margin-bottom:0.4rem;
+    text-align: center;
+    border-radius: 0.25rem;
+}
+.springclass-titlesub{
+    font-size:0.6rem;
+    color: #42495d;
+    margin-top: 0.6rem;
+}
+.springclass-tea{
+    margin:0 0.7rem
+}
+.springclass-tealist{
+    margin-top: 1rem;
+}
+.springclass-teabox{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding:0.4rem 1rem 0.6rem 1rem;
+    box-shadow: 0 0.1rem 0.3rem rgba(14,110,215,0.27);
+    margin-bottom: 0.55rem;
+}
+.springclass-tea-top{
+    padding-bottom: 0.45rem;
+}
+.springclass-tea-top img{
+    width: 4rem;
+    height: 4rem;
+    float: left;
+    margin-right: 1.1rem;
+}
+.springclass-teaname{
+    float: left;
+    padding-top: 0.9rem;
+}
+.springclass-teaname p{
+    font-size: 0.7rem;
+    color:#333;
+}
+.springclass-teaname span{
+    font-size: 0.5rem;
+    color:#888888
+}
+.springclass-tea-into{
+    border-top: solid 1px #d7d4da;
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+    color: #666;
+    padding-top: 0.5rem;
+}
+.springclass-part2{
+    padding:1.5rem 0 2.25rem
+}
+.springclass-part2 ul{
+    padding:0 0.85rem ;
+    margin-top: 1.25rem;
+}
+.springclass-part2 li{
+    width: 5.2rem;
+    font-size: 0.5rem;
+    color: #888888;
+    line-height: 0.9rem;
+}
+.springclass-part2 li span{
+    display: block;
+    font-size: 0.75rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0.4rem;
+    margin-top: -0.5rem;
+}
+.springclass-part2 li img{
+    margin-bottom: 0.7rem;
+}
+.springclass-icon1{
+    width: 3.25rem;
+    height: 3.65rem;
+}
+.springclass-icon2{
+    width: 2.8rem;
+    height: 3.65rem;
+}
+.springclass-icon3{
+    width: 3.8rem;
+    height: 3.65rem;
+}
+/* 大纲 */
+.winter-buttons-row-two {
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0.6rem;
+    font-size: 0.75rem;
+    background-color:#bceafe;
+    border-radius: 0.25rem;
+    padding: 0.6rem 1.6rem;
+    margin-top: 1.25rem;
+}
+.yu-buttons-row-two{
+    padding: 0.6rem 0.6rem;
+}
+.winter-buttons-row-two .button {
+    border-radius: 0.5rem;
+    width: auto;
+    padding: 0 0.2rem;
+    height: 1rem;
+    border-color: transparent;
+    background-color: transparent;
+    color: #333;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    /* margin-bottom: 0.6rem; */
+}
+.winter-buttons-row-two .button.active {
+    background-color: #2d8ef9;
+    border-color: #2d8ef9;
+    color: #fff;
+}
+.winter-buttons-row-two .button:first-child {
+    border-radius:0.5rem;
+}
+.winter-buttons-row-two .button:last-child {
+    border-radius: 0.5rem;
+}
+.winter-tablewrap{
+    margin: 0 0.6rem;
+    margin-top: 0.9rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+table{
+    width: 100%;
+    font-size: 0.6rem;
+    color:#666;
+}
+table th{
+    background-color: #20ae6a;
+    color:#fff;
+    height: 1.75rem;
+    text-align: center;
+}
+table th:first-child{
+    border-right: solid 1px #fff;
+}
+table tr{
+    background-color: #fff;
+    min-height: 1.75rem;
+    border-bottom: solid 1px #dddddd;
+}
+table thead tr:last-child{
+    border-bottom:none;
+}
+table th:first-child,table td:first-child{
+    width: 2.35rem;
+}
+table td:first-child{
+   color: #20ae6a;
+   text-align: center;
+   border-right: solid 1px #dddddd;
+}
+table td:last-child{
+    padding:0.4rem 0.4rem 0.4rem 1.2rem;
+}
+.springclass-dagang{
+    padding-bottom: 2rem;
+}
+/* 大纲end */
+.springclass-classlist{
+    background-color: transparent;
+}
+.springclass-classlist .class-box .tag {
+    background-color: #258afc;
+}
+.springclass-classlist .class-box .check.act {
+    background-color: #258afc;
+}
+.springclass-img{
+    width: 17.4rem;
+    height: 13.95rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+.xuzhi{
+    background-color: #20af6a;
+    padding:1.25rem 0.6rem 4.5rem;
+    font-size: 0.5rem;
+    color: #c4faff;
+    line-height: 0.8rem;
+}
+.xuzhi-title{
+    color:#fff;
+    margin-top: 0.75rem;
+}
+.xuzhi p:first-child{
+    font-size: 0.9rem;
+    color:#fff;
+    margin-bottom: 0.5rem;
+}
+.springclass-tea1{
+    border-radius: 100%;
+    border: solid 1px #cfcfcf;
+}
+.springclass-tea2{
+    border-radius: 100%;
+}

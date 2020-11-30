@@ -1,0 +1,123 @@
+/* select.xdo-select{
+    background:none\0;
+    padding-right: 0;
+} */
+/* ._xdo-widget-area-select select{
+    background:none\0;
+    padding-right: 0;
+} */
+select{
+    background:none\0!important;
+    padding-right: 0!important;
+}
+b.placeholder{
+    font-weight: normal;
+    color: #999;
+    position: absolute;
+    line-height: 44px;
+    font-size:14px;
+    bottom: 0px;
+    z-index: 10
+}
+textarea ~ b.placeholder{
+    top:4px;
+    bottom:auto;
+}
+.input-box,.teainfo-box,.login-inputbox{
+    position: relative;
+}
+.flexbox:after{
+    display:block;
+    clear:both;content:"";
+    visibility:hidden;
+    height:0
+}
+.xdo-listbox1-rh>button,.xdo-listbox1-rh>a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -24px;
+    margin-left: -90px;
+}
+.xdo-listbox1-lfin{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    margin-left: -68px;
+}
+.xdo-listbox2-md{
+    position: relative;
+}
+.xdo-listbox2-mdin{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20px;
+}
+.xdo-listbox2-rh{
+    position: relative;;
+}
+.xdo-listbox2-one .xdo-listbox2-rh .xdo-listbox2-lesson{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -24px;
+    margin-left:-179px;
+}
+.xdo-listbox2-two .xdo-listbox2-rh .xdo-listbox2-lesson:last-of-type{
+    position: absolute;
+    left: 50%;
+    bottom:73px;
+    margin-left:-179px;
+}
+.xdo-listbox2-two .xdo-listbox2-rh .xdo-listbox2-lesson:nth-last-of-type(2){
+    position: absolute;
+    left: 50%;
+    bottom:9px;
+    margin-left:-179px;
+}
+.xdo-alertl{
+    float: left;
+}
+.xdo-alertr{
+    float: right;
+}
+.datalist-box li.flexbox>p{
+    float: left;
+}
+.datalist-box li.flexbox>a{
+    float: right;
+}
+.datalist-box li.flexbox>div{
+    float: right;
+}
+.order-box-list .flexbox>p{
+    float: left;
+}
+.order-box-list .flexbox>label{
+    float: right;
+}
+.order-box-top div{
+    float: left;
+}
+.order-box-top label{
+    float: right;
+}
+.xdo-order-top span:first-child,p.flexbox span:first-child,.xdo-sch-info div:first-child{
+    float: left;
+}
+.xdo-order-top span:last-child,p.flexbox span:last-child,.xdo-sch-info div:last-child{
+    float: right;
+}
+.xdo-sch-tag div:first-child{
+    float: left;
+}
+.xdo-sch-tag .xdo-schtea-tag,.modify-topic{
+    float: right;
+}
+.flexbox .xdo-titlesm{
+    float: left;
+}
+.flexbox .xdo-titlesm + a{
+    float: right;
+}

@@ -1,0 +1,221 @@
+.content{
+    width: calc(750px/2);
+    margin: auto;
+    background: #FF6135;
+    overflow: auto !important;
+}
+.content::-webkit-scrollbar{
+	display: none
+}
+.tea_top{
+    width: 100%;
+    height: calc(698px/2);
+    background: url(../image/backStage/tea_bg.png);
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 9;
+    padding: calc(136px/2) 0  0 33px;
+    display: grid; 
+    grid-template-columns: calc(278px/2) auto;
+    grid-template-rows: calc(370px/2);
+}
+.tea_top_left{
+    position: relative;
+}
+.tea_top_left_teaImg{
+    width: 100%;
+    height: 100%;
+    border-radius:13px;
+    box-shadow:0px 13px 25px 0px rgba(229,60,0,1);
+}
+.tea_top_left_play{
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    cursor: pointer;
+}
+.tea_top_left_bottom{
+    width: calc(430px/2);
+    height: calc(68px/2);
+    position: absolute;
+    bottom: -18px;
+    left: 104px;
+}
+.tea_top_right{
+    font-size: 0;
+}
+.tea_top_right_content{
+    margin-left: 46px;
+}
+.tea_top_right_content p{
+    font-size:30px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    margin-bottom: 2px;
+    width: 150px;
+    height: 42px;
+    line-height: 42px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+}
+.tea_top_right_content_subject{
+    font-size:14px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    position: relative;
+    padding-right: 8px;
+}
+.tea_top_right_content_subject::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 12px;
+    background-color: #DD2500;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    z-index: -1;
+}
+.tea_top_right_content_box{
+    height: 80px;
+    font-size:12px;
+    color:rgba(86,86,86,1);
+    margin-top: 20px;
+    overflow: hidden;
+}
+.tea_top_right_content_box span{
+    display: inline-block;
+    background-color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.tea_down{
+    width: 100%;
+    padding: 0 calc(34px/2);
+    position: relative;
+    z-index: 1;
+    margin-top: calc(-34px/2);
+}
+.tea_down_content{
+    width: 100%;
+    padding: 25px 23px 5px 0;
+    background-color: #fff;
+    border-radius:0px 0px 4px 4px;
+
+}
+.tea_d_c_title{
+    width: calc(401px/2);
+    height: calc(82px/2);
+    background: url(../image/backStage/tea_info.png);
+    background-size: 100% 100%;
+    margin-left: 7px;
+    line-height: 52px;
+    font-size:calc(34px/2);
+    font-weight:600;
+    color:rgba(37,37,37,1);
+    padding-left: calc(29px/2);
+}
+.tea_d_c_title.cer{
+    background: url(../image/backStage/tea_certificate.png);
+    background-size: 100% 100%;
+}
+.tea_d_c_title.exp{
+    background: url(../image/backStage/tea_experience.png);
+    background-size: 100% 100%;
+}
+.tea_d_c_ul{
+    font-size: calc(27px/2);
+    color: #000;
+    margin: 13px 0 20px 0;
+}
+.tea_d_c_ul li{
+    padding-left: 33px;
+    margin-bottom: 14px;
+}
+.tea_d_c_ul li .tea_d_c_ul_li_title{
+    position: relative;
+}
+.tea_d_c_ul li .tea_d_c_ul_li_title::before{
+    content: '';
+    position: absolute;
+    width:4px;
+    height:4px;
+    background:rgba(255,167,52,1);
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: -11px;
+    margin: auto 0;
+}
+.tea_d_c_ul .tea_d_c_ul_li_title{
+    display: inline;
+}
+.tea_d_c_ul span{
+    color: #75737D;
+}
+.tea_d_c_experience{
+    padding-left: 23px;
+}
+.tea_d_c_experience span{
+    color: #5C5A64;
+}
+.tea_d_c_experience li:first-child{
+    color: #252525;
+}
+
+.modal_tea>input {
+    display: none;
+  }
+
+  .modal_tea>input~* {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0
+  }
+
+  .modal_tea .overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    border-radius: 0;
+    background: rgba(17, 17, 17, 0.6);
+    transition: all 0.3s;
+    z-index: 100000;
+  }
+
+  .modal_tea .overlay~* {
+    border: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
+    z-index: 1000000;
+    transition: all .3s ease;
+  }
+
+  .main {
+    background: #fff;
+    /* padding: 10px; */
+    width: 340px;
+  }
+
+  .modal_tea>input:checked~* {
+    display: block;
+    opacity: 1;
+    max-height: 10000px;
+  }
+
+  .modal_tea>input:checked~.overlay~* {
+    overflow: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+  }

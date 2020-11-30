@@ -1,0 +1,320 @@
+
+.page-current{
+    overflow: auto !important;
+}
+.weight{
+    font-weight: bold;
+}
+button{
+    border: none;
+    outline: none;
+}
+.logo{
+    width: 7rem;
+    height: auto;
+    margin-left: 0.75rem;
+}
+.headerTitle{
+    text-align: center;
+    margin-top: 1.1rem;
+}
+.headerTitle img{
+    width: 15.2rem;
+    height: auto;
+}
+
+.main{
+    padding: 3rem 1rem 2.85rem 1rem;
+    width: 100%;
+    background: #c60001;
+    margin-top: 2rem;
+}
+
+.examination-before{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    position: relative;
+}
+.triangle{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: .65rem solid transparent;
+    border-right: 1.3rem solid transparent;
+    border-bottom: .65rem solid transparent;
+    border-left: 1.3rem solid #fff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.examination-before span{
+    margin-left: 2.5rem;
+    float: left;
+    font-size: 1.5rem;
+    font-weight:bold;
+    
+}
+.examination-before p{
+    float: left;
+    font-size: 1.35rem;
+    margin-left: 0.5rem;
+}
+.teacher-before{
+    width: 100%;
+    text-align: center;
+    border-left: 2px dashed #fff;
+    margin-top: 0.67rem;
+    margin-bottom: 0.67rem;
+}
+.teacher-before .team1{
+    width: 95%;
+    height: auto;
+}
+.teacher-before-box{
+    margin-top: .75rem;
+    overflow: hidden;
+}
+.teacher-before-box-left{
+    padding: 0 .75rem;
+    padding-top: .9rem;
+    font-size: 0.7rem;
+    color: #fff;
+    float: left;
+}
+
+.teacher-before-box-left-self{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.teacher-before-box-img{
+    width: 7.125rem;
+    height: 8.325rem;
+    float: left;
+}
+.teacher-before-box-left-control{
+    margin-top: 0.5rem;
+}
+.teacher-after{
+    width: 100%;
+    text-align: center;
+    border-left: 2px dashed #fff;
+    margin-top: 0.67rem;
+    overflow: hidden;
+    position: relative;
+}
+.teacher-after .team2{
+    width: 95%;
+    height: auto;
+    float: right;
+    margin-bottom: 1rem;
+}
+.teacher-after-text{
+    text-align: left;
+    color: #fff;
+    font-size: 1rem;
+    padding-left: .75rem;
+}
+.teacher-after-ul{
+    float: left;
+    margin-top: .75rem;
+    width: 8.6rem; 
+    color: #c60001;
+    font-size: 0.8rem;
+}
+.teacher-after-ul li{
+    background-color: #fff;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    margin-bottom: 0.125rem;
+    margin-left: 0.75rem;
+}
+.teacher-after-price{
+    float: left;
+    padding-left: .85rem;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+}
+.teacher-after-price-img{
+    width: 5.625rem;
+    height: auto;
+}
+.teacher-after-price p{
+    width: 6.125rem;
+    height: 1.45rem;
+    border-radius: .725rem;
+    background-color: #fff;
+    color: #c60001;
+    font-size: .875rem;
+    line-height: 1.45rem;
+    letter-spacing: .15rem;
+    margin-top: .25rem;
+}
+.time{
+    width: 100%;
+    background: #fffd00;
+    height: 3.325rem;
+    line-height: 3.325rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #c60001;
+}
+.allPrice{
+    padding: 1.675rem 1rem 2.3rem 1rem;
+    background-color: #c60001;
+}
+.allPrice img{
+    width: 100%;
+    height: auto;
+}
+.bottom-text{
+    background: #fff;
+    color: #c60001;
+    font-size: .83rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+.ask{
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #e8233f;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/* 注册页面 */
+.register-title{
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+    font-size: 1.16rem;
+    margin-top: 3.5rem;
+    letter-spacing: 1px;
+}
+.register-remarks{
+    font-size: .75rem;
+    text-align: center;
+    color: #666;
+    margin: 1rem 0 2rem 0;
+}
+.school-apply-box{
+    margin: auto 2.5rem;
+    border-radius: 0.5rem;
+}
+.school-apply-box .input-box {
+    margin-top: 1rem;
+    height: 2rem;
+    border-bottom:solid 1px #999999;
+}
+.school-apply-box .select-box{
+    border-bottom:none;
+}
+.school-apply-box .input-box input {
+    border: none;
+    padding-left: 0 !important;
+    border-radius: 0;
+    font-size: .7rem;
+    background: none;
+}
+.school-apply-box .input-box input::placeholder{
+    color: #666;
+    font-size: .7rem;
+}
+.school-apply-box .input-box select {
+    font-size: .7rem;
+    color: #666;
+    text-align: left;
+    border: none;
+    padding-left: 0;
+    background: url(../image/Highlights/arrow.png)no-repeat right;
+    background-size: .6rem .35rem;
+    border-bottom:solid 1px #999999;
+    border-radius: 0;
+    /* text-align: center;
+    text-align-last: center; */
+}
+.school-apply-box .smscode-btn{
+    width: auto;
+    background: none;
+    font-size: 0.7rem;
+    line-height: 2rem;
+    border: none;
+    outline: none;
+    background-color: #c60001;
+    width: 5.4rem;
+    height: 2rem;
+    color: #fff;
+}
+.register{
+    width: 100%;
+    background-color: #c60001;
+    height: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+form{
+    margin-block-end: 0;
+}
+/* 注册成功页面 */
+.success{
+    width: 100%;
+    height: 100%;
+    background-color: #c60001;
+    text-align: center;
+    position: relative;
+}
+.success p{
+    color: #fff;
+    font-size: .9rem;
+}
+.success-top{
+    margin-top: 6.1rem;
+    width: 11.4rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+.success-buttom{
+    width: 5.5rem;
+    height: auto;
+    position: absolute;
+    bottom: 1.425rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+/* 艺考报名 */
+.arts-rigister-title{
+    font-size: 1.15rem;
+    color:#fff
+}
+.arts-apply-box{
+    margin-top: 3rem;
+}
+.arts-apply-box .input-box {
+    border-bottom: solid 1px #fff;
+}
+.arts-apply-box .input-box input::placeholder{
+    color: #fff;
+}
+.arts-apply-box .input-box input {
+    color: #fff;
+}
+.arts-apply-box .input-box select {
+    color:#fff
+}
+.arts-apply-box .input-box select option{
+    color:#333
+}

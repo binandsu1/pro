@@ -1,0 +1,332 @@
+.img{
+    display: block;
+    margin: 0 auto;
+}
+.study-logo{
+    float: left;
+    width: 7.45rem;
+    height: 2.5rem;
+    margin-left: 0.2rem;
+}
+.study-top p{
+    float: right;
+    font-size: 0.6rem;
+    color:#15284d;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+}
+.study-txt1{
+    width: 15.05rem;
+    height: 4.75rem;
+    margin-top: 2.25rem;
+}
+.study-txt2{
+    width: 7.8rem;
+    height: 2.5rem;
+    margin-top: 3.15rem; 
+}
+.study-btn{
+    flex-wrap: wrap;
+    margin: 1.65rem 2rem 0 2rem;
+}
+.study-btn li{
+    width: 4.05rem;
+    height: 1.5rem;
+    background-color: #ea4e22;
+    border:solid 0.1rem #15284d;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin-bottom: 1.9rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    cursor: pointer;
+}
+.study-btn li.act{
+    background-color: #d328d3;
+}
+.study-apply{
+    width: 13rem;
+    height: 3.2rem;
+    margin: 0 auto;
+    background: url(../image/study/btn_bg.png)no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    text-align: center;
+    margin-top: 3.85rem;
+}
+#sciencebox{
+    display: none;
+}
+.study-true{
+    width: 13.525rem;
+    height: 3.725rem;
+    margin-top: 2.25rem;
+}
+.study-txt3{
+    width: 9.85rem;
+    height: 1.7rem;
+    margin-top: 3.35rem;
+}
+.study-code{
+    width:9.15rem;
+    height: 9.15rem;
+    margin:0 auto;
+    background-color: #fff;
+    border:solid 0.2rem #15284d;
+    border-radius: 0.5rem;
+    margin-top: 0.85rem;
+    overflow: hidden;
+}
+.study-code img{
+    width:8.75rem;
+    height: 8.75rem;
+    display: block;
+}
+.study-txt{
+    display: inline-block;
+    background-color: #fce1d3;
+    font-size: 0.6rem;
+    color:#15284d;
+    padding:0.25rem 1rem;
+    border:solid 0.1rem #15284d;
+    border-radius: 0.5rem;
+    margin-top: 1.8rem;
+}
+/* 3期 */
+.study-logo3{
+    float: left;
+    width: 4.2rem;
+    height: 1.25rem;
+    margin-left: 0.85rem;
+}
+.study3true-logo{
+    width: 4.2rem;
+    height: 1.25rem;
+}
+.study-top3 p{
+    float: right;
+    font-size: 0.75rem;
+    color:#2d56ca;
+    margin-right: 0.75rem;
+    margin-top:0.2rem;
+}
+.study3-text{
+    font-size: 1.6rem;
+    color:#2d56ca;
+    margin-top:4.5rem;
+}
+.study3-text span{
+    border-bottom: solid 0.1rem #2d56ca;
+    padding-bottom: 0.4rem;
+}
+.study3-text1{
+    font-size: 1.1rem;
+    color:#000;
+    margin-top: 1.5rem;
+}
+.study3-btn{
+    margin:1.35rem 2.5rem 0 2.5rem;
+}
+.study3-btn li{
+    width: 3.45rem;
+    height: 1.75rem;
+    background-color: #2d56ca;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+}
+.study3-btn li:last-child{
+    margin-right: 0;
+}
+.study3-btn li.act{
+    background-color: #081e5c;
+}
+.study3-apply{
+    width: 10.3rem;
+    height: 2.75rem;
+    margin: 0 auto;
+    background: #2d56ca;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.75rem;
+    text-align: center;
+    margin-top: 2.3rem;
+    border-radius: 0.5rem;
+}
+.study3-code{
+    width:10.3rem;
+    height: 10.3rem;
+    margin:0 auto;
+    background-color: #fff;
+    border:solid 0.4rem #2d56ca;
+    border-radius: 0.5rem;
+    margin-top: 1.1rem;
+    overflow: hidden;
+}
+.study3-code img{
+    width:9.5rem;
+    height: 9.5rem;
+    display: block;
+}
+.studytrue3-txt{
+    font-size: 0.9rem;
+    margin-top:1rem;
+}
+.studytrue3-apply{
+    margin-top: 4.5rem;
+}
+/* 强基计划 */
+.study-top4{
+    text-align: center;
+}
+.study-logo4{
+    width: 4.2rem;
+    height: 1.25rem;
+}
+.study4-text{
+    font-size: 1.6rem;
+    color:#ce2d2d;
+    margin-top:4.5rem;
+}
+.study4-text{
+    font-size: 1.6rem;
+    color:#ce2d2d;
+    margin-top:4.5rem;
+}
+.study4-text span{
+    border-bottom: solid 0.1rem #ce2d2d;
+    padding-bottom: 0.4rem;
+}
+
+.study4-btn{
+    margin:1.35rem 2.5rem 0 2.5rem;
+}
+.study4-btn li{
+    width: 5.4rem;
+    height: 1.75rem;
+    background-color: #ce2d2d;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+}
+.study4-btn li:last-child{
+    margin-right: 0;
+}
+.study4-btn li.act{
+    background-color: #f90505;
+}
+.study4-apply{
+    width: 10.3rem;
+    height: 2.75rem;
+    margin: 0 auto;
+    background: #ce2d2d;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.75rem;
+    text-align: center;
+    margin-top: 4.3rem;
+    border-radius: 0.5rem;
+}
+.study4-code{
+    width:10.3rem;
+    height: 10.3rem;
+    margin:0 auto;
+    background-color: #fff;
+    border:solid 0.4rem #ce2d2d;
+    border-radius: 0.5rem;
+    margin-top: 1.1rem;
+    overflow: hidden;
+}
+.study4-code img{
+    width:9.5rem;
+    height: 9.5rem;
+    display: block;
+}
+
+/* 大脑派 */
+.brain_logo{
+    width: 6.85rem;
+    height: 1.45rem;
+}
+.brain-wrap{
+    width: 11.5rem;
+    margin:0 auto;
+    margin-top: 0.5rem;
+    border: solid 0.35rem #fff;
+    border-radius: 0.5rem;
+    background: #e4eae3;
+    padding: 0.45rem 0.25rem 0.3rem 0.25rem;
+}
+.brain_txt{
+    width: 8.45rem;
+    height: 4.15rem;
+}
+.brain-text1{
+    font-size: 1rem;
+    color:#05a990 
+}
+.brain-btn{
+    margin: 0.75rem 0 0 0;
+}
+.brain-btn li{
+    background: #05a990;
+    font-size: 0.8rem;
+    height: 1.55rem;
+    line-height: 1.55rem;
+    border-radius: 0.775rem;
+    margin-right: 0.4rem;
+    text-shadow:0 0.01rem 0.15rem rgba(97,77,77,0.5);
+}
+.brain-btn li.act{
+    background-color: #056153;
+}
+.brain-apply{
+    width: 8rem;
+    margin: 0 auto;
+    background: #05a990;
+    height: 1.8rem;
+    border:solid 0.1rem #fff;
+    border-radius: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.brain-apply-true{
+    margin-top: 3rem;
+}
+.brain-code{
+    width: 11.5rem;
+    height: 11.5rem;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    margin-top: 1.1rem;
+}
+.brain-code img{
+    width: 11.5rem;
+    height: 11.5rem;
+}
+.brain-true-txt{
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 1.1rem;
+}

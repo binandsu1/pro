@@ -1,0 +1,86 @@
+  #login-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(/media/login.jpg?v=20190220);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: .8;
+  }
+  .login-peo{
+    /* height:400px; */
+    /*background-image: url(/media/login_peo.png?v-20190220);*/
+    background-size:100%;
+    background-repeat: no-repeat;
+    margin-left: -60px
+  }
+  #form-box {
+    position: relative;
+    z-index: 1001;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7em;
+    padding: 15px 30px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .form-box input {
+    height: 48px;
+    width: 370px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(50, 58, 69, .2);
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .btn-login {
+    border:none;
+    border-radius: 24px;
+    font-size:20px;
+    background-color:#323a45;
+    color:#f1f1f1
+  }
+
+  #login-about {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+  }
+
+  #login-about a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+    margin: 0px 8px;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+    color: #222;
+  }
+
+  .main-header .navbar {
+    margin-left: 0px;
+  }
+
+  .content-wrapper,
+  .main-footer {
+    margin-left: 0px;
+  }
+  .navbar {
+    min-height: 60px;
+    background:none;border-color:transparent
+}
+.navbar-brand {
+  height: 60px;
+  padding: 11px 15px;
+  font-size: 20px;
+  line-height:36px
+}

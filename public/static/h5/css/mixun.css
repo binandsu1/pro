@@ -1,0 +1,429 @@
+.img{
+    display: block;
+    margin: 0 auto;
+}
+.mixun-banner{
+    max-width: 100%;
+    height: auto;
+}
+.mixun-darkbg{
+    background-color: #a5b8ff;
+}
+.mixun-top{
+    position: relative;
+}
+.minxun-topicon{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: 50%;
+    bottom: -1.4rem;
+    margin-left: -2rem;
+}
+.mixun-title{
+    width: 15.75rem;
+    height: 3.5rem;
+    margin-bottom: 0.55rem;
+}
+.mixun-title2{
+    width: 11.7rem;
+    height: 1.9rem;
+    margin: 0.7rem auto 1.75rem;
+}
+.mixun-title5{
+    width: 15.75rem;
+    height: 1.5rem;
+    margin-bottom: 1.7rem;
+}
+.mixun-title4{
+    margin-bottom: 1.15rem;
+}
+.mixun-titlesub{
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.05rem;
+}
+.mixun-titlesm{
+    font-size: 1.2rem;
+    text-align: center;
+    color:#0032c3;
+}
+.mixun-part1{
+    padding:3.2rem 0 2.1rem
+}
+.mixun-part2{
+    padding:2rem 0 2.5rem;
+}
+.mixun-part3{
+    padding:1.9rem 0 1.3rem;
+}
+.mixun-part4{
+    padding:2.4rem 0.125rem 1.85rem;
+}
+.mixun-part5{
+    padding:1.75rem 0 1.5rem;
+}
+.mixunpart1-item{
+    width: 5.6rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(142,139,255,0.4);
+    padding:0.9rem 0.25rem 0.5rem 0.25rem;
+    font-size: 0.5rem;
+    color:#363636;
+    line-height: 0.75rem;
+    margin-right: 0.24rem;
+}
+.mixunpart1-item:last-child{
+    margin-right: 0;
+}
+.mixunpart1-icon1{
+    width: 3.075rem;
+    height: 3.8rem;
+    margin-bottom: 0.35rem;
+}
+.mixunpart1-icon2{
+    width: 2.9rem;
+    height: 3.8rem;
+    margin-bottom: 0.35rem;
+}
+.mixunpart1-icon3{
+    width: 2.925rem;
+    height: 3.8rem;
+    margin-bottom: 0.35rem;
+}
+.mixun-part1main{
+    margin: 1.15rem 0.6rem 0 0.6rem;
+}
+.mixunpart2-main{
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.55rem 0.55rem rgba(142,139,255,0.4);
+    padding:0.7rem 1.25rem 1.35rem;
+    margin:0 0.6rem
+}
+.mixunpart2-main p{
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+}
+.mixun-part2icon{
+margin-top: 0.85rem;
+}
+.mixunpart2-icon1{
+    width: 3.5rem;
+    height: 4.05rem;
+}
+.mixunpart2-icon2{
+    width: 4.85rem;
+    height: 4.05rem;
+}
+.mixunpart2-icon3{
+    width: 4.675rem;
+    height: 4.05rem;
+}
+.mixun-part3title{
+    font-size: 0.9rem;
+    color:#305ee5;
+    text-align: center;
+    margin: 1.15rem 0 1.25rem;
+}
+.mixun-teawrap{
+    margin:0 0.6rem
+}
+.mixun-buttons-row{
+    height: 2.5rem;
+    padding:0.25rem;
+    background-color: #d7d9ff;
+    box-shadow: 0 0 0.25rem rgba(172,175,255,0.35) inset;
+    border-radius: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.mixun-buttons-row .button {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    line-height: 2rem;
+    font-size:0.75rem;
+    color: #999dee;
+    border:none;
+    background: transparent;
+    border-color: #d7d9ff;
+}
+.buttons-row.mixun-buttons-row .button.active {
+    color: #305ee5;
+    background-color: #fff;
+}
+.buttons-row.mixun-buttons-row .button:first-child {
+    border-radius: 1rem;
+    border-left-width:0px
+}
+.buttons-row.mixun-buttons-row .button:last-child {
+    border-radius: 1rem;
+}
+.buttons-row.mixun-buttons-row.button:last-child {
+    border-radius: 1rem;
+}
+.mixun-tea{
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(142,139,255,0.4);
+    padding:0.4rem 0.6rem 0.4rem 0.4rem;
+    margin-bottom: 0.45rem;
+}
+.mixun-teaimg{
+    width: 4rem;
+    height: 5rem;
+    float: left;
+    margin-right: 0.75rem;
+}
+.mixun-teatxt{
+    width: calc(100% - 4.75rem);
+    padding-top: 0.5rem;
+    float: left;
+    font-size: 0.45rem;
+}
+.mixun-teatxt .tea-top{
+    margin-bottom: 0.25rem;
+}
+.mixun-teatxt .tea-top .tea-name{
+    font-size: 0.75rem;
+    color:#305ee5;
+    margin-right: 0.4rem;
+}
+.mixun-teatxt .tea-top .tea-subj{
+    color:#305ee5;
+    margin-right: 0.5rem;
+}
+.mixun-teatxt .tea-bottom{
+    color:#666;
+    line-height: 0.75rem;
+}
+.mixun-part4txt{
+    width: 18.5rem;
+    max-width: 100%;
+    height: auto;
+}
+.mixun-part4txt2{
+    margin-top: -0.45rem;
+}
+.mixun-part4txt3{
+    margin-top: -0.8rem;
+}
+.mixun-part5main{
+    margin:0 0.6rem;
+}
+.mixun-part5main ul{
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem 0 0.4rem;
+    margin-right: 0.5rem;
+    width: 50%;
+    overflow: hidden;
+}
+.mixun-part5main ul:last-child{
+    margin-right: 0;
+}
+.mixun-part5main ul li{
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0;
+    color:#363636;
+    padding-right: 0.6rem;
+    white-space: nowrap;
+}
+.mixun-part5main ul li:nth-of-type(odd){
+    background-color: #f3f3ff;
+}
+.part5_txtimg1{
+    width: 2.925rem;
+    height: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.part5_txtimg2{
+    width: 3.225rem;
+    height: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.mixun-part5main ul li p{
+    width: 44%;
+    font-size: 0.5rem;
+    display: inline-block;
+    text-align: right;
+    color:#305ee5;
+    padding-right: 0.9rem;
+}
+.mixun-part5main ul li span{
+    font-size: 0.5rem;
+    display: inline-block;
+}
+.mixun-part5txtimg{
+    width: 14rem;
+    height: 1.05rem;
+    margin-top: 1.5rem;
+}
+.apply-fixed{
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.apply-fixed-right{
+    width: 60%;
+    font-size: 0.75rem;
+}
+.apply-fixed-left a{
+    color:#fff
+}
+.apply-fixed-left{
+    width: 40%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.mixunbuy-title{
+    width: 15.75rem;
+    height: 1.15rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.15rem;
+}
+.mixunbuy-wrap{
+    margin:0 0.6rem;
+}
+.selectbox-list{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    font-size: 0.6rem;
+    overflow: hidden;
+}
+.selectbox-list .selectbox{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.selectbox-list li:nth-of-type(odd){
+    background-color: #f3f3ff;
+}
+.selectbox-list .selectbox .name,.selectbox-list .selectbox .price{
+    color:#305ee5;
+}
+.selectbox-list .selectbox .name{
+    text-align: right;
+    width: 21.4%;
+}
+.selectbox-list .selectbox .price{
+    /* width: 3.8rem; */
+    /* width: 4.8rem;
+    display: inline-block; */
+    float: left;
+}
+.selectbox-right{
+    /* width: 34.3%; */
+    width: 39%;
+    padding-right: 0.7rem;
+}
+.selectbox-list .selectbox .underline{
+    font-size: 0.45rem;
+    color:#676de8;
+    margin-right: 0.35rem;
+    font-weight: normal;
+}
+.selectbox-list .selectbox .check{
+    float: right;
+}
+.selectbox .check label {
+    width: 1rem;
+    height: 1rem;
+    background:#d7d9ff url(../image/mixun/check.png)no-repeat center center;
+    background-size: 0.9rem 0.625rem;
+    border-radius: 0.125rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.selectbox.act .check label{
+    background-color: #f04444;
+}
+.mixunbuy-titlesm{
+    font-size: 0.75rem;
+    color: #305ee5;
+    text-align: center;
+    margin:0.9rem 0;
+}
+.selectbox-list-pack .selectbox .name{
+    width: 50%;
+}
+.selectbox-list-three .selectbox .name{
+    width: 34%;
+    text-align: center;
+}
+.selectbox-list-long .selectbox .name{
+    width: 16%;
+}
+.selectbox-list-three .selectbox .selectbox-right{
+    width: 26%;
+}
+.selectbox-list-long .selectbox .selectbox-right{
+    width: 50%;
+}
+.selectbox-list-pack li:nth-of-type(odd){
+    background-color: #fff;
+}
+.selectbox-list-pack li:nth-of-type(even){
+    background-color: #f3f3ff;
+}
+.mixun-tip{
+    font-size: 0.75rem;
+    margin:1rem 0;
+    text-align: center;
+}
+.mixunbuy-titlelg{
+    font-size: 1.2rem;
+    color: #e13572;
+    margin-top: 1.5rem;
+}
+
+/* 3卷 */
+.mixun3-titlesub{
+    color:#1c1b19;
+}
+.mixun3part1-item p{
+    text-indent: 2em;
+}
+.mixun3-part5main ul{
+    width: 100%;
+    padding: 0;
+}
+.mixun3-part5main ul li{
+    height: 2rem;
+    line-height: 2rem;
+    color: #000;
+}
+.mixun3-part5main ul li p{
+    color: #000;
+}
+.mixun3-part5main ul li:nth-of-type(odd) {
+    background-color: #dededc;
+}
+.minxun-topicon3{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    bottom: -1.5rem;
+    margin-left: -1.5rem;
+}
+.mixun-tea3 .mixun-teatxt .tea-bottom {
+    font-size: 0.35rem;
+    line-height: 0.5rem;
+}
+.mixun-tea3 .mixun-teatxt .tea-top {
+    margin-bottom: 0.15rem;
+}
+.mixun-tea3 .mixun-teaimg{
+    margin-right: 0.45rem;
+}
+.mixun-tea3 .mixun-teatxt{
+    width: calc(100% - 4.45rem);
+}
+.mixun3-sch-title{
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.9rem;
+    color: #0027be;
+}

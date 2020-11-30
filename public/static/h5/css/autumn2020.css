@@ -1,0 +1,566 @@
+.autumn-box{
+    margin: 0 0.4rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 1.3rem;
+}
+.autumn-btnwrap{
+    padding: 0.75rem 0.4rem 0.55rem;
+}
+.autumn-title{
+    text-align: center;
+}
+.autumn-title p{
+    display: inline-block;
+    height: 2.45rem;
+    line-height: 2rem;
+    padding: 0 0.8rem 0 1rem;
+    font-size: 0.9rem;
+    color: #fff;
+    text-shadow: 0 0.1rem 0.1rem #d95e1d;
+    background: url(../image/autumn2020/titlebg.png)no-repeat;
+    background-size: 100% 100%;
+}
+.autumn-title1 p{
+    padding: 0.2rem 1.25rem 0 0.85rem;
+}
+.autumn-title1 p span{
+    display: block;
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+}
+.autumn-title2 p{
+    padding: 0 1.2rem 0 1.2rem;
+}
+.autumn-title3 p{
+    padding: 0 2.25rem 0 2.35rem;
+}
+.autumn-titlesub{
+    font-size: 0.9rem;
+    color: #333;
+}
+.autumn-titlesub span {
+    display: inline-block;
+    height: 0.6rem;
+    padding: 0 0.45rem;
+    background-color: #ffcd5b;
+    border-radius: 0.3rem;
+    line-height: 0;
+}
+/* 按钮 */
+.autumn-buttons-row{
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 0.35rem;
+}
+.autumn-buttons-row .button {
+    border-radius: 0.25rem;
+    width: 5.5rem;
+    width: calc((100% - 1rem) /3);
+    height: 1.75rem;
+    background: #fff;
+    border-color: #666;
+    color: #333;
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.55rem;
+    margin-right: 0.3rem;
+}
+.autumn-buttons-row .button.active {
+    background-color: #ff8d50;
+    border-color: #ff8d50;
+    color: #fff;
+}
+.autumn-buttons-row .button:nth-of-type(3n) {
+    margin-right: 0;
+}
+.buttons-row .button:first-child {
+    border-radius: 0.25rem;
+}
+.buttons-row .button:last-child {
+    border-radius: 0.25rem;
+}
+/* 按钮 */
+.autumn-timewrap{
+    padding:0.6rem 0.4rem 0.9rem
+}
+.autumn-listbox li{
+    height: 2.45rem;
+    padding: 0 0.6rem;
+    background-color: #ffeda5;
+    margin-bottom: 0.6rem;
+    color: #333;
+    border-radius: 0.5rem;
+}
+.listbox-left{
+    width: 32%;
+    line-height: 2.45rem;
+    font-size: 0.75rem;
+    /* 修改 */
+    /* padding-left: 0.8rem;   */
+}
+.listbox-multiple .listbox-left{
+    padding-left: 0.8rem;
+}
+.listbox-left .check{
+    position: relative;
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #cecece;
+    border: solid 0.05rem #ff8d50;
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #e6d6c0 inset;
+    vertical-align: middle;
+}
+.listbox-left .check img{
+    display: none;
+    position: absolute;
+    width: 0.95rem;
+    height: 0.95rem;
+    left: -0.1rem;
+    bottom: 0.1rem;
+}
+.autumn-listbox{
+    margin-top: 0.3rem;
+}
+.autumn-listbox li.act{
+    color: #fff;
+    background-color: #fb7832;
+    box-shadow: 0 0.2rem 0.3rem rgba(255, 191, 157, 0.96);
+}
+.autumn-listbox li.act .listbox-left .check img{
+    display: block;
+}
+.listbox-left span span{
+    font-size: 0.6rem;
+}
+.autumn-listbox li .listbox-p1{
+    font-size: 0.75rem;
+}
+.autumn-listbox li .listbox-p2{
+    font-size: 0.6rem;
+}
+.listbox-med,.listbox-right{
+    padding: 0.26rem 0;
+}
+.listbox-right{
+    width: 30%;
+    /* 修改 */
+    /* line-height: 1.93rem;  */
+}
+.listbox-multiple .listbox-right{
+    line-height: 1.93rem;
+}
+.white-wrap{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2.4rem 0 2.4rem 0/2rem 0 2rem 0;
+    /* 修改 */
+    /* border-radius: 0 0 2.4rem 0/0 0 2rem 0;  */
+    padding: 1rem 0 1.35rem;
+    margin-bottom: 1.3rem;
+}
+.white-wrap-multiple{
+    border-radius: 0 0 2.4rem 0/0 0 2rem 0;
+}
+.whyimg1{
+    width: 16.3rem;
+    height: 6.95rem;
+    margin-top: 0.5rem;
+}
+.autumn-why2{
+    margin: 0.9rem 0.6rem 1.2rem;
+    padding: 0.6rem 0 0.9rem;
+    background-color: #fff3f3;
+    border-radius: 0.5rem;
+}
+.whytxt{
+    width: 13.8rem;
+    height: 4.35rem;
+}
+.autumn-buttons-row-two {
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    background-color: #ffcd5b;
+    padding: 0.5rem 1.5rem 0 1.5rem;
+}
+.autumn-buttons-row-two .button {
+    border-radius: 0.57rem;
+    width: auto;
+    padding: 0 0.75rem;
+    height: 1.15rem;
+    line-height: 1.05rem;
+    border-color: transparent;
+    background-color: transparent;
+    color: #fff;
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+.autumn-buttons-row-two .button.active {
+    background-color: #6791eb;
+    border-color: #6791eb;
+    box-shadow: 0 0.1rem 0.3rem rgba(62,111,215,0.5);
+}
+.autumn-buttons-row-two .button:first-child {
+    border-radius: 0.57rem;
+}
+.autumn-buttons-row-two .button:last-child {
+    border-radius: 0.57rem;
+}
+/* .buttons-row-single .button {
+    margin-bottom: 0;
+} */
+.autumn-tablewrap {
+    margin: 0 0.5rem;
+    margin-top: 0.7rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    font-size: 0.6rem;
+    color: #666;
+}
+table tr {
+    background-color: #fff3f3;
+    border-bottom: solid 1px #fff;
+}
+table th {
+    background-color: #fa7707;
+    color: #fff;
+    height: 1.75rem;
+}
+table thead tr {
+    border-bottom: none;
+}
+table td,table th{
+    text-align: left;
+    padding-left: 1.2rem;
+}
+table th:first-child, table td:first-child {
+    width: 4rem;
+    text-align: center;
+    padding-left: 0;
+    border-right: solid 1px #fff;
+}
+table td:first-child {
+    color: #fa7707;
+}
+/* table td:last-child{
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+} */
+table td:nth-child(2){
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+}
+table th span {
+    font-size: 0.45rem;
+    margin-left: 0.4rem;
+}
+.dagang-info {
+    font-size: 0.55rem;
+    color: #ef8e3a;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+.autumn-whowrap{
+    padding: 0.9rem 0 0.5rem;
+}
+.who-txt{
+    padding: 0 2.5rem;
+    margin-top: 1rem;
+}
+.who-btn{
+    padding: 0 0.2rem;
+    margin-top: 1.2rem;
+}
+.who-txt1{
+    padding: 0 0.6rem;
+    margin-top: 0.4rem;
+}
+.autumn-tealist{
+    margin: 0.9rem 0.25rem 0;
+}
+.autumn-teabox{
+    display: flex;
+    min-height: 7.4rem;
+    background: url(../image/autumn2020/teabox_bg1.png)no-repeat top right,url(../image/autumn2020/teabox_bg2.png)no-repeat bottom left;
+    background-size: 3rem 2.65rem,5.25rem 6rem;
+    box-shadow: 0 0.4rem 0.4rem rgba(210, 233, 251, 0.44);
+    margin-bottom: 0.7rem;
+}
+.autumnteabox-left{
+    width: 5.25rem;
+    position: relative;
+}
+.autumnteabox-right{
+    width: calc(100% - 5.25rem);
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+}
+.autumnteabox-right .tea-name{
+    font-size: 0.6rem;
+    color: #333;
+    line-height: 1rem;
+}
+.autumnteabox-right .tea-name span{
+    color: #fd5519;
+    margin-left: 0.6rem;
+}
+.autumnteabox-right .tea-num{
+    font-size: 0;
+}
+.autumnteabox-right .tea-num p{
+    position: relative;
+    display: inline-block;
+    font-size: 0.45rem;
+    color: #000;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    background-color: #f3d367;
+    border-radius: 0.45rem;
+    padding-left: 0.4rem;
+}
+.autumnteabox-right .tea-num span{
+    padding: 0 0.7rem 0 0.25rem;
+    margin-left: 0.15rem;
+    /* background: url(../image/autumn2020/who_teabg.png)no-repeat right top;
+    background-size: 100% 100%; */
+}
+.autumnteabox-right .tea-num span.truenum{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1.2rem;
+    background: url(../image/autumn2020/who_teabg.png)no-repeat right top;
+    background-size: 100% 100%;
+}
+.autumnteabox-right .tea-info{
+    font-size: 0.5rem;
+    color: #666;
+    line-height: 0.8rem;
+    margin-top: 0.4rem;
+}
+.teaimg{
+    position: absolute;
+    width: 5rem;
+    height: 7.15rem;
+    bottom: 0;
+    left: 0.15rem;
+}
+/* .teaimg.junior-tea1{
+    width: 4.7rem;
+    height: 7.2rem;
+}
+.teaimg.junior-tea2{
+    width: 4.45rem;
+    height: 7.05rem;
+}
+.teaimg.junior-tea3{
+    width: 4.5rem;
+    height: 6.85rem;
+} */
+.autumn-howwrap{
+    padding: 0.75rem 0 2.1rem;
+}
+.autumn-userwrap{
+    padding: 0.95rem 0 1.15rem;
+}
+.how-img{
+    padding: 0 0.425rem;
+    margin-top: 1rem;
+}
+.user_img{
+    padding: 0 0.3rem;
+    margin-top: 1rem;
+}
+.autumn-tip{
+    background-color: #fff;
+    padding: 0.95rem 0.5rem 1rem 0.8rem;
+    font-size: 0.5rem;
+    color: #666;
+    line-height: 0.75rem;
+}
+.autumn-tip .autumn-tip-title {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+}
+.autumn-tiplg{
+    font-size: 1.1rem;
+    color: #ef8e3a;
+    margin-top: 1rem;
+}
+.autumn-apply-fixed{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.9rem;
+    border-top: solid 1px #ccc;
+}
+.apply-fixed-left{
+    width: 16.6%;
+    height: 2.5rem;
+    background-color: #fff;
+    font-size: 0.45rem;
+    color: #666;
+    padding-top: 0.3rem;
+    line-height: 0.8rem;
+}
+.apply-fixed-right{
+    width: 83.4%;
+    background-color: #f43939;
+}
+.apply-fixed-left img {
+    width: 1.1rem;
+    height: 1rem;
+}
+/* 修改 */
+.top-img{
+    width: 16.6rem;
+    height: 3.2rem;
+    margin-bottom: 0.9rem;
+}
+.dgtable-time{
+    width: 4.3rem;
+    text-align: center;
+    border-left: solid 1px #fff;
+    font-weight: bold;
+    color: #fa7707;
+    padding-left: 0;
+}
+.dgtable-time-mt{
+    margin-top: 1.75rem;
+}
+table thead th:last-child{
+    padding-left: 0;
+    text-align: center;
+}
+/* 购买页 */
+.sutumn-buy-top{
+    background-color: #fff;
+    padding: 1.5rem 0.7rem 0;
+}
+.summer2020-buy-title{
+    font-size: 0.9rem;
+}
+.qiuji-buttons-row {
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0.5rem;
+    padding-bottom: 0.75rem;
+}
+.qiuji-buttons-row .button {
+    border-radius: 0.25rem;
+    width: 5.5rem;
+    width: calc((100% - 1rem) /3);
+    height: 1.75rem;
+    border-color: #666;
+    color: #333;
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.55rem;
+    margin-right: 0.5rem;
+}
+.qiuji-buttons-row .button.active {
+    background-color: #ff8d50;
+    border-color: #ff8d50;
+}
+.qiuji-buttons-row .button:nth-of-type(3n) {
+    margin-right: 0;
+}
+.summer2020-tabs {
+    padding: 0.7rem;
+}
+.summer2-buytabs .summer20202-buttons-row {
+    padding: 0;
+}
+.summer20202-buttons-row .button {
+    padding: 0;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    border: none;
+    color: #333;
+    background-color: #fff;
+}
+.summer20202-buttons-row .button.active {
+    background-color: #ff8d50;
+    color: #fff;
+    border-color: #ff8d50;
+}
+.summer20202-buttons-row .button:first-child {
+    margin-right: 0;
+    border-radius: 0;
+    border: none;
+}
+.summer20202-buttons-row .button:last-child {
+    border-radius: 0;
+}
+.list {
+    margin-top: 0.85rem;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.class-box-sm {
+    height: 2.25rem;
+    line-height: 2.25rem;
+    background-color: #fff;
+    font-size: 0.75rem;
+    padding: 0 0.5rem 0 0.35rem;
+    margin-bottom: 0.2rem;
+}
+.class-box-sm .subj {
+    font-weight: bold;
+}
+.class-box-sm .price {
+    color: #f43939;
+}
+.class-box-sm .price .undefined {
+    font-size: 0.5rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 0.45rem;
+}
+.class-box-sm .price .money {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.class-box-sm .check {
+    width: 1rem;
+    height: 1rem;
+    /* text-align: center; */
+    vertical-align: top;
+    background-color: #d2d2d2;
+    border-radius: 0.2rem;
+}
+.class-box-sm .check.act {
+    background-color: #ff8d50;
+}
+.class-box-sm .check img {
+    width: 0.8rem;
+    height: 0.575rem;
+}
+.summer2020-buy-title1 {
+    margin-top: 0.8rem;
+}
+.autumnbuy-apply-fixed{
+    height: 2.5rem;
+}
+.autumnbuy-apply-fixed .apply-fixed-left{
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 2.5rem;
+    background:#e7233f;
+    padding-top: 0;
+}
+
+
+

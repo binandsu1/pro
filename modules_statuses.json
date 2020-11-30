@@ -1,0 +1,10 @@
+{
+    "User": true,
+    "Teacher": true,
+    "Admin": true,
+    "System": true,
+    "Auth": true,
+    "Curd": true,
+    "Laravel": true,
+    "Total": true
+}

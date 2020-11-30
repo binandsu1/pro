@@ -1,0 +1,175 @@
+.img{
+    display: block;
+    margin: 0 auto;
+}
+.banner{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin:0 auto;
+}
+.count-time{
+    padding:1.75rem 0 2.1rem;
+    background-color: #bc8e71;
+}
+.count-time p{
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3rem;
+}
+.time-wrap label{
+    display: inline-block;
+    width: 7.175rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2.4rem;
+    color:#975125;
+    /* background: url(../image/sprint/time_bg.png) no-repeat;
+    background-size: 100%; */
+    background:#ebe1de;
+    font-weight: bold;
+    text-align: right;
+    letter-spacing: 0.8rem;
+    /* padding-left: 0.4rem; */
+    border-radius: 0.5rem;
+}
+.time-wrap span{
+    font-size: 0.65rem;
+    color:#fff;
+    vertical-align:bottom;
+    margin-left: 0.4rem;
+}
+.txt{
+    width: 17rem;
+    height: 12.45rem;
+    position: relative;
+    z-index:2;
+}
+.sprint-part1{
+    padding-top: 2.1rem;
+}
+.sprint-img7{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin:0 auto;
+    margin-top: -1.4rem;
+}
+.sprint-part2{
+    padding:1.75rem 0;
+    background-color: #bc8e71;
+    color: #fff;
+}
+.sprint-part2>p{
+    font-size: 0.9rem;
+}
+.sprint-part2-txt{
+    width: 15.2rem;
+    margin:0 auto;
+    border:solid 1px #fff;
+    padding:1rem 0 1.4rem;
+    margin-top: 0.6rem;
+}
+.sprint-part2-txt p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.sprint-part2-txt span{
+    font-size: 0.45rem;
+}
+.sprint-title{
+    font-size: 1.8rem;
+    color: #bc8e71;
+}
+.sprint-part3{
+    padding: 1.55rem 0 1.9rem;
+}
+.sprint-img6{
+    width: 16.7rem;
+    height: 9rem;
+    margin-top: 1.75rem;
+}
+.img6-txt{
+    font-size: 0.6rem;
+    color:#363636;
+    margin-top: 0.75rem;
+}
+.txt1{
+    width: 12.1rem;
+    height: 1.5rem;
+    margin-top: 1.4rem;
+}
+.sprint-graybg{
+    background-color: #ebe1df;
+}
+.sprint-part4{
+    padding: 1.45rem 0 1.9rem;
+}
+.sprint-img1{
+    width: 17.625rem;
+    height: 6.55rem;
+    margin-top: -0.2rem;
+}
+.mr-b70{
+    margin-bottom: 1.75rem;
+}
+.sprint-part5{
+    padding: 1.75rem 0;
+}
+.sprint-img4{
+    width: 14.325rem;
+    height: 16.575rem;
+    margin-top: 1.5rem;
+}
+.sprint-part5-txt{
+    width: 16.15rem;
+    height: 6.875rem;
+    margin:0 auto;
+    background: url(../image/sprint/txtbg.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.6rem;
+    color: #363636;
+    line-height: 1.1rem;
+    padding:2.6rem 0 0 1.5rem;
+}
+.sprint-part6{
+    padding:1.75rem 0;
+}
+.sprint-img5{
+    width: 17.85rem;
+    height: 11.95rem;
+    margin-top: 1.35rem;
+}
+.sprint-part7{
+    padding: 1.6rem 0 4.6rem;
+    font-size: 1.15rem;
+    color:#bc8e71;
+}
+.math-btn {
+    padding: 1.5rem 0.6rem 0 0.6rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* margin: 0 0.6rem; */
+}
+.math-btn a {
+    display: block;
+    width: 5.2rem;
+    height: 2rem;
+    border-color: #ffe3d1;
+    background-color: #ffe3d1;
+    color: #333;
+    font-size: 0.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    border-radius: 0.25rem;
+}
+.math-btn a.active {
+    border: solid 1px #bc8e71;
+    color: #fff;
+    background-color: #bc8e71;
+}

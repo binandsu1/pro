@@ -1,0 +1,78 @@
+.arts-top{
+    padding-top: 1.2rem;
+}
+.arts-logo{
+    width: 4.9rem;
+    height: 1.25rem;
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
+}
+.arts-part{
+    background: url(../image/artsexam/part_bg.png)no-repeat center 1rem;
+    background-size: 100% auto;
+    margin-bottom: 2.75rem;
+}
+.artspart-top{
+    padding: 0 0.9rem;
+    margin-bottom: 0.65rem;
+}
+.artspart-top-left .arts-day{
+    font-size: 1.7rem;
+    color: #ffd800;
+}
+.artspart-top-left .arts-time{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.75rem;
+    color: #000;
+    background-color: #ffd800;
+    padding: 0 0.35rem;
+    border-radius: 0.2rem;
+}
+.artspart-top-right{
+    font-size: 1.2rem;
+    color: #fff;
+}
+.artspart-tea{
+    padding-right: 1.25rem;
+}
+.artspart-info{
+    padding-left: 2.9rem;
+    margin-top: 0.4rem;
+}
+.artstrue-txt{
+    padding:0 3.675rem
+}
+.arts-codewrap{
+    width: 15.25rem;
+    height: 10.375rem;
+    margin: 0 auto;
+    background: url(../image/artsexam/true_img.png)no-repeat;
+    background-size: 100% 100%;
+    padding-top: 2.4rem;
+    margin-top: 0.5rem;
+}
+.arts-code{
+    width: 6.75rem;
+    height: 6.75rem;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0.5rem;
+}
+.arts-code img{
+    width: 6.75rem;
+    height: 6.75rem;
+}
+.artstrue-codeinfo{
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 0.9rem;
+}
+.arts-footer{
+    margin-top: 8.75rem;
+}
+.artstrue-logo{
+    width: 5.55rem;
+    height: 1.7rem;
+}

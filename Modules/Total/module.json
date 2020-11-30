@@ -1,0 +1,13 @@
+{
+    "name": "Total",
+    "alias": "total",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Total\\Providers\\TotalServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,226 @@
+/* 成功页面1 */
+.tplsuccess-logo{
+    width: 5.85rem;
+    height: 1.75rem;
+}
+.tplsuccess-txt{
+    padding: 0 2.3rem;
+    margin-top: 5rem;
+}
+.tplsuccess-info{
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 1.55rem;
+    margin-top: 4rem;
+}
+.success-code{
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    margin-top: 1.65rem;
+}
+.success-code img{
+    width: 6rem;
+    height: 6rem;
+}
+/* 购买页面 */
+/* .mixun-buttons-row{
+    height: 2.5rem;
+    padding:0.25rem;
+    background-color: #d7d9ff;
+    box-shadow: 0 0 0.25rem rgba(172,175,255,0.35) inset;
+    border-radius: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.mixun-buttons-row .button {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    line-height: 2rem;
+    font-size:0.75rem;
+    color: #999dee;
+    border:none;
+    background: transparent;
+    border-color: #d7d9ff;
+}
+.buttons-row.mixun-buttons-row .button.active {
+    color: #305ee5;
+    background-color: #fff;
+}
+.buttons-row.mixun-buttons-row .button:first-child {
+    border-radius: 1rem;
+    border-left-width:0px
+}
+.buttons-row.mixun-buttons-row .button:last-child {
+    border-radius: 1rem;
+}
+.buttons-row.mixun-buttons-row.button:last-child {
+    border-radius: 1rem;
+} */
+.apply-fixed{
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.apply-fixed-right{
+    width: 60%;
+    font-size: 0.75rem;
+}
+.apply-fixed-left a{
+    color:#fff
+}
+.apply-fixed-left{
+    width: 40%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.tplbuy-wrap{
+    margin:0 0.6rem;
+}
+.tplbuy-titlelg{
+    margin: 0.9rem 0;
+}
+.tplbuy-titlelg span {
+    font-size: 1.2rem;
+    padding: 0 1.1rem;
+    color: #2b4b7a;
+    background: url(../image/keylesson/buytitle_bg.png) no-repeat center center;
+    background-size: 100% auto;
+}
+.tplbuy-titlesm{
+    font-size: 0.75rem;
+    color: #305ee5;
+    text-align: center;
+    margin:0.9rem 0;
+}
+.selectbox-list{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    font-size: 0.6rem;
+    overflow: hidden;
+}
+.selectbox-list .selectbox{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.selectbox-list li:nth-of-type(odd){
+    background-color: #f3f3ff;
+}
+.selectbox .selectbox-left{
+    width: 54%;
+    text-align: right;
+    padding-right: 0.7rem;
+}
+.selectbox .selectbox-right{
+    width: 46%;
+    padding-right: 0.7rem;
+}
+.selectbox-list .selectbox .name,.selectbox-list .selectbox .price{
+    color:#305ee5;
+}
+.selectbox-list .selectbox .time{
+    margin-left: 0.2rem;
+}
+.selectbox-list .selectbox .underline{
+    font-size: 0.45rem;
+    color:#676de8;
+    margin-right: 0.35rem;
+    font-weight: normal;
+}
+.selectbox-list .selectbox .check{
+    float: right;
+}
+.selectbox .check label {
+    width: 1rem;
+    height: 1rem;
+    background:#d7d9ff url(../image/mixun/check.png)no-repeat center center;
+    background-size: 0.9rem 0.625rem;
+    border-radius: 0.125rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.selectbox.act .check label{
+    background-color: #f04444;
+}
+.mixun-tip{
+    font-size: 0.75rem;
+    margin:1rem 0;
+    text-align: center;
+}
+.springbuy-select {
+    padding: 0.75rem 0 0.25rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+/* .springt-shadow {
+    box-shadow: 0 0.25rem 0.9rem rgba(0,81,32,0.67);
+} */
+.springbuy-title {
+    color: #0a7534;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+/* 新成功页面 */
+.successnew-cont{
+    margin: 0 0.8rem;
+    padding: 0.95rem 0 2rem;
+    background:#fff;
+    box-shadow:0 0 0.5rem 0 rgba(13,51,32,0.08);
+    border-radius:0.3rem;
+}
+.successnew-info{
+    font-size: 0.7rem;
+    color: #20242E;
+    line-height: 1.45rem;
+}
+.successnew-code{
+    width: 6.3rem;
+    height: 6.55rem;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    padding: 0.5rem 0.4rem;
+    background: url(../image/tpl/success_codewrap.png);
+    background-size: 100% 100%;
+}
+.successnew-code img{
+    width: 5.5rem;
+    height: 5.55rem;
+}
+/* 黄色背景成功页 */
+.tplsuccess-txt-yellow{
+    padding: 0 3rem;
+    padding-top: 5rem;
+}
+.success-code-y{
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 3.5rem;
+}
+.success-code-y img{
+    width: 7.5rem;
+    height: 7.5rem;
+}
+.tplsuccess-info-y {
+    font-size: 0.85rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+.logo-bottom{
+    padding: 1.1rem 0;
+}
+.logo-bottom img{
+    width: 4.55rem;
+    height: 1.2rem;
+}
+.success-y-top{
+    min-height: -moz-calc(100% - 3.4rem);
+    min-height: -webkit-calc(100% - 3.4rem);
+    min-height: calc(100% - 3.4rem);
+}

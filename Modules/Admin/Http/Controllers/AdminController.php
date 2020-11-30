@@ -23,7 +23,7 @@ class AdminController extends \App\Http\Controllers\AdminController
             }
             return $this->sendFailedLoginResponse($request);
         }
-        return view('admin::login');
+        return view('admin::login');  
     }
 
     protected function validateLogin(Request $request)

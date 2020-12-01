@@ -50,6 +50,7 @@
                         <th width="15%" class="tcc">解决方案</th>
                         <th width="8%" class="tcc">操作</th>
                     </tr>
+                    
                     </thead>
                     <tbody>
                     @if(!$list->isEmpty())

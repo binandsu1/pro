@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Fortify\Contracts\LoginResponse;
+use Modules\Laravel\Models\XdoArtisan;
 use Modules\Laravel\Models\XdoEnv;
 
 //class AdminController extends Controller
@@ -85,8 +86,13 @@ class AdminController extends \App\Http\Controllers\AdminController
         return $result;
     }
 
-    public function searchGlobal(){
 
+    public function searchGlobal(Request $request){
+
+        $value = $request->input('_value');
+        $query = XdoArtisan::where('title','like',"%".$value."%")->orwhere('name','like',"%".$value."%")->orwhere('desc','like',"%".$value."%")->orderBy('id','desc');
+        $list = $query->paginate(100)->appends($request->all());
+        return view('gs',compact('list'));
     }
 
 

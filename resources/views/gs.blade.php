@@ -5,7 +5,6 @@
 
         </h1>
         <ol class="breadcrumb">
-
         </ol>
     </section>
     <section class="content">

@@ -64,7 +64,7 @@
                     @if(!$list->isEmpty())
                         @foreach($list as $item)
                             @php
-                                    $color = '';
+                                    $color = '';   
                                     if($item->type=='functions_linux'){
                                         $color = 'id-txt';
                                     }

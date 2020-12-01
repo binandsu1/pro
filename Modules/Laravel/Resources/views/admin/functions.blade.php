@@ -64,15 +64,16 @@
                     @if(!$list->isEmpty())
                         @foreach($list as $item)
                             @php
-                                if($item->type=='functions_linux'){
-                                    $color = 'id-txt';
-                                }
-                                if ($item->type=='functions_arr'){
-                                    $color = 'z-txt';
-                                }
-                                if ($item->type=='functions_str'){
-                                    $color = 'wa-txt';
-                                }
+                                    $color = '';
+                                    if($item->type=='functions_linux'){
+                                        $color = 'id-txt';
+                                    }
+                                    if ($item->type=='functions_arr'){
+                                        $color = 'z-txt';
+                                    }
+                                    if ($item->type=='functions_str'){
+                                        $color = 'wa-txt';
+                                    }
                             @endphp
                             <tr>
                                 <td class="tcc {{$color}}"> {{config('laravel.functions')[$item->type]}} </td>

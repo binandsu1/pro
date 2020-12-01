@@ -13,7 +13,6 @@
 
             <div class="box-header with-border">
                 <span class="box-title">
-
                 </span>
                 <div class="box-tools pull-right">
                 </div>

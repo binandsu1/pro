@@ -56,8 +56,8 @@
                         @foreach($list as $item)
                             <tr>
                                 {{--<td class="tcc id-txt"> {{$item->id}} </td>--}}
-                                <td class="tcc " title="{{$item->title}}"> {!! str_replace(request('title-like'), "<span class='dt-txt'>".request('title-like').'</span>', $item->title) !!} </td>
-                                <td class="tcc ">  {!! str_replace(request('desc-like'), "<span class='dt-txt'>".request('desc-like').'</span>', $item->desc) !!} </td>
+                                <td class=" " title="{{$item->title}}"> {!! str_replace(request('title-like'), "<span class='dt-txt'>".request('title-like').'</span>', $item->title) !!} </td>
+                                <td class=" ">  {!! str_replace(request('desc-like'), "<span class='dt-txt'>".request('desc-like').'</span>', $item->desc) !!} </td>
                                 <td class="tcc" title="{{$item->desc}}">
                                     <a class="btn btn-xs btn-info xdo-remote-form" href="{{route('admin.laravel.question-add',['id'=>$item->id])}}"> <i class="fa fa-pencil"></i> 编辑 </a>
                                     <a class="btn btn-xs btn-danger xdo-confirm" title="确定要删除数据" href="{{route('admin.laravel.question-del',['id'=>$item->id])}}"> <i class="fa fa-trash"></i> 删除 </a>
@@ -70,7 +70,7 @@
                 </table>
             </div>
             <div class="box-footer text-center">
-                @if(!$list->empty())
+                @if($list->count())
                     {{$list->links()}}
                 @endif
             </div>

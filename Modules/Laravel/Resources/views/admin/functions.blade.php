@@ -77,9 +77,9 @@
                             @endphp
                             <tr>
                                 <td class="tcc {{$color}}"> {{config('laravel.functions')[$item->type]}} </td>
-                                <td class="tcc "
+                                <td class=" "
                                     title="{{$item->title}}"> {!! str_replace(request('title-like'), "<span class='dt-txt'>".request('title-like').'</span>', $item->title) !!} </td>
-                                <td class="tcc ">  {!! str_replace(request('desc-like'), "<span class='dt-txt'>".request('desc-like').'</span>', $item->desc) !!} </td>
+                                <td class=" ">  {!! str_replace(request('desc-like'), "<span class='dt-txt'>".request('desc-like').'</span>', $item->desc) !!} </td>
                                 <td class="tcc" title="{{$item->desc}}">
                                     <a class="btn btn-xs btn-info xdo-remote-form"
                                        href="{{route('admin.laravel.functions-add',['id'=>$item->id])}}"> <i
@@ -90,7 +90,7 @@
                                     <a href="{{route('admin.laravel.functions-sel',['id'=>$item->id])}}"
                                        data-size="large" class="btn btn-xs xdo-remote-content"> <i class="fa fa-eye"
                                                                                                    style="margin-right:.3em;"></i>
-                                        查看 </a>
+                                        查看</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -99,7 +99,7 @@
                 </table>
             </div>
             <div class="box-footer text-center">
-                @if(!$list->empty())
+                @if($list->count())
                     {{$list->links()}}
                 @endif
             </div>

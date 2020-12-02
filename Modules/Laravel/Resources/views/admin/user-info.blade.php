@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="no-padding box-body" style="overflow:hidden;"><br>
-                <div style="width: 50%;float: left">
+                <div style="width: 70%;float: left">
                     <p class="wa-txt">登录认证的时候做两件事情</p>
                     <p class="wa-txt">Provider负责从数据里存取用户数据 DB </p>
                     <p class="wa-txt">Guard存储用户认证的信息 Session </p>

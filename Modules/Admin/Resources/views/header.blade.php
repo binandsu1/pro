@@ -8,8 +8,8 @@ $user = auth('web')->user();
       <img src="<?=static_url('admin/img/xl1.png')?>" width="30"/>
     </span>
     <span class="logo-lg" style="margin-left:-10px;">
-      <img src="<?=static_url('admin/img/logo.png')?>" width="100"/>
-      <span style="font-size:10px;">在线业务</span>
+      <img src="<?=static_url('admin/img/log3.jpg')?>" width="100"/>
+      <span style="font-size:10px;"></span>
     </span>
 </a>
 <nav class="navbar navbar-static-top">

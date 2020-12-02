@@ -76,7 +76,7 @@
                                     }
                             @endphp
                             <tr>
-                                <td class="tcc {{$color}}"> {{config('laravel.functions')[$item->type]}} </td>
+                                <td class="tcc "> {{config('laravel.functions')[$item->type]}} </td>
                                 <td class=" "
                                     title="{{$item->title}}"> {!! str_replace(request('title-like'), "<span class='dt-txt'>".request('title-like').'</span>', $item->title) !!} </td>
                                 <td class=" ">  {!! str_replace(request('desc-like'), "<span class='dt-txt'>".request('desc-like').'</span>', $item->desc) !!} </td>

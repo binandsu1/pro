@@ -20,6 +20,7 @@ Route::prefix('laravel')->group(function() {
     Route::match(['get','post'],'/artisan-sel', 'LaravelController@artisanSel')->name('admin.laravel.artisan-sel');
     Route::get('/user', 'LaravelController@user')->name('admin.laravel.user');
     Route::get('/queue', 'LaravelController@queue')->name('admin.laravel.queue');
+    Route::get('/listen', 'LaravelController@listen')->name('admin.laravel.listen');
     Route::get('/question', 'QuestionController@question')->name('admin.laravel.question');
     Route::match(['get','post'],'/question-add', 'QuestionController@questionAdd')->name('admin.laravel.question-add');
     Route::match(['get','post'],'/question-del', 'QuestionController@questionDel')->name('admin.laravel.question-del');

@@ -87,7 +87,7 @@ class LaravelController extends AdminController
      */
     public function user(Request $request)
     {
-        return view('laravel::admin.artisan');
+        return view('laravel::admin.user-info');
     }
 
     /**
@@ -96,7 +96,16 @@ class LaravelController extends AdminController
      */
     public function queue(Request $request)
     {
-        return view('laravel::admin.artisan');
+        return view('laravel::admin.user-info');
+    }
+
+    /**
+     * @name 事件监听
+     * @is_menu 1
+     */
+    public function listen(Request $request)
+    {
+        return view('laravel::admin.user-info');
     }
 
 }

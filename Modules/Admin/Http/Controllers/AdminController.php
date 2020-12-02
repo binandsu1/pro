@@ -2,17 +2,24 @@
 
 namespace Modules\Admin\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Fortify\Contracts\LoginResponse;
 use Modules\Laravel\Models\XdoArtisan;
 use Modules\Laravel\Models\XdoEnv;
-
+use PasswordValidationRules;
+use Laravel\Fortify\Rules\Password;
 //class AdminController extends Controller
 class AdminController extends \App\Http\Controllers\AdminController
 {
+
+
+
     protected $redirectTo = '/admin';
     public function login(Request $request)
     {
@@ -133,5 +140,35 @@ class AdminController extends \App\Http\Controllers\AdminController
         $xdo_env->save();
         return redirect(route('admin'));
     }
+
+    public function register(Request $request){
+
+        if($request->method() == 'GET'){
+            return view('admin::register');
+        }
+
+        if($request->method() == 'POST'){
+            $request->validate([
+                'name' => 'required|string|min:3|max:10',
+                'password' => 'required|string|min:3|max:10',
+            ],[
+                'name.required' => '请输入用户名',
+                'name.min' => '用户名最少3字符',
+                'name.max' => '用户名最多10字符',
+                'password.required' => '请输入密码',
+                'password.confirmed' => '两次密码输入不一致',
+                'password.min' => '密码最少3字符',
+                'password.max' => '密码最多20字符',
+            ]);
+
+            $user = User::create([
+                'name' => $request->input('name'),
+                'password' => Hash::make($request->input('password')),
+            ]);
+            $this->guard()->login($user);
+            return redirect(route('admin'));
+        }
+    }
+
 
 }

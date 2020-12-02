@@ -14,7 +14,7 @@ class AdminController extends Controller
         #所有视图共享
         \View::share('auth', $this->auth);
         #except 排除这些路由其他的走验证 黑名单 还有一个白名单
-        $this->middleware('auth')->except(['login', 'logout', 'test']);
+        $this->middleware('auth')->except(['login', 'logout', 'test','register']);
 //        $this->middleware('show-sql')->except(['login', 'logout', 'test']);
         $this->auth = auth('web');
     }

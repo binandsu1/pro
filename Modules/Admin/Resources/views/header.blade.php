@@ -9,7 +9,7 @@ $user = auth('web')->user();
     </span>
     <span class="logo-lg" style="margin-left:-10px;">
       {{--<img src="<?=static_url('admin/img/log3.jpg')?>" width="100"/>--}}
-      {{--<span style="font-size:10px;"></span>--}}
+      {{--<span style="font-size:10px;">logo</span>--}}
     </span>
 </a>
 <nav class="navbar navbar-static-top">
@@ -164,8 +164,8 @@ $user = auth('web')->user();
             </li>
             <li>
                 <a href="#" data-toggle="control-sidebar">
-                    <i class="fa fa-home"></i>
-                    <b class="text-danger">[切换]</b>
+                    <i class="fa fa-random"></i>
+                    <b class="">[切换]</b>
                 </a>
             </li>
         </ul>

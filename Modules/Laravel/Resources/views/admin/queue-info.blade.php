@@ -82,9 +82,9 @@
                     <p class="wa-txt">控制器UserJob队列里设置通用最大失败尝试次数-执行时间等构造函数指定连接方式队列名参数</p>
                     <p class="wa-txt">handle消费传出服务里的方法开始执行</p>
                     <p class="wa-txt">执行过程中记录错误数据再次处理</p>
-                    <p class="wa-txt"> Laravel 的 Redis 限制频率功能 可以直接写job里乱套</p>
-                    <p class="wa-txt">UserJob::dispatch($i)->through([new RateLimited()]); 队列中间件</p>
-                    <p class="wa-txt"></p>
+                    <p class="wa-txt">Laravel 的 Redis 限制频率功能 可以直接写job里乱套</p>
+                    <p class="wa-txt">UserJob::dispatch($i)->through([new RateLimited()]); 队列中间件 单独放里面或者在外指定都可以</p>
+                    <p class="wa-txt">位置app\Jobs\Middleware</p>
                     <p class="wa-txt"></p>
                     <p class="wa-txt"></p>
                     <p class="wa-txt"></p>

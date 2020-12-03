@@ -3,6 +3,7 @@
 namespace Modules\Laravel\Http\Controllers;
 
 use App\Http\Controllers\AdminController;
+use App\Jobs\Middleware\RateLimited;
 use App\Jobs\UserJob;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
@@ -99,8 +100,8 @@ class LaravelController extends AdminController
     {
         $num = $request->input('num');
         if($num > 0){
-            for($i=1;$i<=1000;$i++){
-                UserJob::dispatch($i);
+            for($i=1;$i<=10;$i++){
+                UserJob::dispatch($i)->through([new RateLimited()]);
             }
             return redirect(route('admin.laravel.queue'));
         }

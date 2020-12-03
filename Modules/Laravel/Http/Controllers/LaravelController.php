@@ -3,12 +3,14 @@
 namespace Modules\Laravel\Http\Controllers;
 
 use App\Http\Controllers\AdminController;
+use App\Jobs\UserJob;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Modules\Laravel\Http\Middleware\ArtisanMidd;
 use Modules\Laravel\Models\XdoArtisan;
+use Modules\Laravel\Models\XdoJobData;
 
 class LaravelController extends AdminController
 {
@@ -70,7 +72,6 @@ class LaravelController extends AdminController
     }
 
 
-
     #https://blog.csdn.net/lixing1359199697/article/details/81202268 软删除文档查看
     public function artisanDel(Request $request)
     {
@@ -85,7 +86,7 @@ class LaravelController extends AdminController
      * @name 用户认证
      * @is_menu 1
      */
-    public function user(Request $request)
+    public function user()
     {
         return view('laravel::admin.user-info');
     }
@@ -96,14 +97,26 @@ class LaravelController extends AdminController
      */
     public function queue(Request $request)
     {
-        return view('laravel::admin.user-info');
+        $num = $request->input('num');
+        if($num > 0){
+            for($i=1;$i<=1000;$i++){
+                UserJob::dispatch($i);
+            }
+            return redirect(route('admin.laravel.queue'));
+        }
+        $query = XdoJobData::orderBy('id','desc');
+        $list = $query->paginate(10)->appends($request->all());
+        $total_arr = [];
+        $total_arr["success"] = XdoJobData::where("is_over",1)->count();
+        $total_arr["error"] = XdoJobData::where("is_over",0)->count();
+        return view('laravel::admin.queue-info',compact('list','total_arr'));
     }
 
     /**
      * @name 事件监听
      * @is_menu 1
      */
-    public function listen(Request $request)
+    public function listen()
     {
         return view('laravel::admin.user-info');
     }

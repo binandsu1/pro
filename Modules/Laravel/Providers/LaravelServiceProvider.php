@@ -4,6 +4,7 @@ namespace Modules\Laravel\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Laravel\Services\Jobdata;
 
 class LaravelServiceProvider extends ServiceProvider
 {
@@ -38,6 +39,9 @@ class LaravelServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->app->singleton('xdo.job-data', function () {
+            return new Jobdata();
+        });
     }
 
     /**

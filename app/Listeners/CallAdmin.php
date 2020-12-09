@@ -33,8 +33,8 @@ class CallAdmin implements ShouldQueue
     {
         $return = $event->user;
         $data["user_id"] = $return->id;
-        $data["user_name"] = $return->name."默认监听";
-        $data["admin_name"] = $return->admin."默认监听";
+        $data["user_name"] = $return->name."默认监听EventJob1";
+        $data["admin_name"] = $return->admin."默认监听EventJob1";
         XdoLog::create($data);
     }
 }

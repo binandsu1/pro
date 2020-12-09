@@ -48,8 +48,8 @@ class EventServiceProvider extends ServiceProvider
         Event::listen(queueable(function (AddUserEvent $event) {
             $return = $event->user;
             $data["user_id"] = $return->id;
-            $data["user_name"] = $return->name."队列监听";
-            $data["admin_name"] = $return->admin."队列监听";
+            $data["user_name"] = $return->name."EventJob队列监听";
+            $data["admin_name"] = $return->admin."EventJob队列监听";
             XdoLog::create($data);
         })->onConnection('rabbitmq')->onQueue('EventJob'));
 

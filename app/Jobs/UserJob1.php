@@ -2,13 +2,11 @@
 
 namespace App\Jobs;
 
-use App\Jobs\Middleware\RateLimited;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Redis;
 
 class UserJob1 implements ShouldQueue
 {
@@ -47,7 +45,7 @@ class UserJob1 implements ShouldQueue
 //        });
 
             $JobService = app('xdo.job-data');
-            $log = $JobService->process($this->i."z");
+            $JobService->process($this->i."z");
 
     }
 }

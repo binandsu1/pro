@@ -2,13 +2,11 @@
 
 namespace App\Jobs;
 
-use App\Jobs\Middleware\RateLimited;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Redis;
 
 class UserJob implements ShouldQueue
 {
@@ -38,6 +36,9 @@ class UserJob implements ShouldQueue
      */
     public function handle()
     {
+
+//        sleep(10);
+
 //        Redis::throttle('key')->allow(1)->every(2)->then(function () {
 //            $JobService = app('xdo.job-data');
 //            $log = $JobService->process($this->i);
@@ -45,9 +46,8 @@ class UserJob implements ShouldQueue
 //        }, function () {
 //            return $this->release(5);
 //        });
-
             $JobService = app('xdo.job-data');
-            $log = $JobService->process($this->i);
+            $JobService->process($this->i);
 
     }
 }

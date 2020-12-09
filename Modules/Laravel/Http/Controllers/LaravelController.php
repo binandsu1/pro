@@ -3,9 +3,11 @@
 namespace Modules\Laravel\Http\Controllers;
 
 use App\Http\Controllers\AdminController;
+use App\Jobs\Hello;
 use App\Jobs\Middleware\RateLimited;
 use App\Jobs\UserJob;
 use App\Jobs\UserJob1;
+use App\Models\User;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
@@ -102,14 +104,19 @@ class LaravelController extends AdminController
     {
         $num = $request->input('num');
         if($num > 0){
-            for($i=1;$i<=10;$i++){
+
+//            UserJob::dispatch('z');die;
+//            Hello::dispatch();die;
+            for($i=1;$i<=5;$i++){
                 #路由中间件
 //                UserJob::dispatch($i)->through([new RateLimited()]);
+                UserJob::dispatch($i);
+//                UserJob::dispatchNow($i);;
                 #有问题明天查看 队列连
-                Bus::chain([
-                    UserJob::dispatch($i),
-                    UserJob1::dispatch($i),
-                ]);
+//                Bus::chain([
+//                    UserJob::dispatch($i),
+//                    UserJob1::dispatch($i),
+//                ]);
 //                UserJob::dispatchAfterResponse($i);
             }
             return redirect(route('admin.laravel.queue'));

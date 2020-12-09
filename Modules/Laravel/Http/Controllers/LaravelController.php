@@ -135,7 +135,7 @@ class LaravelController extends AdminController
      */
     public function listen()
     {
-        return view('laravel::admin.user-info');
+        return view('laravel::admin.listen-info');
     }
 
 }

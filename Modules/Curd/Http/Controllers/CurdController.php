@@ -2,6 +2,7 @@
 
 namespace Modules\Curd\Http\Controllers;
 
+use App\Events\AddUserEvent;
 use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use Modules\Curd\Http\Middleware\XdoDataMidd;
@@ -55,6 +56,8 @@ class CurdController extends AdminController
         app()->make(XdoDataMidd::class);
         $data = $this->getParas($request,$data);
         $add_re = $id ? $data->save() : XdoData::create($data);
+        #保存之后 传入一个事件
+        event(new AddUserEvent($add_re));
         if($add_re){
             return $this->returnSuccess();
         }

@@ -3,7 +3,6 @@
 namespace Modules\Laravel\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Factory;
 use Modules\Laravel\Services\Jobdata;
 
 class LaravelServiceProvider extends ServiceProvider

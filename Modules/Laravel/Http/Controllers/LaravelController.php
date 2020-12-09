@@ -103,12 +103,13 @@ class LaravelController extends AdminController
         $num = $request->input('num');
         if($num > 0){
             for($i=1;$i<=10;$i++){
+                #路由中间件
 //                UserJob::dispatch($i)->through([new RateLimited()]);
                 #有问题明天查看 队列连
                 Bus::chain([
-                    UserJob::class,
-                    UserJob1::class,
-                ])->dispatch($i);
+                    UserJob::dispatch($i),
+                    UserJob1::dispatch($i),
+                ]);
 //                UserJob::dispatchAfterResponse($i);
             }
             return redirect(route('admin.laravel.queue'));

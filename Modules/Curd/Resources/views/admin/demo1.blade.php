@@ -53,15 +53,15 @@
                 <table class="table table-bordered ">
                     <thead>
                     <tr>
-                        <th width="30" class="tcc ">ID</th>
-                        <th width="100" class="tcc">姓名</th>
-                        <th width="100" class="tcc">手机号</th>
-                        <th width="50" class="tcc">年龄</th>
-                        <th width="100" class="tcc">年级</th>
-                        <th width="50" class="tcc">状态</th>
-                        <th width="250" class="tcc">地址</th>
-                        <th width="150" class="tcc">创建时间</th>
-                        <th width="250" class="tcc">操作</th>
+                        <th width="5%" class="tcc ">ID</th>
+                        <th width="10%" class="tcc">姓名</th>
+                        <th width="10%" class="tcc">手机号</th>
+                        <th width="5%" class="tcc">年龄</th>
+                        <th width="10%" class="tcc">年级</th>
+                        <th width="5%" class="tcc">状态</th>
+                        <th width="20%" class="tcc">地址</th>
+                        <th width="10%" class="tcc">创建时间</th>
+                        <th width="20%" class="tcc">操作</th>
                     </tr>
                     </thead>
                     <tbody>

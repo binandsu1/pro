@@ -2,9 +2,10 @@
 
 namespace Modules\Curd\Providers;
 
+use App\Observers\LogObserver;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Pagination\Paginator;
+use Modules\Curd\Models\XdoData;
 
 class CurdServiceProvider extends ServiceProvider
 {
@@ -30,8 +31,12 @@ class CurdServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
         Paginator::useBootstrap();
+        $this->addModelLog();
     }
 
+    protected function addModelLog() {
+        XdoData::observe(LogObserver::class);
+    }
     /**
      * Register the service provider.
      *

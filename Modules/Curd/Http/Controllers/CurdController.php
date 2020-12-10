@@ -57,7 +57,7 @@ class CurdController extends AdminController
         $data = $this->getParas($request,$data);
         $add_re = $id ? $data->save() : XdoData::create($data);
         #保存之后 传入一个事件
-        event(new AddUserEvent($add_re));
+//        event(new AddUserEvent($add_re));
         if($add_re){
             return $this->returnSuccess();
         }

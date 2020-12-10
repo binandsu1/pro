@@ -37,21 +37,21 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         #自定义监听
-        Event::listen(function (AddUserEvent $event) {
-            $return = $event->user;
-            $data["user_id"] = $return->id;
-            $data["user_name"] = $return->name."手动监听";
-            $data["admin_name"] = $return->admin."手动监听";
-            XdoLog::create($data);
-        });
+//        Event::listen(function (AddUserEvent $event) {
+//            $return = $event->user;
+//            $data["user_id"] = $return->id;
+//            $data["user_name"] = $return->name."手动监听";
+//            $data["admin_name"] = $return->admin."手动监听";
+//            XdoLog::create($data);
+//        });
         #队列监听
-        Event::listen(queueable(function (AddUserEvent $event) {
-            $return = $event->user;
-            $data["user_id"] = $return->id;
-            $data["user_name"] = $return->name."EventJob队列监听";
-            $data["admin_name"] = $return->admin."EventJob队列监听";
-            XdoLog::create($data);
-        })->onConnection('rabbitmq')->onQueue('EventJob'));
+//        Event::listen(queueable(function (AddUserEvent $event) {
+//            $return = $event->user;
+//            $data["user_id"] = $return->id;
+//            $data["user_name"] = $return->name."EventJob队列监听";
+//            $data["admin_name"] = $return->admin."EventJob队列监听";
+//            XdoLog::create($data);
+//        })->onConnection('rabbitmq')->onQueue('EventJob'));
 
     }
 }

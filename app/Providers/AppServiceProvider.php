@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Observers\LogObserver;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Redis;
+use Modules\Curd\Models\XdoData;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->addModelLog();
+        $this->listendb();
+    }
+
+    public function addModelLog(){
+        #直接所有的都在这里引入
+        XdoData::observe(LogObserver::class);
+    }
+
+    public function listendb(){
         DB::listen(
             function($query) {
                 $request = request();
@@ -58,7 +70,6 @@ class AppServiceProvider extends ServiceProvider
                 $logs = uniquArr($logs,'sql');
                 Cache::put('logs', $logs);
             });
-
     }
 
 }

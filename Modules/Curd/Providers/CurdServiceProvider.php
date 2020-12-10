@@ -31,12 +31,9 @@ class CurdServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
         Paginator::useBootstrap();
-        $this->addModelLog();
     }
 
-    protected function addModelLog() {
-        XdoData::observe(LogObserver::class);
-    }
+
     /**
      * Register the service provider.
      *

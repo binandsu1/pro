@@ -2,11 +2,11 @@
 
 namespace Modules\System\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Modules\Curd\Models\XdoLog;
 
-class SystemController extends Controller
+class SystemController extends AdminController
 {
     /**
      * @name 管理员列表
@@ -36,43 +36,14 @@ class SystemController extends Controller
     }
 
     /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
+     * @name 操作日志
+     * @is_menu 1
      */
-    public function show($id)
+    public function log(Request $request)
     {
-        return view('system::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('system::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
-    public function destroy($id)
-    {
-        //
+        $query = XdoLog::orderBy('id','desc');
+        $where = $this->getParasSel($request->all());
+        $list = $query->where($where)->paginate(10)->appends($request->all());
+        return view('system::log',compact('list'));
     }
 }

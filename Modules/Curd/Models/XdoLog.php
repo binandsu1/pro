@@ -21,13 +21,13 @@ class XdoLog extends XdoBase
         $type = "学生";
         $time = $this->getDateTime($date);
         if($act == 'add'){
-            $str = $date." ".$admin." 新增了一条id为".$t_id."的".$type."数据";
+            $str = $date." ".$admin." 新增了一条id为 ".$t_id." 的".$type."数据";
         }
         if($act == 'update'){
-            $str = $date." ".$admin." 修改了一条id为".$t_id."的".$type."数据";
+            $str = $date." ".$admin." 修改了一条id为 ".$t_id." 的".$type."数据";
         }
         if($act == 'delete'){
-            $str = $date." ".$admin." 偷偷删除了一条id为".$t_id."的".$type."数据";
+            $str = $date." ".$admin." 偷偷删除了一条id为 ".$t_id." 的".$type."数据";
         }
         return $str;
     }

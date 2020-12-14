@@ -14,7 +14,7 @@ class UserJob implements ShouldQueue
     #最大重试次数
     public $tries = 3;
     #最大执行时间
-    public $timeout = 600;
+    public $timeout = 6000;
     protected  $i;
 
     public function __construct($i)

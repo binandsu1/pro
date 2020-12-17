@@ -38,6 +38,7 @@ class LogObserver
             $originals = $model->getOriginal();
             foreach ($after as $key => $value) {
                 $before[$key] = $originals[$key];
+                $before['updated_at'] = $originals['updated_at']->format('Y-m-d H:i:s');;
             }
             $data = [
                 'act' => 'update',

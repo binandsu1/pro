@@ -25,24 +25,17 @@
             <div class="no-padding box-body" style="overflow:hidden;">
                 <x-s :resetUrl="route('admin.laravel.artisan')">
                     <div class="form-group">
-                    <label class="control-label fw300">标题:</label>
-                    <input type="text" name="title-like"
+                    <label class="control-label fw300">操作表id:</label>
+                    <input type="text" name="t_id-like"
                     class="form-control input-sm"
-                    placeholder="标题" value="<?=request('title-like')?>">
+                    placeholder="操作表id" value="<?=request('t_id-like')?>">
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label fw300">命令:</label>
-                        <input type="text" name="name-like"
+                        <label class="control-label fw300">表名:</label>
+                        <input type="text" name="table-like"
                                class="form-control input-sm"
-                               placeholder="命令" value="<?=request('name-like')?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label fw300">介绍:</label>
-                        <input type="text" name="desc-like"
-                               class="form-control input-sm"
-                               placeholder="介绍" value="<?=request('desc-like')?>">
+                               placeholder="表名" value="<?=request('table-like')?>">
                     </div>
                     @slot('more')
                     @endslot
@@ -70,7 +63,7 @@
                                 <td class="tcc ">  {{$item->created_at}} </td>
                                 <td >  {{$item->LogDesc}} </td>
                                 <td class="tcc ">
-                                    <a href="{{route('admin.laravel.artisan-sel',['id'=>1])}}" data-size="large" class="btn btn-xs xdo-remote-content"> <i class="fa fa-eye" style="margin-right:.3em;"></i> 查看操作  </a>
+                                    <a href="{{route('laravel.system.log-sel',['id'=>$item->id])}}" data-size="large" class="btn btn-xs xdo-remote-content"> <i class="fa fa-eye" style="margin-right:.3em;"></i> 查看详情  </a>
                                 </td>
                             </tr>
                         @endforeach

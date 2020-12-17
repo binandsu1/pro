@@ -46,4 +46,11 @@ class SystemController extends AdminController
         $list = $query->where($where)->paginate(10)->appends($request->all());
         return view('system::log',compact('list'));
     }
+
+    public function logSel(Request $request){
+        $id = $request->input('id');
+        $list = XdoLog::find($id);
+        return view('system::log-sel',compact('list'));
+
+    }
 }

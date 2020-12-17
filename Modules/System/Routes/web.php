@@ -16,4 +16,5 @@ Route::prefix('system')->group(function() {
     Route::get('/role', 'SystemController@role')->name('laravel.system.role');
     Route::get('/role-set', 'SystemController@roleSet')->name('laravel.system.role-set');
     Route::get('/log', 'SystemController@log')->name('laravel.system.log');
+    Route::get('/log-sel', 'SystemController@logSel')->name('laravel.system.log-sel');
 });

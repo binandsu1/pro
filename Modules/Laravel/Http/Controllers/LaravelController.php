@@ -28,19 +28,19 @@ class LaravelController extends AdminController
         return view('laravel::admin.index');
     }
 
-    /**
-     * @name 脚本命令
-     * @is_menu 1
-     */
-    #https://www.jb51.net/article/191741.htm
-    # toRawSql  dumpSql  ddSql
-    public function artisan(Request $request)
-    {
-        $query = XdoArtisan::where("type",'artisan')->orderBy('id','desc');
-        $where = $this->getParasSel($request->all());
-        $list = $query->where($where)->paginate(10)->appends($request->all());
-        return view('laravel::admin.artisan',compact('list'));
-    }
+//    /**
+//     * @name 脚本命令
+//     * @is_menu 1
+//     */
+//    #https://www.jb51.net/article/191741.htm
+//    # toRawSql  dumpSql  ddSql
+//    public function artisan(Request $request)
+//    {
+//        $query = XdoArtisan::where("type",'artisan')->orderBy('id','desc');
+//        $where = $this->getParasSel($request->all());
+//        $list = $query->where($where)->paginate(10)->appends($request->all());
+//        return view('laravel::admin.artisan',compact('list'));
+//    }
 
     /**
      * @name 脚本介绍

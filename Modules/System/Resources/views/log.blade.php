@@ -23,7 +23,7 @@
             </div>
 
             <div class="no-padding box-body" style="overflow:hidden;">
-                <x-s :resetUrl="route('admin.laravel.artisan')">
+                <x-s :resetUrl="route('laravel.system.log')">
                     <div class="form-group">
                     <label class="control-label fw300">操作表id:</label>
                     <input type="text" name="t_id-like"

@@ -7,6 +7,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Artisan;
+use Modules\Curd\Models\XdoLog;
 use Modules\Laravel\Models\XdoArtisan;
 use Modules\Laravel\Models\XdoEnv;
 use PasswordValidationRules;
@@ -23,7 +24,8 @@ class AdminController extends \App\Http\Controllers\AdminController
             #显示一个基本的验证
             $this->validateLogin($request);
             if ($this->attemptLogin($request)) {
-                return $this->sendLoginResponse($request);
+                $login_result = $this->sendLoginResponse($request);
+                return  $login_result;
             }
             return $this->sendFailedLoginResponse($request);
         }
@@ -52,11 +54,23 @@ class AdminController extends \App\Http\Controllers\AdminController
 //        $data['status'] = 0;
 //        $data['hr_status'] = 'A';
         // 验证登录的逻辑
-         $this->auth->attempt(
+         $login_status = $this->auth->attempt(
             $data,
             $request->filled('remember')
         );
-//        dd($result);
+         #request name password 尝试登陆用户名密码
+        #记录进log表
+        $json_data["login_status"] = $login_status;
+        $json_data["admin_name"] = $request->name;
+        $json_data["password"] = $request->password;
+        $log_data["t_id"] = 0;
+        $log_data["act"] = "login";
+        $log_data["admin_id"] = 0;
+        $log_data["table"] = "***";
+        $log_data["admin_name"] = $request->name;
+        $log_data["data"] = json_encode($json_data);
+        $log_data["ip"] = $request->getClientIp();
+        XdoLog::create($log_data);
         return $request;
     }
 
@@ -104,7 +118,15 @@ class AdminController extends \App\Http\Controllers\AdminController
 
     protected function logOut(Request $request)
     {
-
+        $auth = auth('web')->user();
+        #记录进log表
+        $log_data["t_id"] = 0;
+        $log_data["act"] = "logout";
+        $log_data["admin_id"] = $auth->id;
+        $log_data["table"] = "***";
+        $log_data["admin_name"] = $auth->name;
+        $log_data["ip"] = $request->getClientIp();
+        XdoLog::create($log_data);
         $this->guard()->logoutCurrentDevice();
         $request->session()->flush();
         return redirect(route('admin.login'));

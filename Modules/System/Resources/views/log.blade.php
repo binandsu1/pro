@@ -25,10 +25,10 @@
             <div class="no-padding box-body" style="overflow:hidden;">
                 <x-s :resetUrl="route('laravel.system.log')">
                     <div class="form-group">
-                    <label class="control-label fw300">操作表id:</label>
-                    <input type="text" name="t_id-like"
-                    class="form-control input-sm"
-                    placeholder="操作表id" value="<?=request('t_id-like')?>">
+                        <label class="control-label fw300">操作表id:</label>
+                        <input type="text" name="t_id-like"
+                               class="form-control input-sm"
+                               placeholder="操作表id" value="<?=request('t_id-like')?>">
                     </div>
 
                     <div class="form-group">
@@ -36,6 +36,13 @@
                         <input type="text" name="table-like"
                                class="form-control input-sm"
                                placeholder="表名" value="<?=request('table-like')?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label fw300">操作人:</label>
+                        <input type="text" name="admin_name-like"
+                               class="form-control input-sm"
+                               placeholder="操作人" value="<?=request('admin_name-like')?>">
                     </div>
                     @slot('more')
                     @endslot
@@ -57,13 +64,18 @@
                         @foreach($list as $item)
                             <tr>
                                 <td class="tcc"> {{$item->act}} </td>
-                                <td class="tcc id-txt" > {{$item->t_id}} </td>
-                                <td class="tcc id-txt" >{{$item->table}}</td>
+                                <td class="tcc id-txt"> {{$item->t_id != 0 ? $item->t_id : '***'}} </td>
+                                <td class="tcc id-txt">{{$item->table}}</td>
                                 <td class="tcc ">  {{$item->admin_name}} </td>
                                 <td class="tcc ">  {{$item->created_at}} </td>
-                                <td >  {{$item->LogDesc}} </td>
+                                <td>  {{$item->LogDesc}} </td>
                                 <td class="tcc ">
-                                    <a href="{{route('laravel.system.log-sel',['id'=>$item->id])}}" data-size="large" class="btn btn-xs xdo-remote-content"> <i class="fa fa-eye" style="margin-right:.3em;"></i> 查看详情  </a>
+                                    @if($item->act != "login" && $item->act != "logout")
+                                        <a href="{{route('laravel.system.log-sel',['id'=>$item->id])}}"
+                                           data-size="large" class="btn btn-xs xdo-remote-content"> <i class="fa fa-eye"
+                                                                                                       style="margin-right:.3em;"></i>
+                                            查看详情 </a>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
@@ -72,7 +84,7 @@
                 </table>
             </div>
             <div class="box-footer text-center">
-                @if(!$list->empty())
+                @if($list->count())
                     {{$list->links()}}
                 @endif
             </div>

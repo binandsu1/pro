@@ -27,7 +27,15 @@ class XdoLog extends XdoBase
             $str = $date." ".$admin." 修改了一条id为 ".$t_id." 的".$type."数据";
         }
         if($act == 'delete'){
-            $str = $date." ".$admin." 偷偷删除了一条id为 ".$t_id." 的".$type."数据";
+            $str = $date." ".$admin." 删除了一条id为 ".$t_id." 的".$type."数据";
+        }
+        if($act == 'login'){
+            $data = json_decode($this->data,true);
+            $login_status  = $data["login_status"] ? " 成功" : " 失败";
+            $str = $date." ".$admin." 尝试用密码 ".$data["password"]." 登陆".$login_status;
+        }
+        if($act == 'logout'){
+            $str = $date." ".$admin." 退下了";
         }
         return $str;
     }

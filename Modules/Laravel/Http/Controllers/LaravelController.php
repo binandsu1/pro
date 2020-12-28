@@ -36,7 +36,7 @@ class LaravelController extends AdminController
 //    # toRawSql  dumpSql  ddSql
 //    public function artisan(Request $request)
 //    {
-//        $query = XdoArtisan::where("type",'artisan')->orderBy('id','desc');
+//        $query = XdoArtisan::where("type",'artisan')->orderBy('id','desc');124.70.81.74
 //        $where = $this->getParasSel($request->all());
 //        $list = $query->where($where)->paginate(10)->appends($request->all());
 //        return view('laravel::admin.artisan',compact('list'));

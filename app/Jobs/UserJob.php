@@ -12,7 +12,7 @@ class UserJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     #最大重试次数
-    public $tries = 3;
+    public $tries = 1;
     #最大执行时间
     public $timeout = 6000;
     protected  $i;

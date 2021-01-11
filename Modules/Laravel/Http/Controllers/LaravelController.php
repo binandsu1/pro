@@ -107,7 +107,7 @@ class LaravelController extends AdminController
 
 //            UserJob::dispatch('z');die;
 //            Hello::dispatch();die;
-            for($i=1;$i<=100;$i++){
+            for($i=1;$i<=$num;$i++){
                 #路由中间件
 //                UserJob::dispatch($i)->through([new RateLimited()]);
                 UserJob::dispatch($i);

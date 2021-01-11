@@ -2,6 +2,7 @@
 
 namespace Modules\Laravel\Providers;
 
+use BaconQrCode\Module;
 use Illuminate\Support\ServiceProvider;
 use Modules\Laravel\Services\Jobdata;
 
@@ -39,7 +40,8 @@ class LaravelServiceProvider extends ServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
         $this->app->singleton('xdo.job-data', function () {
-            return new Jobdata();
+//            return new Jobdata();
+            return new \Modules\Laravel\Services\Jobdata();
         });
     }
 

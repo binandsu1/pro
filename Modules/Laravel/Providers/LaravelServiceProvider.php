@@ -40,8 +40,7 @@ class LaravelServiceProvider extends ServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
         $this->app->singleton('xdo.job-data', function () {
-//            return new Jobdata();
-            return new \Modules\Laravel\Services\Jobdata();
+            return new Jobdata();
         });
     }
 

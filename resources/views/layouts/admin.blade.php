@@ -1163,7 +1163,6 @@ Laravel 8 peace && love - <a href="https://xueyuanjun.com/books/laravel-docs-8" 
 <script>
 
     $(function () {
-
         $('body').on('click', 'a[data-action=toRoom]', function (e) {
             var $classAction = $(this);
             if (!$classAction.hasClass('baijiayun')) {
@@ -1192,6 +1191,7 @@ Laravel 8 peace && love - <a href="https://xueyuanjun.com/books/laravel-docs-8" 
             });
             $.get(href, function (xhr) {
                 if (xhr.status == 9999) {
+                    alert(1);
                     layer.close(loadTip);
                     var data = xhr.data;
                     var inClassClient = data.baijiayunRoomUrl.inClassClient;

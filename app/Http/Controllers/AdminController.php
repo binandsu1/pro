@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     protected $auth;
+    protected static $SUCCESS_VIEW = 'public.success';
+    protected static $ERROR_VIEW = 'public.error';
 
     function __construct()
     {
@@ -19,27 +21,35 @@ class AdminController extends Controller
         $this->auth = auth('web');
     }
 
-    public static function returnSuccess($data = [])
-    {
+
+
+    public static function returnSuccess($data = []){
         $errorCode = config('errorcode');
-        if (request()->ajax()) {
-            return ['status' => $errorCode['AJAXCODE']['ERR_OK']['code'], 'msg' => $errorCode['AJAXCODE']['ERR_OK']['msg'], 'data' => $data];
-        } else {
-            return view(static::$SUCCESS_VIEW, compact('data'));
+        if(request()->ajax()){
+            return ['status'=>$errorCode['AJAXCODE']['ERR_OK']['code'],'msg'=>$errorCode['AJAXCODE']['ERR_OK']['msg'],'data'=>$data];
+        }else{
+            return view(static::$SUCCESS_VIEW,compact('data'));
         }
     }
 
-    public static function returnError($msg = '', $status = 0, $data = [])
-    {
-        $errorCode = config('errorcode');
-        if (request()->ajax()) {
-            $status = $status ? $status : $errorCode['AJAXCODE']['ERR_PUBLIC']['code'];
-            $msg = $msg ? $msg : $errorCode['AJAXCODE']['ERR_PUBLIC']['msg'];
-            return compact('status', 'msg', 'data');
-        } else {
-            return view(static::$ERROR_VIEW, compact('msg', 'status', 'data'));
-        }
+//    public static function returnError($msg = '',$status = 0,$data = []){
+//        $errorCode = config('errorcode');
+//        if(request()->ajax()){
+//            $status = $status?$status:$errorCode['AJAXCODE']['ERR_PUBLIC']['code'];
+//            $msg = $msg?$msg:$errorCode['AJAXCODE']['ERR_PUBLIC']['msg'];
+//            return compact('status','msg','data');
+//        }else{
+//            return view(static::$ERROR_VIEW,compact('msg','status','data'));
+//        }
+//    }
+
+    public static function returnError(){
+        $arr["status"] = 1;
+        $arr["msg"] = 1;
+
+            return $arr;
     }
+
 
     public function getParas($request, $data)
     {

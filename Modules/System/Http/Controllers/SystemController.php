@@ -27,7 +27,7 @@ class SystemController extends AdminController
      */
     public function role()
     {
-        return view('system::index');
+        return view('system::role');
     }
 
     /**
@@ -36,7 +36,7 @@ class SystemController extends AdminController
      */
     public function roleSet(Request $request)
     {
-        return view('system::index');
+        return view('system::role-set');
     }
 
     /**

@@ -14,7 +14,7 @@ class TotalController extends Controller
      */
     public function totalZ()
     {
-        return view('total::index');
+        return view('total::z');
     }
 
     /**
@@ -32,7 +32,7 @@ class TotalController extends Controller
      */
     public function totalQ()
     {
-        return view('total::create');
+        return view('total::q');
     }
 
     /**

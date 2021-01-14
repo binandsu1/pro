@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use App\Observers\LogObserver;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -35,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
     #操作log
     public function addModelLog(){
         XdoData::observe(LogObserver::class);
+        User::observe(LogObserver::class);
     }
     #调试模式
     public function listendb(){

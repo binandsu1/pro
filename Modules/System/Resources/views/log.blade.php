@@ -54,8 +54,9 @@
                         <th width="5%" class="tcc">操作表ID</th>
                         <th width="5%" class="tcc">表名</th>
                         <th width="5%" class="tcc">操作人</th>
+                        <th width="5%" class="tcc">IP</th>
                         <th width="10%" class="tcc">操作时间</th>
-                        <th width="30%" class="tcc">描述</th>
+                        <th width="25%" class="tcc">描述</th>
                         <th width="5%" class="tcc">查看</th>
                     </tr>
                     </thead>
@@ -67,6 +68,7 @@
                                 <td class="tcc id-txt"> {{$item->t_id != 0 ? $item->t_id : '***'}} </td>
                                 <td class="tcc id-txt">{{$item->table}}</td>
                                 <td class="tcc ">  {{$item->admin_name}} </td>
+                                <td class="tcc ">  {{$item->ip}} </td>
                                 <td class="tcc ">  {{$item->created_at}} </td>
                                 <td>  {{$item->LogDesc}} </td>
                                 <td class="tcc ">

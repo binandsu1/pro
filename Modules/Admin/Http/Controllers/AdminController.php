@@ -51,8 +51,7 @@ class AdminController extends \App\Http\Controllers\AdminController
     protected function attemptLogin(Request $request)
     {
         $data = $request->only('name', 'password');
-//        $data['status'] = 0;
-//        $data['hr_status'] = 'A';
+        $data['status'] = 1;
         // 验证登录的逻辑
          $login_status = $this->auth->attempt(
             $data,

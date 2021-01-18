@@ -12,17 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |->middleware('auth')
 */
-Route::match(['get', 'post'],'/login', 'AdminController@login')->name('admin.login')->middleware('auth');
-
 Route::get('/', function () {
     return redirect(route('admin'));
 })->middleware('auth');
-
-Route::get('/login', function () {
-    return view('welcome');
-})->middleware('auth');
-
-Route::middleware(['auth:sanctum', 'verified','auth'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-

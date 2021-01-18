@@ -34,7 +34,6 @@ class AdminController extends \App\Http\Controllers\AdminController
 
     protected function validateLogin(Request $request)
     {
-        dd($request);
         $request->validate([
             'name' => 'required|string|min:3|max:10',
             'password' => 'required|string|min:3|max:10',
@@ -173,7 +172,6 @@ class AdminController extends \App\Http\Controllers\AdminController
                 'password.min' => '密码最少3字符',
                 'password.max' => '密码最多20字符',
             ]);
-            echo 1;die;
             $user = User::create([
                 'name' => $request->input('name'),
                 'password' => Hash::make($request->input('password')),

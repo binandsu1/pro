@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |->middleware('auth')
 */
+Route::match(['get', 'post'],'/login', 'AdminController@login')->name('admin.login')->middleware('auth');
 
 Route::get('/', function () {
     return redirect(route('admin'));

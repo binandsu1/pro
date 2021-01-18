@@ -34,6 +34,7 @@ class AdminController extends \App\Http\Controllers\AdminController
 
     protected function validateLogin(Request $request)
     {
+        dd($request);
         $request->validate([
             'name' => 'required|string|min:3|max:10',
             'password' => 'required|string|min:3|max:10',
@@ -158,21 +159,21 @@ class AdminController extends \App\Http\Controllers\AdminController
         if ($request->method() == 'GET') {
             return view('admin::register');
         }
-
         if ($request->method() == 'POST') {
             $request->validate([
                 'name' => 'required|string|min:3|max:10',
-                'password' => 'required|string|min:3|max:10',
+                'password' => 'required|string|min:3|max:10|same:password',
+                'password_confirmation' => 'required|same:password'
             ], [
                 'name.required' => '请输入用户名',
                 'name.min' => '用户名最少3字符',
                 'name.max' => '用户名最多10字符',
                 'password.required' => '请输入密码',
-                'password.confirmed' => '两次密码输入不一致',
+                'password_confirmation.same' => ('两次密码输入不一致'),
                 'password.min' => '密码最少3字符',
                 'password.max' => '密码最多20字符',
             ]);
-
+            echo 1;die;
             $user = User::create([
                 'name' => $request->input('name'),
                 'password' => Hash::make($request->input('password')),

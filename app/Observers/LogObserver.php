@@ -22,7 +22,7 @@ class LogObserver
             't_id' => $model->getKey(),
             'table' => $model->getTable(),
             'admin_id' => $auth->id(),
-            'admin_name' => $auth->user()->name,
+            //'admin_name' => $auth->user()->name,
             'data' => json_encode($model->getAttributes())
         ];
         $this->pushJobSend($data);

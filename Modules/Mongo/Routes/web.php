@@ -14,4 +14,5 @@
 Route::prefix('mongo')->group(function() {
     Route::get('/index', 'MongoController@index')->name('admin.mongo.index');
     Route::get('/list', 'MongoController@list')->name('admin.mongo.list');
+    Route::match(['get','post'],'/mongoadd', 'MongoController@mongoadd')->name('admin.mongo.mongo-add');
 });

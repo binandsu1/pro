@@ -91,7 +91,7 @@ return [
             'prefix_indexes' => true,
         ],
 
-        'xdo_crm_data' => [
+        'yan_data' => [
             'driver' => 'mongodb',
             'host' => env('DB_MONGO_HOST', '39.105.54.131'),
             'port' => env('DB_MONGO_PORT', 27077),

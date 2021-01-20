@@ -1,11 +1,10 @@
 <?php
 namespace Modules\System\Models;
-
-use App\Models\XdoBase;
 use Jenssegers\Mongodb\Eloquent\Model;
 
-abstract class BaseMongo extends XdoBase
+abstract class BaseMongo extends Model
 {
-    protected $connection = 'mongo_data';
+    protected $connection = 'yan_data';
     protected $guarded = [];
+
 }

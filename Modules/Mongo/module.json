@@ -1,0 +1,13 @@
+{
+    "name": "Mongo",
+    "alias": "mongo",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mongo\\Providers\\MongoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

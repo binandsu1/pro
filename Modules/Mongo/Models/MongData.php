@@ -10,5 +10,5 @@ class MongData extends BaseMongo
 {
     use HasFactory,SoftDeletes;
     protected $guarded = [];
-
+  
 }

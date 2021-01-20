@@ -91,6 +91,18 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'xdo_crm_data' => [
+            'driver' => 'mongodb',
+            'host' => env('DB_MONGO_HOST', '39.105.54.131'),
+            'port' => env('DB_MONGO_PORT', 27077),
+            'database' => env('DB_MONGO_DATABASE', 'xdo_crm'),
+            'username' => env('DB_MONGO_USERNAME', ''),
+            'password' => env('DB_MONGO_PASSWORD', ''),
+            'options' => [
+                'database' => env('DB_MONGO_AUTHENTICATION_DATABASE', 'admin'), // required with Mongo 3+
+            ],
+        ],
+
     ],
 
     /*

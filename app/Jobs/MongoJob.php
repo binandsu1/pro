@@ -13,7 +13,7 @@ use Modules\Mongo\Models\MongData;
 class MongoJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
+    protected  $i;
     /**
      * Create a new job instance.
      *

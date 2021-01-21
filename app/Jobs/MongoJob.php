@@ -43,8 +43,14 @@ class MongoJob implements ShouldQueue
         $add["roundF"] = rand(100000, 999999);
         $add["roundG"] = rand(100000, 999999);
         $add["roundH"] = rand(100000, 999999);
+        $add["is_over"] = 0;
         $model = new MongData();
         $model->fill($add);
-        $model->save();
+        $sa = $model->insertGetId($add);
+        if($sa){
+            $wosa = $model->find($sa);
+            $wosa->is_over = 1;
+            $wosa->save();
+        }
     }
 }

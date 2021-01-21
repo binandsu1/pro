@@ -27,7 +27,10 @@ class MongoController extends AdminController
     {
         $query = MongData::orderBy('id','desc');
         $list = $query->paginate(10)->appends($request->all());
-        return view('mongo::list',compact('list'));
+        $total_arr = [];
+        $total_arr["success"] = MongData::where("is_over",1)->count();
+        $total_arr["error"] = MongData::where("is_over",0)->count();
+        return view('mongo::list',compact('list','total_arr'));
     }
 
     public function mongoadd(Request $request){
@@ -39,8 +42,8 @@ class MongoController extends AdminController
             throw new \Exception('');
         }
 
-        for($i=0;$i<=$num;$i++){
-            MongoJob::dispatch($i);
+        for($i=1;$i<=$num;$i++){
+            MongoJob::dispatchNow($i);
         }
         return $this->returnSuccess();
     }

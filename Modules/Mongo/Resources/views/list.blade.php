@@ -11,10 +11,9 @@
     </section>
     <section class="content">
         <div class="box box-solid">
-
             <div class="box-header with-border">
-                <span class="box-title">
-
+                <span class="">
+                    数组总计 {{$list->total()}} 条  成功 {{$total_arr["success"]}} 条   &nbsp;  失败 {{$total_arr["error"]}} 条
                 </span>
                 <div class="box-tools pull-right">
                     <a class='btn btn-sm btn-success xdo-remote-form'
@@ -37,7 +36,8 @@
                         <th width="8%" class="tcc">roundF</th>
                         <th width="8%" class="tcc">roundG</th>
                         <th width="8%" class="tcc">roundH</th>
-                        <th width="15%" class="tcc">创建时间</th>
+                        <th width="5%" class="tcc">状态</th>
+                        <th width="15%" class="tcc">时间</th>
                     </tr>
 
                     </thead>
@@ -55,7 +55,12 @@
                                 <td class="tcc">  {{$item->roundF}} </td>
                                 <td class="tcc">  {{$item->roundG}} </td>
                                 <td class="tcc">  {{$item->roundH}} </td>
-                                <td class="tcc">  {{$item->created_at}} </td>
+                                @if($item->is_over == 1)
+                                <td class="tcc" style="color: green"> sucess  </td>
+                                @else
+                                    <td class="tcc id-txt"> error</td>
+                                @endif
+                                <td class="tcc">  {{$item->updated_at}} </td>
                             </tr>
                         @endforeach
                     @endif

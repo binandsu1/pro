@@ -25,7 +25,7 @@ class MongoController extends AdminController
      */
     public function list(Request $request)
     {
-        $query = MongData::orderBy('id','desc');
+        $query = MongData::orderBy('updated_at','desc');
         $list = $query->paginate(10)->appends($request->all());
         $total_arr = [];
         $total_arr["success"] = MongData::where("is_over",1)->count();

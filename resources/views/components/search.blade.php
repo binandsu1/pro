@@ -8,10 +8,13 @@
             <div class="col-sm-1 xdo-search-title text-left"><span class="text-gray"><i class="fa fa-filter"></i> 筛选</span></div>
             <div class="col-sm-10 text-center">
                 {{ $slot }}
-                <a href="<?=$resetUrl?>" type="reset" class="btn btn-default btn-xs">
-                    <i class="fa fa-times"></i> 重置 </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" class="btn btn-warning btn-xs to-search">
                     <i class="fa fa-search"></i> 搜索</button>
+
+                <a href="<?=$resetUrl?>" type="reset" class="btn btn-danger btn-xs">
+                    <i class="fa fa-times"></i> 重置 </a>
+
                 <?php if($excel):?>
                 <button type="submit" name="excel" value="1" class="btn btn-success btn-xs">
                     <i class="fa fa-file-excel-o"></i> Excel</button>

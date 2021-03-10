@@ -3,10 +3,13 @@
 namespace Modules\Curd\Http\Controllers;
 
 use App\Events\AddUserEvent;
+use App\Exports\CurdExport;
 use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Modules\Curd\Http\Middleware\XdoDataMidd;
 use Modules\Curd\Models\XdoData;
+use Modules\Outbound\Exports\RecordLogExports;
 
 class CurdController extends AdminController
 {
@@ -20,7 +23,14 @@ class CurdController extends AdminController
     public function demo1(Request $request)
     {
         $query = XdoData::orderBy('id','desc');
+        $excel = $request->input('excel');
         $where = $this->getParasSel($request->all());
+        if($excel){
+            $data = $query->where($where)->get();
+            $exports = new CurdExport($data);
+            $title = sprintf('数据导出'.date('Y-m-d-H-i-s').'.xlsx');
+            return Excel::download($exports, $title);
+        }
         $list = $query->where($where)->paginate(10)->appends($request->all());
         return view('curd::admin.demo1',compact('list'));
     }

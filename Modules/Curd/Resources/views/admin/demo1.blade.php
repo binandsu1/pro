@@ -2,11 +2,11 @@
 @section('content')
     <section class="content-header">
         <h1>
-            数据列表 - 横
+            数据列表 - 横111
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Laravel </a></li>
-            <li class="active">基础页面1</li>
+            <li class="active">基础页面</li>
             <li class="active">数据列表</li>
             <li class="active">横</li>
         </ol>

@@ -2,7 +2,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            数据列表 - 横3
+            数据列表 - 横
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Laravel </a></li>

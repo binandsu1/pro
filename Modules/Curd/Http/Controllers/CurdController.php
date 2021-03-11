@@ -18,7 +18,7 @@ class CurdController extends AdminController
      * @is_menu 1
      */
     //* ./artisan vendor:publish --tag=laravel-pagination  分页
-    //* Paginator::useBootstrap();
+    //* Paginator::useBootstrap();1
     //* use Illuminate\Pagination\Paginator;
     public function demo1(Request $request)
     {

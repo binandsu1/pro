@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>peace yo~</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-{{--<?php if (is_prod()) : ?>--}}
-{{--<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->--}}
+    {{--<?php if (is_prod()) : ?>--}}
+    {{--<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->--}}
     {{--<?php endif; ?>--}}
     <link rel="stylesheet" href="<?=static_url("/libs/layui/src/css/layui.css", true)?>"/>
     <link rel="stylesheet" href="<?=static_url("/libs/layui/dist/css/layui.css", true)?>"/>
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?=static_url("/libs/datetime-picker/css/bootstrap-datetimepicker.css", true)?>"/>
     <link rel="stylesheet" href="<?=static_url("/libs/iCheck/minimal/_all.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/jquery-treetable/css/treetable.css", true)?>">
+    <link rel="stylesheet" href="<?=static_url("/libs/layer/theme/default/layer.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/jquery-treetable/css/theme.mysite.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/webuploader/webuploader.css", true)?>"/>
 
@@ -41,8 +42,12 @@
     <script src="<?=static_url("/libs/moment/locale/zh-cn.js", true)?>"></script>
     <script src="<?=static_url("/libs/ueditor/ueditor.config.js")?>"></script>
     <script src="<?=static_url("/libs/ueditor/ueditor.all.js")?>"></script>
+    <!--<script src="/static/libs/bootstrap-daterangepicker/daterangepicker.js"></script>-->
+    <!--<script src="/static/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>-->
     <script src="<?=static_url("/libs/datetime-picker/js/bootstrap-datetimepicker.min.js", true)?>"></script>
     <script src="<?=static_url("/libs/jquery-slimscroll/jquery.slimscroll.min.js", true)?>"></script>
+    <script src="<?=static_url("/libs/layer/layer.js", true)?>"></script>
+    <!--<script src="/static/libs/fastclick/lib/fastclick.js"></script>-->
     <script src="<?=static_url('/admin/js/adminlte.min.js', true)?>"></script>
     <script src="<?=static_url("/libs/jquery-treetable/jquery.treetable.js", true)?>"></script>
     <script src="<?=static_url("/libs/select2/js/select2.full.min.js", true)?>"></script>
@@ -268,28 +273,28 @@
         }
 
         .z-txt {
-        font-size: 0.9em;
-        color: #D52BB3;
+            font-size: 0.9em;
+            color: #D52BB3;
         }
 
         .h-txt {
-        font-size: 0.9em;
-        color: #DDDD00;
+            font-size: 0.9em;
+            color: #DDDD00;
         }
 
         .wa-txt {
-        font-size: 0.9em;
-        padding: 0.3em 1.8em 0.2em;
-        font-size: 65% !important;
-        color: green;
+            font-size: 0.9em;
+            padding: 0.3em 1.8em 0.2em;
+            font-size: 65% !important;
+            color: green;
         }
 
         .sl-txt {
-        font-size: 0.9em;
-        font-weight: 200;
-        padding: 0.3em 1.3em 0.2em;
-        font-size: 65% !important;
-        color: red;
+            font-size: 0.9em;
+            font-weight: 200;
+            padding: 0.3em 1.3em 0.2em;
+            font-size: 65% !important;
+            color: red;
         }
 
 
@@ -1102,20 +1107,20 @@
 
     <div class="content-wrapper">
 
-@if(getDebugStatus() == 1)
-<div class="alert alert-warning alert-dismissible" style="margin:10px 10px 0px 10px;font-size:1.3em; font-size:14px;" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <?php
-       echo getSqlShow();
-    ?>
-</div>
-@endif
+        @if(getDebugStatus() == 1)
+            <div class="alert alert-warning alert-dismissible" style="margin:10px 10px 0px 10px;font-size:1.3em; font-size:14px;" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <?php
+                echo getSqlShow();
+                ?>
+            </div>
+        @endif
 
-      <div class="alert alert-success alert-dismissible" style="margin:10px 10px 0px 10px;font-size:1.3em">
-Laravel 8 peace && love - <a href="https://xueyuanjun.com/books/laravel-docs-8" target='_blank' style="text-decoration:none;">学院君</a>
-- <a href="https://v3.bootcss.com/components/" target='_blank' style="text-decoration:none;">bootstrap </a>
-</div>
-      @yield('content')
+        <div class="alert alert-success alert-dismissible" style="margin:10px 10px 0px 10px;font-size:1.3em">
+            Laravel 8 peace && love - <a href="https://xueyuanjun.com/books/laravel-docs-8" target='_blank' style="text-decoration:none;">学院君</a>
+            - <a href="https://v3.bootcss.com/components/" target='_blank' style="text-decoration:none;">bootstrap </a>
+        </div>
+        @yield('content')
     </div>
     <div class="main-footer">
         @include('admin::footer')
@@ -1224,3 +1229,4 @@ Laravel 8 peace && love - <a href="https://xueyuanjun.com/books/laravel-docs-8" 
 </body>
 
 </html>
+

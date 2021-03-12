@@ -8,6 +8,8 @@
 {{--<?php if (is_prod()) : ?>--}}
 {{--<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->--}}
     {{--<?php endif; ?>--}}
+    <link rel="stylesheet" href="<?=static_url("/libs/layui/src/css/layui.css", true)?>"/>
+    <link rel="stylesheet" href="<?=static_url("/libs/layui/dist/css/layui.css", true)?>"/>
     <link rel="stylesheet" href="<?=static_url("/libs/bootstrap/css/bootstrap.min.css", true)?>"/>
     <link rel="stylesheet" href="<?=static_url("/libs/bootstrap/css/tag.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/font-awesome/css/font-awesome.min.css")?>"/>
@@ -18,7 +20,6 @@
     <link rel="stylesheet" href="<?=static_url("/libs/datetime-picker/css/bootstrap-datetimepicker.css", true)?>"/>
     <link rel="stylesheet" href="<?=static_url("/libs/iCheck/minimal/_all.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/jquery-treetable/css/treetable.css", true)?>">
-    <link rel="stylesheet" href="<?=static_url("/libs/layer/theme/default/layer.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/jquery-treetable/css/theme.mysite.css", true)?>">
     <link rel="stylesheet" href="<?=static_url("/libs/webuploader/webuploader.css", true)?>"/>
 
@@ -40,17 +41,16 @@
     <script src="<?=static_url("/libs/moment/locale/zh-cn.js", true)?>"></script>
     <script src="<?=static_url("/libs/ueditor/ueditor.config.js")?>"></script>
     <script src="<?=static_url("/libs/ueditor/ueditor.all.js")?>"></script>
-    <!--<script src="/static/libs/bootstrap-daterangepicker/daterangepicker.js"></script>-->
-    <!--<script src="/static/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>-->
     <script src="<?=static_url("/libs/datetime-picker/js/bootstrap-datetimepicker.min.js", true)?>"></script>
     <script src="<?=static_url("/libs/jquery-slimscroll/jquery.slimscroll.min.js", true)?>"></script>
-    <script src="<?=static_url("/libs/layer/layer.js", true)?>"></script>
-    <!--<script src="/static/libs/fastclick/lib/fastclick.js"></script>-->
     <script src="<?=static_url('/admin/js/adminlte.min.js', true)?>"></script>
     <script src="<?=static_url("/libs/jquery-treetable/jquery.treetable.js", true)?>"></script>
     <script src="<?=static_url("/libs/select2/js/select2.full.min.js", true)?>"></script>
     <script src="<?=static_url("/libs/webuploader/webuploader.js", true)?>"></script>
     <script src="<?=static_url('/admin/js/xdo.js?v=20200717', true)?>"></script>
+    <script src="<?=static_url('/libs/layui/src/layui.js', true)?>"></script>
+    <script src="<?=static_url('/libs/layui/dist/layui.js', true)?>"></script>
+
 
 
     <meta name="csrf-token" content="{{ csrf_token() }}">

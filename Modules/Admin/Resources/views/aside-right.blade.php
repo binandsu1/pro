@@ -36,8 +36,8 @@ table.xdo-role-box td {
           <?php $isCurr = $auth->isCurrRole($c['id'], $r['id'], $s['id'])?>
           <?php $query = ['cid'=>$c['id'], 'rid'=>$r['id'],'sid'=>$s['id']]?>
           <tr class="<?=ifelse($isCurr, 'active')?>">
-            <td class="tcc"><?=$c['name']?> </td> 
-            <td class="tcc"><?=$r['group_name']?></td> 
+            <td class="tcc"><?=$c['name']?> </td>
+            <td class="tcc"><?=$r['group_name']?></td>
             <td class="tcc"><?=$s['name_short']?></td>
             <td class="options">
               <a href="<?=route('admin.auth.toggle-role', $query)?>"
@@ -51,8 +51,8 @@ table.xdo-role-box td {
           <?php $isCurr = $auth->isCurrRole($c['id'], $r['id'], 0) ?>
           <?php $query = ['cid'=> $c['id'], 'rid'=> $r['id'],'sid'=> 0]?>
           <tr class="<?=ifelse($isCurr, 'active')?>">
-            <td class="tcc"><?=$c['name']?></td> 
-            <td class="tcc"><?=$r['group_name']?></td> 
+            <td class="tcc"><?=$c['name']?></td>
+            <td class="tcc"><?=$r['group_name']?></td>
             <td class="tcc">&nbsp;</td>
             <td class="options">
               <a href="<?=route('admin.auth.toggle-role', $query)?>"

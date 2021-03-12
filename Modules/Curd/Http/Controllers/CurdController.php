@@ -49,7 +49,7 @@ class CurdController extends AdminController
 
     /**
      * @name 按钮样式
-     * @is_menu 1
+     * @is_menu 0
      */
     public function button(Request $request)
     {

@@ -33,9 +33,10 @@
                         <th width="5%" class="tcc">数据填充</th>
                         <th width="5%" class="tcc">数据填充</th>
                         <th width="5%" class="tcc">数据填充</th>
+                        <th width="5%" class="tcc">数据填充</th>
                         <th width="8%" class="tcc">创建时间</th>
                         <th width="8%" class="tcc">更新时间</th>
-                        <th width="15%" class="tcc">操作</th>
+                        <th width="10%" class="tcc">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,7 @@
                                 <td class="tcc id-txt">--</td>
                                 <td class="tcc"> --</td>
                                 <td class="tcc"> --</td>
+                                <td class="tcc"> --</td>
                                 <td class="tcc ">  {{$item->created_at}} </td>
                                 <td class="tcc ">  {{$item->updated_at}} </td>
                                 <td class="tcc ">
@@ -68,12 +70,7 @@
                                            href="{{route('laravel.system.prohibit',['id'=>$item->id,'status'=>2])}}">
                                             限制登录</a>
                                     @endif
-                                    <a class="btn btn-xs btn-info xdo-remote-form"
-                                       href="{{route('admin.curd.demo-add',['id'=>$item->id])}}"> <i
-                                            class="fa fa-pencil"></i> 编辑 </a>
-                                    <a class="btn btn-xs btn-danger xdo-confirm" title="确定要删除数据"
-                                       href="{{route('admin.curd.demo-del',['id'=>$item->id])}}"> <i
-                                            class="fa fa-trash"></i> 删除 </a>
+
                                 </td>
                             </tr>
                         @endforeach

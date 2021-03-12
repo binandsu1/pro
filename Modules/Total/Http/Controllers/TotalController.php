@@ -9,7 +9,7 @@ use Illuminate\Routing\Controller;
 class TotalController extends Controller
 {
     /**
-     * @name 统计图-柱
+     * @name Layer
      * @is_menu 1
      */
     public function totalZ()
@@ -18,7 +18,7 @@ class TotalController extends Controller
     }
 
     /**
-     * @name 统计图-饼
+     * @name xxx
      * @is_menu 1
      */
     public function totalB()
@@ -27,7 +27,7 @@ class TotalController extends Controller
     }
 
     /**
-     * @name 统计图-线
+     * @name xxx
      * @is_menu 1
      */
     public function totalQ()

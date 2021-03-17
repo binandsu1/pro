@@ -4,6 +4,9 @@
         margin-left: 10px;
 
     }
+    .dd{
+        margin-top: 10px;
+    }
 </style>
 @extends('layouts.admin')
 @section('content')
@@ -18,7 +21,7 @@
         </ol>
     </section>
     <section class="content">
-        <div class="box box-solid">
+        <div class="box box-solid" id="layerDemo">
 {{--            按鈕--}}
             <div class="no-padding box-body" style="overflow:hidden;">
                 <fieldset class="layui-elem-field site-demo-button" style="margin-top: 30px;">
@@ -29,6 +32,13 @@
                         <button type="button" class="layui-btn layui-btn-warm">暖色按钮</button>
                         <button type="button" class="layui-btn layui-btn-danger">警告按钮</button>
                         <button type="button" class="layui-btn layui-btn-disabled">禁用按钮</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="t1()">弹</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="t2()">弹</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="t3()">弹</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="z1()">转</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="z2()">转</button>
+                        <button type="button" class="layui-btn layui-btn-primary" onclick="z3()">转</button>
+                        <button data-method="setTop" class="layui-btn">多弹屏</button>
                     </div>
                     <div class="a">
                         <button type="button" class="layui-btn layui-btn-warm layui-btn-lg ">大型按钮</button>
@@ -542,6 +552,39 @@
 
             </div>
 
+            <div class="layui-bg-red dd">&nbsp;</div>
+            <div class="layui-bg-orange dd">&nbsp;</div>
+            <div class="layui-bg-green dd">&nbsp;</div>
+            <div class="layui-bg-cyan dd">&nbsp;</div>
+            <div class="layui-bg-blue dd">&nbsp;</div>
+            <div class="layui-bg-black dd">&nbsp;</div>
+
+            <div class="layui-tab">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">tab1</li>
+                    <li>tab2</li>
+                    <li>tab3</li>
+                    <li>tab4</li>
+                    <li>tab5</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">tab1 content</div>
+                    <div class="layui-tab-item">tab2 content</div>
+                    <div class="layui-tab-item">tab3 content</div>
+                    <div class="layui-tab-item">tab4 content</div>
+                    <div class="layui-tab-item">tab5 content</div>
+                </div>
+            </div>
+
+            <script>
+                //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+                layui.use('element', function(){
+                    var element = layui.element;
+
+                    //…
+                });
+            </script>
+
 
             <div class="box-footer text-center">
             </div>
@@ -618,5 +661,119 @@
             });
 
         });
+
+        function t1(){
+            layer.msg('hello');
+        }
+        function t2(){
+            layer.alert('酷毙了', {icon: 1});
+        }
+        function t3(){
+            layer.msg('不开心。。', {icon: 5});
+        }
+        function z1(){
+            layer.load(1,{time: 3*1000});
+
+        }
+        function z2(){
+            layer.load(2,{time: 3*1000});
+            // window.setTimeout(function(){
+            //     window.location.reload();
+            // }, 3000);
+        }
+        function z3(){
+            layer.load(3,{time: 3*1000});
+
+        }
+
+    </script>.
+
+    <script>
+        layui.use('layer', function(){ //独立版的layer无需执行这一句
+            //触发事件
+            var active = {
+                setTop: function(){
+                    var that = this;
+                    //多窗口模式，层叠置顶
+                    layer.open({
+                        type: 2 //此处以iframe举例
+                        ,title: '标题'
+                        ,area: ['390px', '260px']
+                        ,shade: 0
+                        ,maxmin: true
+                        ,offset: [ //为了演示，随机坐标
+                            Math.random()*($(window).height()-300)
+                            ,Math.random()*($(window).width()-390)
+                        ]
+                        ,content: '//layer.layui.com/test/settop.html'
+                        ,btn: ['继续弹出', '全部关闭'] //只是为了演示
+                        ,yes: function(){
+                            $(that).click();
+                        }
+                        ,btn2: function(){
+                            layer.closeAll();
+                        }
+
+                        ,zIndex: layer.zIndex //重点1
+                        ,success: function(layero){
+                            layer.setTop(layero); //重点2
+                        }
+                    });
+                }
+                ,confirmTrans: function(){
+                    //配置一个透明的询问框
+                    layer.msg('大部分参数都是可以公用的<br>合理搭配，展示不一样的风格', {
+                        time: 20000, //20s后自动关闭
+                        btn: ['明白了', '知道了', '哦']
+                    });
+                }
+                ,notice: function(){
+                    //示范一个公告层
+                    layer.open({
+                        type: 1
+                        ,title: false //不显示标题栏
+                        ,closeBtn: false
+                        ,area: '300px;'
+                        ,shade: 0.8
+                        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                        ,btn: ['火速围观', '残忍拒绝']
+                        ,btnAlign: 'c'
+                        ,moveType: 1 //拖拽模式，0或者1
+                        ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
+                        ,success: function(layero){
+                            var btn = layero.find('.layui-layer-btn');
+                            btn.find('.layui-layer-btn0').attr({
+                                href: 'http://www.layui.com/'
+                                ,target: '_blank'
+                            });
+                        }
+                    });
+                }
+                ,offset: function(othis){
+                    var type = othis.data('type')
+                        ,text = othis.text();
+
+                    layer.open({
+                        type: 1
+                        ,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                        ,id: 'layerDemo'+type //防止重复弹出
+                        ,content: '<div style="padding: 20px 100px;">'+ text +'</div>'
+                        ,btn: '关闭全部'
+                        ,btnAlign: 'c' //按钮居中
+                        ,shade: 0 //不显示遮罩
+                        ,yes: function(){
+                            layer.closeAll();
+                        }
+                    });
+                }
+            };
+
+            $('#layerDemo .layui-btn').on('click', function(){
+                var othis = $(this), method = othis.data('method');
+                active[method] ? active[method].call(this, othis) : '';
+            });
+
+        });
     </script>
+
 @stop

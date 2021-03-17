@@ -24,6 +24,32 @@
         <div class="box box-solid" id="layerDemo">
 {{--            按鈕--}}
             <div class="no-padding box-body" style="overflow:hidden;">
+
+                <div class="layui-bg-red dd">&nbsp;</div>
+                <div class="layui-bg-orange dd">&nbsp;</div>
+                <div class="layui-bg-green dd">&nbsp;</div>
+                <div class="layui-bg-cyan dd">&nbsp;</div>
+                <div class="layui-bg-blue dd">&nbsp;</div>
+                <div class="layui-bg-black dd">&nbsp;</div>
+
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">tab1</li>
+                        <li>tab2</li>
+                        <li>tab3</li>
+                        <li>tab4</li>
+                        <li>tab5</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">tab1 content</div>
+                        <div class="layui-tab-item">tab2 content</div>
+                        <div class="layui-tab-item">tab3 content</div>
+                        <div class="layui-tab-item">tab4 content</div>
+                        <div class="layui-tab-item">tab5 content</div>
+                    </div>
+                </div>
+
+
                 <fieldset class="layui-elem-field site-demo-button" style="margin-top: 30px;">
                     <div class="a">
                         <button type="button" class="layui-btn layui-btn-primary">原始按钮</button>
@@ -552,29 +578,7 @@
 
             </div>
 
-            <div class="layui-bg-red dd">&nbsp;</div>
-            <div class="layui-bg-orange dd">&nbsp;</div>
-            <div class="layui-bg-green dd">&nbsp;</div>
-            <div class="layui-bg-cyan dd">&nbsp;</div>
-            <div class="layui-bg-blue dd">&nbsp;</div>
-            <div class="layui-bg-black dd">&nbsp;</div>
 
-            <div class="layui-tab">
-                <ul class="layui-tab-title">
-                    <li class="layui-this">tab1</li>
-                    <li>tab2</li>
-                    <li>tab3</li>
-                    <li>tab4</li>
-                    <li>tab5</li>
-                </ul>
-                <div class="layui-tab-content">
-                    <div class="layui-tab-item layui-show">tab1 content</div>
-                    <div class="layui-tab-item">tab2 content</div>
-                    <div class="layui-tab-item">tab3 content</div>
-                    <div class="layui-tab-item">tab4 content</div>
-                    <div class="layui-tab-item">tab5 content</div>
-                </div>
-            </div>
 
             <script>
                 //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
@@ -650,7 +654,7 @@
                     ,"like[write]": true //复选框选中状态
                     ,"close": true //开关状态
                     ,"sex": "女"
-                    ,"desc": "peace ha"
+                    ,"desc": "peace yo"
                 });
             });
 
@@ -669,7 +673,7 @@
             layer.alert('酷毙了', {icon: 1});
         }
         function t3(){
-            layer.msg('不开心。。', {icon: 5});
+            layer.msg('不开心', {icon: 5});
         }
         function z1(){
             layer.load(1,{time: 3*1000});

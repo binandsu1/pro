@@ -18,7 +18,7 @@ class TotalController extends Controller
     }
 
     /**
-     * @name xxx
+     * @name Vue
      * @is_menu 1
      */
     public function totalB()
@@ -27,7 +27,7 @@ class TotalController extends Controller
     }
 
     /**
-     * @name xxx
+     * @name xxxx
      * @is_menu 1
      */
     public function totalQ()

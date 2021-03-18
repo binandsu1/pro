@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Modules\Curd\Models\XdoLog;
+use Modules\System\Http\Middleware\RoleAddMidd;
+use Modules\System\Models\XdoRole;
 
 class SystemController extends AdminController
 {
@@ -27,7 +29,48 @@ class SystemController extends AdminController
      */
     public function role()
     {
-        return view('system::role');
+        $query = XdoRole::orderBy('id','DESC');
+        $list = $query->paginate(10);
+        return view('system::role',compact('list'));
+    }
+
+    /**
+     * @name 添加角色
+     */
+    public function roleAdd(Request $request)
+    {
+        $id = $request->input('id');
+        $name = $request->input('name');
+        $data = XdoRole::find($id);
+        if($request->method() == 'POST'){
+            app()->make(RoleAddMidd::class);
+            $data['role_name'] = $name;
+            $add_re = $id ? $data->save() : XdoRole::create($data);
+            if($add_re){
+                return $this->returnSuccess();
+            }
+        }
+        return view('system::role-add',compact('data'));
+
+    }
+
+    public function roleDel(Request $request){
+        $id = $request->input('id');
+        $del_re = XdoRole::find($id)->delete();
+        if($del_re){
+            return $this->returnSuccess();
+        }
+    }
+
+    public function roleUpStatus(Request $request){
+        $id = $request->input('id');
+        $status = $request->input('status');
+        $role = XdoRole::find($id);
+        $role->status = $status;
+        $up_re = $role->save();
+        if($up_re){
+            return $this->returnSuccess();
+        }
     }
 
     /**

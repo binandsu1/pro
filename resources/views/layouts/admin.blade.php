@@ -242,6 +242,14 @@
             font-size: 0.9em;
         }
 
+        .green-txt {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            color: #0E9A00;
+            /*(background-color: #f5f5f5;*/
+            font-size: 0.9em;
+        }
+
         .price-txt {
             font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
             "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

@@ -8,20 +8,20 @@ $section =1;
 ?>
   <section class="sidebar" style="height: auto;">
     <ul class="sidebar-menu tree" data-widget="tree" data-animation-speed="120">
-      <li class="header">
-        <div class="row xdo-sec-box">
-          <div class="col-sm-6" style="padding:0px 5px 0px 10px">
-            <button data-section="1" class="xdo-sec-btn btn btn-xs btn-block <?=ifelse($section == 1, 'btn-danger', 'btn-default')?>">
-              Laravel
-            </button>
-          </div>
-          <div class="col-sm-6" style="padding:0px 0px 0px 5px">
-            <button data-section="2" class="xdo-sec-btn btn btn-xs btn-block <?=ifelse($section == 2, 'btn-danger', 'btn-default')?>">
-              其他学习
-            </button>
-          </div>
-        </div>
-      </li>
+{{--      <li class="header">--}}
+{{--        <div class="row xdo-sec-box">--}}
+{{--          <div class="col-sm-6" style="padding:0px 5px 0px 10px">--}}
+{{--            <button data-section="1" class="xdo-sec-btn btn btn-xs btn-block <?=ifelse($section == 1, 'btn-danger', 'btn-default')?>">--}}
+{{--              Laravel--}}
+{{--            </button>--}}
+{{--          </div>--}}
+{{--          <div class="col-sm-6" style="padding:0px 0px 0px 5px">--}}
+{{--            <button data-section="2" class="xdo-sec-btn btn btn-xs btn-block <?=ifelse($section == 2, 'btn-danger', 'btn-default')?>">--}}
+{{--              其他学习--}}
+{{--            </button>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--      </li>--}}
       <?php foreach($menus as $menu):?>
 
       <?php if($menu['active']):?>

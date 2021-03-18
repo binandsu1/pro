@@ -8,8 +8,8 @@ $user = auth('web')->user();
       <img src="<?=static_url('admin/img/xl1.png')?>" width="30"/>
     </span>
     <span class="logo-lg" style="margin-left:-10px;">
-      {{--<img src="<?=static_url('admin/img/log3.jpg')?>" width="100"/>--}}
-      {{--<span style="font-size:10px;">logo</span>--}}
+{{--      <img src="<?=static_url('admin/img/log3.jpg')?>" width="100"/>--}}
+      <span style="font-size:28px;">I'm a logo</span>
     </span>
 </a>
 <nav class="navbar navbar-static-top">
@@ -21,7 +21,7 @@ $user = auth('web')->user();
 
             <li class="hidden-xs hidden-sm hidden-md">
                 <form class="navbar-form navbar-left" method="get" action="<?=route('admin.search.global')?>">
-                    <div class="form-group">
+                    <div class="form-group" >
                         全局搜索：
                         <div class="input-group  input-group-sm" style="width:180px;">
                             <input type="text" class="form-control" name="_value" value="<?=request('_value')?>"

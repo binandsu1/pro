@@ -79,7 +79,10 @@ class SystemController extends AdminController
      */
     public function roleSet(Request $request)
     {
-        return view('system::role-set');
+
+        $role_list = XdoRole::get();
+        $modules = app('xdo.action')->getAdminActions();
+        return view('system::role-set',compact('role_list','modules'));
     }
 
     /**

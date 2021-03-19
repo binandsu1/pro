@@ -48,15 +48,17 @@ class CurdController extends AdminController
     }
 
     /**
-     * @name 按钮样式
+     * @name peace
      * @is_menu 0
      */
     public function button(Request $request)
     {
-
         return view('curd::admin.button');
     }
-
+    /**
+     * @name 数据添加
+     * @is_menu 0
+     */
     public function demoAdd(Request $request){
         $id = $request->input('id');
         $data = XdoData::find($id);
@@ -74,7 +76,10 @@ class CurdController extends AdminController
         return $this->returnError("学生保存失败");
 
     }
-
+    /**
+     * @name 数据删除
+     * @is_menu 0
+     */
     public function demoDel(Request $request){
         $id = $request->input('id');
         $del_re = XdoData::find($id)->delete();
@@ -82,7 +87,10 @@ class CurdController extends AdminController
             return $this->returnSuccess();
         }
     }
-
+    /**
+     * @name 数据查看
+     * @is_menu 0
+     */
     public function demoSel(Request $request)
     {
         $id = $request->input('id');

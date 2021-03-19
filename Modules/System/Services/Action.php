@@ -355,9 +355,7 @@ class Action extends \App\Services\XdoService
    * 得到所有的AdminAction
    */
   public function getAdminActions() {
-    $menus = \Cache::rememberForever('adminActions', function() {
-      return $this->genAdminActions();
-    });
+    $menus =  $this->genAdminActions();
     return $menus;
   }
 
@@ -367,7 +365,7 @@ class Action extends \App\Services\XdoService
   public function genAdminActions() {
     $records = XdoAction::whereNotIn('module', static::$exceptModules)
                 ->where('type', 'action')
-                ->where('subdir', 'admin')
+//                ->where('subdir', 'admin')
                 ->get();
 //获得所有后台（subdir admin）动作（action）
     $moduleNames = $records->pluck('module')->unique()->toArray();

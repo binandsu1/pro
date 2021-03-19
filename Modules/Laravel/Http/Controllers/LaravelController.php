@@ -51,6 +51,10 @@ class LaravelController extends AdminController
         return view('laravel::admin.artisan-info');
     }
 
+    /**
+     * @name 命令添加
+     * @is_menu 0
+     */
     public function artisanAdd(Request $request)
     {
         $id = $request->input('id');
@@ -66,7 +70,10 @@ class LaravelController extends AdminController
         }
         return $this->returnError("脚本保存失败");
     }
-
+    /**
+     * @name 命令删除
+     * @is_menu 0
+     */
     public function artisanSel(Request $request)
     {
         $id = $request->input('id');
@@ -78,6 +85,10 @@ class LaravelController extends AdminController
 
 
     #https://blog.csdn.net/lixing1359199697/article/details/81202268 软删除文档查看
+    /**
+     * @name 命令删除
+     * @is_menu 0
+     */
     public function artisanDel(Request $request)
     {
         $id = $request->input('id');

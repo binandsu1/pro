@@ -22,7 +22,10 @@ class FunctionController extends AdminController
         $list = $query->where($where)->paginate(10)->appends($request->all());
         return view('laravel::admin.functions',compact('list'));
     }
-
+    /**
+     * @name 函数添加
+     * @is_menu 0
+     */
     public function functionsAdd(Request $request)
     {
         $id = $request->input('id');
@@ -38,7 +41,10 @@ class FunctionController extends AdminController
         }
         return $this->returnError("函数保存失败");
     }
-
+    /**
+     * @name 函数查看
+     * @is_menu 0
+     */
     public function functionsSel(Request $request)
     {
         $id = $request->input('id');
@@ -49,6 +55,10 @@ class FunctionController extends AdminController
     }
 
     #https://blog.csdn.net/lixing1359199697/article/details/81202268 软删除文档查看
+    /**
+     * @name 函数删除
+     * @is_menu 0
+     */
     public function functionsDel(Request $request)
     {
         $id = $request->input('id');

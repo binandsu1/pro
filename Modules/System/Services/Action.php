@@ -1,6 +1,9 @@
 <?php
 namespace Modules\System\Services;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Modules\Auth\Models\XdoAdminGroup;
 use Modules\System\Models\XdoAction;
+use Modules\System\Models\XdoAdminGroupAction;
 
 #继承了一个跟的services 定义一下公共的返回
 class Action extends \App\Services\XdoService
@@ -474,5 +477,51 @@ class Action extends \App\Services\XdoService
     });
     return $routes;
   }
+
+    /**
+     * 为角色添加/删除权限
+     */
+    public function setRoleAction($roleId, $unioncode, $do='add')
+    {
+        $record = XdoAdminGroupAction::where('group_id', $roleId)
+            ->where('unioncode', $unioncode)
+            ->first();
+        if ( $do == 'add' ) {
+            if ( $record ) {
+                $record->is_del = 0;
+            } else {
+                $record = new XdoAdminGroupAction;
+                $record->group_id = $roleId;
+                $record->unioncode = $unioncode;
+            }
+            $record->save();
+        } else if ( $do == 'del' ) {
+            if ( $record ) {
+                $record->is_del = 1;
+                $record->save();
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 获取角色下所有的权限
+     */
+    public function getActionsOfRole($role) {
+//        if ( !$role instanceof XdoAdminGroup ) {
+//            //传过来的是Id时
+//            if ( is_numeric( $role ) )  {
+//                $role = XdoAdminGroup::find($role);
+//            }
+//        }
+//        if ( !$role || $role->is_del == 1 ) {
+//            throw new ModelNotFoundException();
+//        }
+//        $records = $role->adminGroupActions()->where('is_del', 0)->get();
+
+//        return $records;
+    }
+
+
 
 }

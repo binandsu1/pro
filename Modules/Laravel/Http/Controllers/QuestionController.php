@@ -25,7 +25,10 @@ class QuestionController extends AdminController
         $list = $query->where($where)->paginate(10)->appends($request->all());
         return view('laravel::admin.question',compact('list'));
     }
-
+    /**
+     * @name 问题添加
+     * @is_menu 0
+     */
     public function questionAdd(Request $request)
     {
         $id = $request->input('id');
@@ -41,7 +44,10 @@ class QuestionController extends AdminController
         }
         return $this->returnError("脚本保存失败");
     }
-
+    /**
+     * @name 问题查看
+     * @is_menu 0
+     */
     public function questionSel(Request $request)
     {
         $id = $request->input('id');
@@ -52,6 +58,10 @@ class QuestionController extends AdminController
     }
 
     #https://blog.csdn.net/lixing1359199697/article/details/81202268 软删除文档查看
+    /**
+     * @name 问题删除
+     * @is_menu 0
+     */
     public function questionDel(Request $request)
     {
         $id = $request->input('id');

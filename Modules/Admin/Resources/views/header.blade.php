@@ -164,8 +164,7 @@ $user = auth('web')->user();
             </li>
             <li>
                 <a href="#" data-toggle="control-sidebar">
-                    <i class="fa fa-random"></i>
-                    <b class="">[切换]</b>
+                    <b class="">切换角色</b>
                 </a>
             </li>
         </ul>

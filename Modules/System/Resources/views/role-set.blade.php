@@ -13,8 +13,8 @@
 
         .role-box .role-item {
             width: 50%;
-            padding: .5px;
-            background-color: #ccc;
+            padding: .3px;
+            background-color: #0c525d;
         }
 
         .role-box .role-item .role-item-inner {
@@ -37,7 +37,7 @@
 
     </style>
 
-
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <section class="content-header">
         <h1> 为<span class="text-primary">xx</span>分配权限</h1>
         <ol class="breadcrumb">
@@ -54,6 +54,7 @@
                         <div class="box-tools pull-right">
                         </div>
                     </div>
+
                     <div class="box-body" style="min-height:800px;">
                         <div class="role-box">
                             @foreach($role_list as $k => $item)
@@ -72,7 +73,7 @@
                         <h3 class="box-title fw300"><i class="fa fa-gears"></i> 权限</h3>
                     </div>
                     <div class="box-body no-padding">
-                        <form action="">
+                        <form action="{{route('laravel.system.role-save')}}">
                             @foreach($modules as $key=>$val)
                                 <div class="box box-solid">
                                     <div class="box-header with-border bg-gray-light">
@@ -81,30 +82,33 @@
                                         </h4>
                                         <div class="box-tools">
                                             <label style="margin-top: 5px">
-                                                <input type="checkbox" class="minimal-red group-action" value="qq">
+                                                <input type="checkbox" class="minimal-red group-action" value="{{$val['id']}}">
                                             </label>
                                         </div>
                                     </div>
-                                        <div class="panle-body box-body" id="group-111">
-                                            @foreach($val['children'] as $k=>$v)
+                                    <div class="panle-body box-body" id="group-{{$val['id']}}">
+                                        @foreach($val['children'] as $k=>$v)
                                             <div class="col-sm-3">
                                                 <div class="form-group " style="margin:10px">
                                                     <label>
-                                                        <input data-role-id="33"
-                                                               class=""
+                                                        <input data-role-id="{{Request('id')}}"
+                                                               class="action minimal-red"
                                                                type="checkbox" name="action_unioncode"
-                                                               value="23"/>
-                                                        <span class="text-primay" style="padding-top: 211px"> &nbsp; {{$v["name"]}}</span>
+                                                               @if(in_array($v['unioncode'], $hasActions))
+                                                               checked
+                                                               @endif
+                                                               value="{{$v['unioncode']}}"/>
+                                                        <span class="text-primay"> &nbsp; {{$v["name"]}}</span>
                                                     </label>
                                                     <small class="fw300">
-                                                        <a title="控制器信息" href="" class="xdo-remote-form">
+                                                        <a title="控制器信息" href="<?=route('laravel.system.role-sel', ['id'=>$v['id']])?>" class="xdo-remote-content">
                                                             <i class="fa fa-info-circle"></i>
                                                         </a>
                                                     </small>
                                                 </div>
                                             </div>
-                                            @endforeach
-                                        </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                             @endforeach
                         </form>
@@ -122,25 +126,29 @@
                 radioClass: 'iradio_minimal-red'
             })
             $('input.group-action').on('ifChecked', function () {
+                layer.load(2,{time: 3*1000});
                 $('#group-' + $(this).val()).find('input').iCheck('check');
             });
             $('input.group-action').on('ifUnchecked', function () {
+                layer.load(2,{time: 3*1000});
                 $('#group-' + $(this).val()).find('input').iCheck('uncheck');
             });
             // add
             $('input.action').on('ifChecked', function () {
+                layer.load(2,{time: 1*1000});
                 var $this = $(this);
                 var url = $this.parents('form:first').attr('action');
                 var datas = {
                     'role_id': $this.data('roleId'),
                     'action_unioncode': $this.val(),
-                    'do': 'add'
                 };
+                console.log(datas);
                 $.post(url, datas, function (xhr) {
                 }, 'json');
             });
             // del
             $('input.action').on('ifUnchecked', function () {
+                layer.load(2,{time: 1*1000});
                 var $this = $(this);
                 var url = $this.parents('form:first').attr('action');
                 var datas = {
@@ -151,8 +159,6 @@
                 $.post(url, datas, function (xhr) {
                 }, 'json');
             });
-
-
         });
     </script>
 

@@ -110,7 +110,7 @@
                 , content: $('#peace')
             });
             //假的加载
-            layer.load(2, {time: 1 * 1000});
+            // layer.load(2, {time: 1 * 1000});
             var url = "<?=route('laravel.system.role-laod')?>";
             var add_role_url = "<?=route('laravel.system.admin-add-role')?>";
             var params = {

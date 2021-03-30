@@ -49,7 +49,9 @@ class AuthServiceProvider extends ServiceProvider
         $auth->macro('getAdminMenus', function() use ($auth){
             $retval = [];
             $role = $auth->role();
-
+            if(empty($role)){
+                $role = XdoRole::find(1);
+            }
             $routes =   $role->routes;
             $isSuper = $auth->isSuper();
             if ( !$isSuper && !$routes ) return $retval;

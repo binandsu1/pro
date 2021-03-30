@@ -12,17 +12,8 @@ class XdoRole extends XdoBase
 
 
     public function getRoutesAttribute() {
-        static $routes = null;
-        if ( $routes == null  ) {
             $_routes = $this->actions->pluck('route')->toArray();
-
-            if ( $_routes == null ) {
-                $routes = [];
-            } else {
-                $routes = $_routes;
-            }
-        }
-        return $routes;
+        return $_routes;
     }
 
     public function adminGroupActions()

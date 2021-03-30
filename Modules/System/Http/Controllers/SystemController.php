@@ -94,6 +94,17 @@ class SystemController extends AdminController
         }
     }
 
+    public function roleChange(Request $request)
+    {
+        $id = $request->input('id');
+        $admin_id = $request->input('admin_id');
+        $admin_info = User::find($admin_id);
+        $admin_info->curr_role_id = $id;
+        if ($admin_info->save()) {
+            return redirect()->route('admin');
+        }
+    }
+
     public function roleUpStatus(Request $request)
     {
         $id = $request->input('id');

@@ -18,6 +18,7 @@ Route::prefix('system')->group(function() {
     Route::get('/role-set', 'SystemController@roleSet')->name('laravel.system.role-set');
     Route::get('/role-del', 'SystemController@roleDel')->name('laravel.system.role-del');
     Route::get('/role-up', 'SystemController@roleUpStatus')->name('laravel.system.role-up');
+    Route::get('/role-change', 'SystemController@roleChange')->name('laravel.system.role-change');
     Route::match(['get','post'],'/role-save', 'SystemController@roleSave')->name('laravel.system.role-save');
     Route::match(['get','post'],'/role-add', 'SystemController@roleAdd')->name('laravel.system.role-add');
     Route::match(['get','post'],'/role-sel', 'SystemController@roleSel')->name('laravel.system.role-sel');

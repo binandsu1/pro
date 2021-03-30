@@ -4,6 +4,7 @@ namespace Modules\Auth\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\System\Models\XdoRole;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -33,17 +34,24 @@ class AuthServiceProvider extends ServiceProvider
 
     public function hongzhiling(){
 
-        $auth = auth('admin');
+        $auth = auth('web');
+
+        $auth->macro('role', function () use ($auth) {
+            $role = $auth->user()->curr_role_id;
+            $roles= XdoRole::find($role);
+            return $roles;
+        });
+
+
         /**
          * 获取当前用户菜单
          */
         $auth->macro('getAdminMenus', function() use ($auth){
             $retval = [];
-//            $role = $auth->role();
-//            $routes = $role !== null? $role->routes : [];
-            $routes = true;
-            $isSuper = true;
-//            $isSuper = $auth->isSuper();
+            $role = $auth->role();
+
+            $routes =   $role->routes;
+            $isSuper = $auth->isSuper();
             if ( !$isSuper && !$routes ) return $retval;
 
             $menus = app('xdo.action')->getAdminMenus();
@@ -57,9 +65,10 @@ class AuthServiceProvider extends ServiceProvider
                 $children = [];
                 foreach($menu['children'] as $nav) {
                     $currRoute = $nav['route'];
+//                    var_dump($currRoute);
                     #这个是jb判断权限的吧
 //                    if ( $isSuper || in_array($currRoute, $routes) ) {
-                    if ($isSuper) {
+                    if ($isSuper || in_array($currRoute, $routes)) {
                         $nav['active'] = $nav['id'] == $action['id']? 1: 0;
                         $children[] = $nav;
                     }
@@ -76,15 +85,19 @@ class AuthServiceProvider extends ServiceProvider
 
         $auth->macro('isSuper', function () use ($auth) {
             static $isSuper = null;
-            if ( $isSuper == null ) {
                 $user = $auth->user();
-                $isSuper = $user? $user->is_super : 0;
-            }
-            return $isSuper;
+                if($user->curr_role_id == 1){
+                    return  true;
+                }
+            return  false;
         });
 
 
+
+
+
     }
+
     /**
      * Register the service provider.
      *

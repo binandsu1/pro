@@ -33,7 +33,7 @@ $section =1;
       <?php endif;?>
         <a href="#">
           <i class="<?=$menu['icon']?> <?=array_get($menu, 'color')?>"></i>
-          <span style="font-size: 12.5px;"><?=$menu['name']?></span>
+          <span style="font-size: 12.5px;">   <?=$menu['name']?></span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -50,7 +50,7 @@ $section =1;
           <li>
               <?php endif;?>
             <a href="<?=route($nav['route'])?>">
-              <i class="fa fa-circle-o"></i> <?=$nav['name']?>
+              <i class="fa fa-circle-o"></i>  <?=$nav['name']?>
             </a>
           </li>
           <?php endforeach;?>

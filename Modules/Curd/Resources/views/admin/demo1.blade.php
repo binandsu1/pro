@@ -53,7 +53,7 @@
                 <table class="table table-bordered ">
                     <thead>
                     <tr>
-                        <th width="5%" class="tcc ">ID1</th>
+                        <th width="5%" class="tcc ">ID</th>
                         <th width="10%" class="tcc">姓名</th>
                         <th width="10%" class="tcc">手机号</th>
                         <th width="5%" class="tcc">年龄</th>

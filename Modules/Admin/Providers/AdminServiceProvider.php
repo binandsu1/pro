@@ -7,6 +7,7 @@ use App\View\Components\Shi;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\System\Models\XdoRole;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -133,8 +134,15 @@ class AdminServiceProvider extends ServiceProvider
         $auth->macro('roleDesc', function () use ($auth) {
             return true;
         });
+        #获取当前用户的角色
         $auth->macro('roles', function () use ($auth) {
-            return [];
+            $admin_info = $auth->user();
+            $role_ids = $admin_info->role_ids;
+            $role_ids_arr = explode(',',$role_ids);
+            $role_list = XdoRole::whereIn('id',$role_ids_arr)->get();
+            $data['role_list'] = $role_list;
+            $data['admin_info'] = $admin_info;
+            return $data;
         });
     }
 #https://xueyuanjun.com/post/21987 写页面组件别名的这里是

@@ -15,7 +15,7 @@ table.xdo-role-box td {
 }
 </style>
 <?php
-  $roleList = auth()->roles()
+  $data = auth()->roles();
 ?>
 <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
   <li class="active">
@@ -28,42 +28,21 @@ table.xdo-role-box td {
   <div class="tab-pane active no-padding" id="control-sidebar-1">
     <table class="table table-condensed xdo-role-box">
       <tbody>
-      <?php foreach($roleList as $c):?>
-        <?php foreach($c['roles'] as $r):?>
+      @foreach($data['role_list'] as $k=>$item)
+          <tr class="active">
+              <td class="tcc">{{$item->role_name}}</td>
+              <td class="tcc"></td>
+              <td class="tcc">&nbsp;</td>
+              <td class="options">
+                  @if($data['admin_info']->curr_role_id == $item->id)
+                      <a href="" class="btn  bg-red-gradient btn-xs"> 当前 </a>
+                  @else
+                      <a href="<?=route('laravel.system.role-change', ['id'=>$item->id,'admin_id'=>$data['admin_info']->id])?> " class="btn  bg-green btn-xs"> 切换 </a>
+                  @endif
+              </td>
+          </tr>
+      @endforeach
 
-          <?php if($r['schools']):?>
-          <?php foreach($r['schools'] as $s):?>
-          <?php $isCurr = $auth->isCurrRole($c['id'], $r['id'], $s['id'])?>
-          <?php $query = ['cid'=>$c['id'], 'rid'=>$r['id'],'sid'=>$s['id']]?>
-          <tr class="<?=ifelse($isCurr, 'active')?>">
-            <td class="tcc"><?=$c['name']?> </td>
-            <td class="tcc"><?=$r['group_name']?></td>
-            <td class="tcc"><?=$s['name_short']?></td>
-            <td class="options">
-              <a href="<?=route('admin.auth.toggle-role', $query)?>"
-                class="btn <?=ifelse($isCurr, 'disabled')?> bg-red-gradient btn-xs">
-                <?=ifelse($isCurr, '当前', '切换')?>
-              </a>
-            </td>
-          </tr>
-          <?php endforeach;?>
-          <?php else:?>
-          <?php $isCurr = $auth->isCurrRole($c['id'], $r['id'], 0) ?>
-          <?php $query = ['cid'=> $c['id'], 'rid'=> $r['id'],'sid'=> 0]?>
-          <tr class="<?=ifelse($isCurr, 'active')?>">
-            <td class="tcc"><?=$c['name']?></td>
-            <td class="tcc"><?=$r['group_name']?></td>
-            <td class="tcc">&nbsp;</td>
-            <td class="options">
-              <a href="<?=route('admin.auth.toggle-role', $query)?>"
-                class="btn <?=ifelse($isCurr, 'disabled')?> bg-red-gradient btn-xs">
-                <?=ifelse($isCurr, '当前', '切换')?>
-              </a>
-            </td>
-          </tr>
-          <?php endif;?>
-        <?php endforeach;?>
-      <?php endforeach;?>
       </tbody>
     </table>
   </div>

@@ -143,7 +143,7 @@
                                 lis.push('<li class="layui-timeline-item"> <i class="layui-icon layui-timeline-axis"></i> ' +
                                     '<div class="layui-timeline-content layui-text"> ' +
                                     '<div class="layui-timeline-title" style="font-size: 11px">' +
-                                    '2021-3-30 12:11:34  '+item.name+' 贡献 0.01 元 累计贡献<span class="id-txt"> 54</span> 次 </div>    ' +
+                                    '2021-3-30 12:11:34  '+item.name+' 贡献 0.01 元 累计贡献<span class="id-txt"> '+ item.num +'</span> 次 </div>    ' +
                                     '</div>  ' +
                                     '</li>')
                             });

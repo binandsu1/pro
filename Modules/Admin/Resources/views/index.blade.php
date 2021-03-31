@@ -80,7 +80,7 @@
             <div class="col-sm-4">
               <div class="box box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title fw300"><small>支付宝小额赞助~ 抱拳了 铁子~</small></h3>
+                  <h3 class="box-title fw300"><small>支付宝小额赞助~</small></h3>
                 </div>
                 <div class="box-body" style="min-height:310px;max-height:310px;overflow:auto;">
                     <img src="<?=static_url('admin/img/zfb3.png')?>" style="margin-left: 50px" width="280px" height="280px"/>

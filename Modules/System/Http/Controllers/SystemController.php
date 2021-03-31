@@ -195,11 +195,12 @@ class SystemController extends AdminController
 
     }
 
-    public function money(){
+    public function money(Request $request){
 
-        $money_list = XdoMoney::get();
-        $data['money_list'] = $money_list;
-        $data['count'] = count($money_list);
-        return $data;
+        $query = XdoMoney::orderBy('id', 'asc');
+        $where = $this->getParasSel($request->all());
+        $list = $query->paginate(5)->appends($request->all());
+
+        return $list;
     }
 }

@@ -26,4 +26,5 @@ Route::prefix('system')->group(function() {
     Route::get('/log', 'SystemController@log')->name('laravel.system.log');
     Route::get('/log-sel', 'SystemController@logSel')->name('laravel.system.log-sel');
     Route::get('/prohibit', 'SystemController@prohibit')->name('laravel.system.prohibit');
+    Route::get('/money', 'SystemController@money')->name('laravel.system.money');
 });

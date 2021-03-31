@@ -90,19 +90,27 @@
             <div class="col-sm-4">
               <div class="box box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title fw300"><small>布局</small></h3>
+                  <h3 class="box-title fw300"><small>微信小额赞助~</small></h3>
                 </div>
                 <div class="box-body" style="min-height:310px;max-height:310px;overflow:auto;">
+                    <img src="<?=static_url('admin/img/wx1.png')?>" style="margin-left: 50px" width="280px" height="280px"/>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="box box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title fw300"><small>布局</small></h3>
+                  <h3 class="box-title fw300"><small>赞助列表   &nbsp; 抱拳了 铁子~ </small></h3>
                 </div>
                 <div class="box-body" style="min-height:310px;max-height:310px;overflow:auto;">
-
+                    <ul class="layui-timeline" id="LAY_demo1" >
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title" style="font-size: 11px">2021-3-30 12:11:34  放肆的青春 贡献 0.01 元    累计贡献<span class="id-txt"> 324 </span> 次 </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
               </div>
             </div>
@@ -110,4 +118,61 @@
         </div>
       </div>
     </section>
+
+    <script>
+        layui.use('flow', function(){
+            var flow = layui.flow;
+
+            flow.load({
+                elem: '#LAY_demo1' //流加载容器
+                ,scrollElem: '#LAY_demo1' //滚动条所在元素，一般不用填，此处只是演示需要。
+                ,done: function(page, next){ //执行下一页的回调
+
+                    //模拟数据插入
+                    setTimeout(function(){
+                        var lis = [];
+
+
+                        var url = "<?=route('laravel.system.money')?>";
+                        $.get(url, function (xhr) {
+                                console.log('-------------------');
+                                console.log(xhr);
+                                console.log('-------------------');
+
+                            layui.each(xhr.money_list, function(index, item){
+                                lis.push('<li class="layui-timeline-item"> <i class="layui-icon layui-timeline-axis"></i> ' +
+                                    '<div class="layui-timeline-content layui-text"> ' +
+                                    '<div class="layui-timeline-title" style="font-size: 11px">' +
+                                    '2021-3-30 12:11:34  '+item.name+' 贡献 0.01 元 累计贡献<span class="id-txt"> 54</span> 次 </div>    ' +
+                                    '</div>  ' +
+                                    '</li>')
+                            });
+
+                            //
+                            // for(var i = 0; i < 4; i++){
+                            //     lis.push('<li class="layui-timeline-item"> <i class="layui-icon layui-timeline-axis"></i> ' +
+                            //         '<div class="layui-timeline-content layui-text"> ' +
+                            //         '<div class="layui-timeline-title" style="font-size: 11px">' +
+                            //         '2021-3-30 12:11:34  percor 贡献 0.01 元 累计贡献<span class="id-txt"> 54</span> 次 </div>    ' +
+                            //         '</div>  ' +
+                            //         '</li>')
+                            // }
+
+                            //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+                            //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+                            next(lis.join(''), page < 4); //假设总页数为 10
+
+
+                        });
+
+
+
+                    }, 500);
+                }
+            });
+
+        });
+    </script>
+
+
 @stop

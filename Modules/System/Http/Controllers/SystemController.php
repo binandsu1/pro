@@ -10,6 +10,7 @@ use Modules\Curd\Models\XdoLog;
 use Modules\System\Http\Middleware\RoleAddMidd;
 use Modules\System\Models\XdoAction;
 use Modules\System\Models\XdoAdminGroupAction;
+use Modules\System\Models\XdoMoney;
 use Modules\System\Models\XdoRole;
 
 class SystemController extends AdminController
@@ -192,5 +193,13 @@ class SystemController extends AdminController
         $user->save();
         return static::returnSuccess();
 
+    }
+
+    public function money(){
+
+        $money_list = XdoMoney::get();
+        $data['money_list'] = $money_list;
+        $data['count'] = count($money_list);
+        return $data;
     }
 }

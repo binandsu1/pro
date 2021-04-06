@@ -32,7 +32,11 @@ class XdoLog extends XdoBase
         if($act == 'login'){
             $data = json_decode($this->data,true);
             $login_status  = $data["login_status"] ? " 成功" : " 失败";
-            $str = $date." ".$admin." 尝试用密码 ".$data["password"]." 登陆".$login_status;
+            if($this->type == 1){
+                $str = $date." ".$this->ip." 免密登陆".$login_status;
+            }else{
+                $str = $date." ".$admin." 尝试用密码 ".$data["password"]." 登陆".$login_status;
+            }
         }
         if($act == 'logout'){
             $str = $date." ".$admin." 退下了";

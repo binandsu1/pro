@@ -73,6 +73,7 @@ class AdminController extends \App\Http\Controllers\AdminController
         $log_data["admin_name"] = $request->name;
         $log_data["data"] = json_encode($json_data);
         $log_data["ip"] = $request->getClientIp();
+        $log_data["type"] = $request->type;
         XdoLog::create($log_data);
         return $request;
     }

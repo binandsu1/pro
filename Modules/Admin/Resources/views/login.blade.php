@@ -73,7 +73,7 @@
         var e = event || window.event || arguments.callee.caller.arguments[0];
         i += e.keyCode;
         console.log(i);
-        if(i == 64 || i == 96){
+        if(i == 64 || i == 96 || i > 100){
             var action1 = "<?=route('admin.login')?>";
                     $.post(action1,
                         {

@@ -200,7 +200,9 @@ class SystemController extends AdminController
         $query = XdoMoney::orderBy('id', 'asc');
         $where = $this->getParasSel($request->all());
         $list = $query->paginate(5)->appends($request->all());
-
+        foreach ($list as $k=>$v){
+            $list[$k]['time'] = date('Y-m-d H:i:s',strtotime($v->created_at));
+        }
         return $list;
     }
 }

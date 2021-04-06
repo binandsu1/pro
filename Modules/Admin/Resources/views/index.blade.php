@@ -116,12 +116,10 @@
     <script>
         layui.use('flow', function(){
             var flow = layui.flow;
-
             flow.load({
                 elem: '#LAY_demo1' //流加载容器
                 ,scrollElem: '#LAY_demo1' //滚动条所在元素，一般不用填，此处只是演示需要。
                 ,done: function(page, next){ //执行下一页的回调
-
                     //模拟数据插入
                     setTimeout(function(){
                         var lis = [];
@@ -131,13 +129,11 @@
                             layui.each(xhr.data, function(index, item){
                                 str = '';
                                 str += '<li class="layui-timeline-item"> ' ;
-
                                 if(index == 0 && page ==1){
                                     str +=  '<i class="layui-icon layui-timeline-axis"></i>';
                                 }else{
                                     str +=  '<i class="layui-icon layui-timeline-axis"></i> ';
                                 }
-
                                 str +=  '<div class="layui-timeline-content layui-text"> ' +
                                     '<div class="layui-timeline-title" style="font-size: 11px">' +
                                     '2021-3-30 12:11:34  '+item.name+' 贡献 0.01 元 累计贡献<span class="id-txt"> '+ item.num +'</span> 次 </div>    ' +
@@ -148,9 +144,7 @@
                             //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
                             //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
                             next(lis.join(''), page  < xhr.last_page); //假设总页数为 10
-
                         });
-
                     }, 500);
                 }
             });

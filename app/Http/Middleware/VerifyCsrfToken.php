@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'system/role-save',
+        'admin/login',
     ];
 }

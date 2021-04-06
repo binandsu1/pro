@@ -28,8 +28,12 @@ class AdminController extends \App\Http\Controllers\AdminController
                 return  $login_result;
             }
             return $this->sendFailedLoginResponse($request);
+        } else if ($request->method() == 'GET') {
+            if ($this->auth->check()) {
+                return redirect(route('admin'));
+            }
+            return view('admin::login');
         }
-        return view('admin::login');
     }
 
     protected function validateLogin(Request $request)

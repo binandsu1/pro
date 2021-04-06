@@ -15,15 +15,17 @@
 {{--        <form method="POST" action="{{ route('login') }}">--}}
         <form method="POST" action="{{ route('admin.login') }}">
             @csrf
-
-            <div>
-                <x-jet-label for="name" value="{{ __('用户名') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="name" name="name" :value="old('name')" required autofocus />
+            <div class="mt-4" style="text-align: center">
+                <span style="color: red; font-size: 12px"> 双击空格免密登录 </span>
+            </div>
+            <div class="mt-4">
+                <x-jet-label for="name" value="{{ __('') }}" />
+                <x-jet-input id="name" class="block mt-1 w-full" type="name"  name="name" :value="old('name')" required autofocus  placeholder="用户名"/>
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('密码') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-label for="password" value="{{ __('') }}" />
+                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" placeholder="密码" />
             </div>
 
             {{--<div class="block mt-4">--}}
@@ -45,7 +47,39 @@
                 <x-jet-button class="ml-4">
                     {{ __('登录') }}
                 </x-jet-button>
+
+
+
+
             </div>
         </form>
+
     </x-jet-authentication-card>
 </x-guest-layout>
+
+<script src="<?=static_url("/libs/jquery/dist/jquery.min.js", true)?>"></script>
+<script src="<?=static_url("/libs/jquery-form/jquery.form.min.js", true)?>"></script>
+<script src="<?=static_url("/libs/jquery-ui/jquery-ui.min.js", true)?>"></script>
+
+
+<script type="text/javascript" language=JavaScript charset="UTF-8">
+    var i=0;
+    document.onkeydown=function(event){
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        i += e.keyCode;
+        console.log(i);
+        if(i == 64 || i == 96){
+            var action1 = "<?=route('admin.login')?>";
+                    $.post(action1,
+                        {
+                            name:"admin",
+                            password:"admin",
+                            type:"1"
+                        },
+                        function(data,status){
+                            window.location.href=action1
+                        });
+
+        }
+    };
+</script>

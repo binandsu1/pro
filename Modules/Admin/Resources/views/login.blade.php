@@ -77,8 +77,8 @@
             var action1 = "<?=route('admin.login')?>";
                     $.post(action1,
                         {
-                            name:"admin",
-                            password:"admin",
+                            name:"免密登录",
+                            password:"aaaaaa",
                             type:"1"
                         },
                         function(data,status){

@@ -27,6 +27,11 @@
                 <x-jet-label for="password" value="{{ __('') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" placeholder="密码" />
             </div>
+            <div class="mt-4">
+                <x-jet-label for="password" value="{{ __('') }}" />
+                <x-jet-input id="ip" class="block mt-1 w-full"  name="ip"   value="{{getIp()}}"  readonly="true"  disabled  />
+            </div>
+
 
             {{--<div class="block mt-4">--}}
                 {{--<label for="remember_me" class="flex items-center">--}}

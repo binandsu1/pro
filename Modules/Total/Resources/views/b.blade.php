@@ -231,11 +231,51 @@
                 </table>
             </div>
 
+            <div class=" box-body" id="demo14">
+
+                <div id = "computed_props">
+                    千米 : <input type = "text" v-model = "kilometers">
+                    米 : <input type = "text" v-model = "meters">
+                </div>
+
+
+            </div>
+            <div class=" box-body alert alert-error alert-dismissible " >
+                <p id="info"></p>
+            </div>
 
         </div>
     </section>
 
     <script>
+
+        var vm14 = new Vue({
+            el: '#computed_props',
+            data: {
+                kilometers : 0,
+                meters:0
+            },
+            methods: {
+            },
+            computed :{
+            },
+            watch : {
+                kilometers:function(val) {
+                    this.kilometers = val;
+                    this.meters = this.kilometers * 1000
+                },
+                meters : function (val) {
+                    this.kilometers = val/ 1000;
+                    this.meters = val;
+                }
+            }
+        });
+        // $watch 是一个实例方法
+        vm14.$watch('kilometers', function (newValue, oldValue) {
+            // 这个回调将在 vm.kilometers 改变后调用
+            document.getElementById ("info").innerHTML = "修改前值为: " + oldValue + "，修改后值为: " + newValue;
+        })
+
 
 
        var vm13 = new Vue({

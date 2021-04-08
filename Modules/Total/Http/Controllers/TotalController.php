@@ -91,4 +91,33 @@ class TotalController extends Controller
     {
         //
     }
+
+    public function getData(){
+
+        $data[0]["name"] = '张珊珊';
+        $data[0]["sex"] = '男';
+        $data[0]["address"] = '北京';
+        $data[0]["check"] = false;
+        $data[1]["name"] = '秦素素';
+        $data[1]["sex"] = '女';
+        $data[1]["address"] = '通辽';
+        $data[1]["check"] = false;
+        $data[2]["name"] = '张丽丽';
+        $data[2]["sex"] = '男';
+        $data[2]["address"] = '上海';
+        $data[2]["check"] = false;
+        $data[3]["name"] = '里丽丽';
+        $data[3]["sex"] = '男';
+        $data[3]["address"] = '北京';
+        $data[3]["check"] = false;
+        $data[4]["name"] = '哈丽丽';
+        $data[4]["sex"] = '男';
+        $data[4]["address"] = '上海';
+        $data[4]["check"] = false;
+        $data[5]["name"] = '是丽丽';
+        $data[5]["sex"] = '男';
+        $data[5]["address"] = '北京';
+        $data[5]["check"] = false;
+        return json_encode($data);
+    }
 }

@@ -60,7 +60,7 @@
                             @foreach($role_list as $k => $item)
                                 <div class="role-item ">
                                     <a href="<?=route('laravel.system.role-set', ['id' => $item->id])?>"
-                                       class="role-item-inner <?=ifelse(Request('id') == $item->id, 'active')?>"> {{$item->role_name}} </a>
+                                       class="role-item-inner <?=ifelse(Request('id') == $item->id || $id == $item->id, 'active')?>"> {{$item->role_name}} </a>
                                 </div>
                             @endforeach
                         </div>

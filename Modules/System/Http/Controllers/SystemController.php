@@ -143,6 +143,9 @@ class SystemController extends AdminController
         $modules = $sys_action->getAdminActions();
 
         $id = $request->input('id');
+        if(empty($id)){
+            $id = 1;
+        }
         $query = XdoRole::where('status', 1);
         if ($id) {
             $currRole = $query->where('id', $id)->first();
@@ -154,7 +157,7 @@ class SystemController extends AdminController
         }
         // 获取当前角色权限分配
         $hasActions = XdoAdminGroupAction::where('group_id', $id)->where('is_del', 0)->pluck('unioncode')->toArray();
-        return view('system::role-set', compact('role_list', 'modules', 'hasActions'));
+        return view('system::role-set', compact('role_list', 'modules', 'hasActions','id'));
     }
 
 

@@ -47,6 +47,7 @@ class MongoJob implements ShouldQueue
         $model = new MongData();
         $model->fill($add);
         $sa = $model->insertGetId($add);
+//        $sa = $model->go($add);
         if($sa){
             $wosa = $model->find($sa);
             $wosa->is_over = 1;

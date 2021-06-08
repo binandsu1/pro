@@ -35,33 +35,34 @@
               <a class="btn btn-app" href="{{route('admin.laravel.functions')}}">
                 <i class="fa fa-tag"></i> 常用函数
               </a>
-              <a class="btn btn-app" href="">
+              <a class="btn btn-app" href="{{route('laravel.system.admin')}}">
                 <i class="fa fa-user"></i> 管理员
               </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-graduation-cap"></i> 老师管理
+                <a class="btn btn-app" href="https://console.huaweicloud.com/lcs/?region=cn-north-4#/lcs/manager/vmList" target="_blank">
+                    <i class="fa fa-calendar"></i> 服务器
+                </a>
+              <a class="btn btn-app" href="http://124.70.81.74:8080/" target="_blank">
+                <i class="fa fa-graduation-cap"></i> Jenkins
               </a>
               {{--<a class="btn btn-app" href="">--}}
                 {{--<i class="fa fa-user-plus"></i> 潜在用户--}}
               {{--</a>--}}
-              <a class="btn btn-app" href="">
-                <i class="fa fa-child"></i> 付费用户
+              <a class="btn btn-app" href="http://124.70.81.74:15672/#/queues" target="_blank">
+                <i class="fa fa-child"></i> Rabbimq
               </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-calendar"></i> 排课总揽
+
+              <a class="btn btn-app" href="{{route('admin.mongo.list')}}">
+                <i class="fa fa-calendar-check-o"></i> Mongo
               </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-calendar-check-o"></i> 今日排课
+              <a class="btn btn-app" href="{{route('laravel.total.z')}}">
+                <i class="fa fa-cubes"></i> Layer
               </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-cogs"></i> 操作日志
+              <a class="btn btn-app" href="{{route('laravel.total.b')}}">
+                <i class="fa fa-list"></i> Vue
               </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-cubes"></i> 宣传资料
-              </a>
-              <a class="btn btn-app" href="">
-                <i class="fa fa-list"></i> 组织架构
-              </a>
+                <a class="btn btn-app" href="{{route('laravel.system.log')}}">
+                    <i class="fa fa-cogs"></i> 操作日志
+                </a>
             </div>
           </div>
         </div>

@@ -15,6 +15,5 @@ Route::prefix('total')->group(function() {
     Route::get('/index-z', 'TotalController@index')->name('laravel.total.index');
     Route::get('/total-z', 'TotalController@totalZ')->name('laravel.total.z');
     Route::get('/total-b', 'TotalController@totalB')->name('laravel.total.b');
-    Route::get('/total-q', 'TotalController@totalQ')->name('laravel.total.q');
     Route::get('/get-data', 'TotalController@getData')->name('laravel.get-data');
 });

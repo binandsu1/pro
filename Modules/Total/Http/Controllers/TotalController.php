@@ -26,14 +26,6 @@ class TotalController extends Controller
         return view('total::b');
     }
 
-    /**
-     * @name xxxx
-     * @is_menu 1
-     */
-    public function totalQ()
-    {
-        return view('total::q');
-    }
 
     /**
      * Store a newly created resource in storage.

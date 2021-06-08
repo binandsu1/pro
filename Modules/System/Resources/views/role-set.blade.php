@@ -39,7 +39,7 @@
 
     <meta name="_token" content="{{ csrf_token() }}"/>
     <section class="content-header">
-        <h1> 为<span class="text-primary">xx</span>分配权限</h1>
+        <h1> 分配权限</h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
             <li class="active">权限分配</li>

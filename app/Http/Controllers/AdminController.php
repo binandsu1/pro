@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class AdminController extends Controller
 {
@@ -12,6 +13,12 @@ class AdminController extends Controller
 
     function __construct()
     {
+        //redis令牌桶算法 限流
+        # $this->redisLimit();
+        //redis漏桶算法 限流
+        $this->LeackBucket();
+
+
         $this->auth = auth('web');
         #所有视图共享
         \View::share('auth', $this->auth);
@@ -96,6 +103,59 @@ class AdminController extends Controller
         return empty(array_filter($input, function ($a) {
             return $a !== null;
         }));
+    }
+
+    //漏桶算法
+    function LeackBucket() {
+
+        $redis = new Redis();
+
+        //时间 s
+        $interval = 60;
+        //每分钟流出的数量
+        $speed   = 20;
+        //用户
+        $time = $redis::time();
+        $key = $time[0].$time[1];
+
+        //时间判断
+        //$redis->del('outCount');
+        $check = $redis::exists('outCount');
+        // echo $check;
+        if ($check){
+            //出桶的速率的请求数量
+            $outCount = $redis::incr('outCount');
+            if ($outCount<=$speed){
+//                echo $outCount;
+//                echo "规定的每分钟只能访问10次当前访问第 $outCount 次";die;
+            } else {
+                echo "高峰流量控制 漏桶算法和令牌桶算法<br>";
+                echo "漏桶算法 ";
+                echo "强行限制数据的平均传输速率<br>";
+                echo "令牌桶算法 除了能限制平均传输速率 新增一个保护机制 还允许某种程度的突发传输<br>";
+                echo "漏桶的话 下游只能按漏水速度取请求 在令牌桶算法里 下游可以一次过取很多请求<br>";
+                echo "你已经超过每分钟的访问10次 现在都访问 $outCount 次了  禁止访问了bro";die;
+            }
+        } else {
+            #自增+1
+            $redis::set('outCount',1);
+            #设置redis过期时间
+            $redis::Expire('outCount',$interval);
+        }
+    }
+
+    public function redisLimit(){
+        $redisLS = app('xdo.redis-limit');
+//        $redisLS->add(20);
+        //初始化
+//        $redisLS->reset();
+//        $redisLS->add(20);die;
+         if(!$redisLS->get()){
+             $redisLS->add(20);
+             echo '禁止访问了 加令牌吧';die;
+         }else{
+             // echo 'go on';
+         }
     }
 
 }

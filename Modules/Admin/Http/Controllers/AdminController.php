@@ -20,6 +20,7 @@ class AdminController extends \App\Http\Controllers\AdminController
 
     public function login(Request $request)
     {
+
         if ($request->method() == 'POST') {
             #显示一个基本的验证
             $this->validateLogin($request);

@@ -14,6 +14,14 @@ use Swoole\WebSocket\Server;
 
 class CurdController extends AdminController
 {
+    public function __construct()
+    {
+        $fd = 1; // Find fd by userId from a map [userId=>fd].
+        /**@var \Swoole\WebSocket\Server $swoole */
+        $swoole = new Server();
+        $success = $swoole->push($fd, 'Push data to fd#1 in Controller');
+        var_dump($success);
+    }
     /**
      * @name 数据列表-横
      * @is_menu 1
@@ -99,16 +107,5 @@ class CurdController extends AdminController
         if($request->method() == 'GET'){
             return view('curd::admin.demo-sel',compact('data'));
         }
-    }
-    /**
-     * @name sw
-     * @is_menu 1
-     */
-    public function sw(){
-        $fd = 1; // Find fd by userId from a map [userId=>fd].
-        /**@var \Swoole\WebSocket\Server $swoole */
-        $swoole = new Server();
-        $success = $swoole->push($fd, 'Push data to fd#1 in Controller');
-        var_dump($success);
     }
 }

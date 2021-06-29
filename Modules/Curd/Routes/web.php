@@ -12,6 +12,7 @@
 */
 
 Route::prefix('curd')->group(function() {
+    Route::get('/sw', 'CurdController@sw')->name('admin.curd.swool');
     Route::get('/demo1', 'CurdController@demo1')->name('admin.curd.demo1');
     Route::get('/demo2', 'CurdController@demo2')->name('admin.curd.demo2');
     Route::match(['GET','POST'],'/demo-add', 'CurdController@demoAdd')->name('admin.curd.demo-add');

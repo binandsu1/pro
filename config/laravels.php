@@ -147,8 +147,8 @@ return [
     */
 
     'websocket' => [
-        'enable' => false,
-        // 'handler' => XxxWebSocketHandler::class,
+        'enable' => true,
+         'handler' => \App\Services\WebSocketService::class,
     ],
 
     /*

@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Modules\Curd\Models\XdoData;
+use Swoole\WebSocket\Server;
 
 class test24 extends Command
 {
@@ -41,6 +42,13 @@ class test24 extends Command
     public function handle(XdoData $user_class)
     {
 
+
+        $fd = 1; // Find fd by userId from a map [userId=>fd].
+        /**@var \Swoole\WebSocket\Server $swoole */
+        $swoole = new Server();
+        $success = $swoole->push($fd, 'Push data to fd#1 in Controller');
+        var_dump($success);
+        die;
 //        dd($user_class->get());
             $headers = ['Name', 'Email'];
             $users = $user_class::get(['id', 'name'])->toArray();

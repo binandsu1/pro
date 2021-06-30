@@ -11,9 +11,9 @@ use Swoole\WebSocket\Server;
 class WebSocketService implements WebSocketHandlerInterface
 {
     // 声明没有参数的构造函数
-    public function __construct()
-    {
-    }
+//    public function __construct()
+//    {
+//    }
     // public function onHandShake(Request $request, Response $response)
     // {
     // 自定义握手：https://wiki.swoole.com/#/websocket_server?id=onhandshake

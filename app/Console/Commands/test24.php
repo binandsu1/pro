@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Modules\Curd\Models\XdoData;
 use Swoole\WebSocket\Server;
 
 class test24 extends Command
@@ -22,61 +21,31 @@ class test24 extends Command
      */
     protected $description = '24号测试脚本';
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-
-
-    /**
-     * Execute the console command.
-     *
-     * @param XdoData $user_class
-     * @return int
-     */
     public function handle()
     {
 
-        $fd =1;// Find fd by userId from a map [userId=>fd].
-        /**@var \Swoole\WebSocket\Server $swoole */
-        $swoole = app('swoole');
-        dd($swoole);
-        $success = $swoole->push($fd,'Push data to fd#1 in Controller');
-        var_dump($success);
+        $server = new Server("0.0.0.0", 9501);
 
-//        dd($user_class->get());
-//            $headers = ['Name', 'Email'];
-//            $users = $user_class::get(['id', 'name'])->toArray();
-//            $this->table($headers, $users);
-//
-//        $users = $user_class::all();
-//
-//        $bar = $this->output->createProgressBar(count($users));
-//
-//        $bar->start();
-//
-//        foreach ($users as $user) {
-//            sleep(3);   // 模拟执行耗时任务
-//            $bar->advance();
-//        }
-//
-//        $bar->finish();
-        $this->info("\n所有任务执行完毕!");
+        //连接成功回调
+        $server->on('open', function (\Swoole\WebSocket\Server $server, $request) {
+            $this->info($request->fd . '链接成功');
+        });
 
-//        $all = $this->option();
-//        dd($all);
-//        $user = $this->option('user');
-//        $target = $this->option('target');
-//        $arr = $this->option('arr');
-//        $this->info("user=".$user."--target=".$target);
-//       dd($arr);
-//        $a = $user_class->find(2);
-//        $a->name = $target;
-//        $a->save();
-////        dd($user_class->get());
-//        $this->info("1");
-//        $this->line("2");
-//        $this->error("3");
+        //收到消息回调
+        $server->on('message', function (\Swoole\WebSocket\Server $server, $frame) {
+            $content = $frame->data;
+
+            //推送给所有链接
+            foreach ($server->connections as $fd){
+                $server->push($fd,$content);
+            }
+        });
+
+        //关闭链接回调
+        $server->on('close', function ($ser, $fd) {
+            $this->info($fd . '断开链接');
+        });
+
+        $server->start();
     }
 }

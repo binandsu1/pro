@@ -282,6 +282,9 @@ return [
     */
 
     'swoole' => [
+        // 表示每60秒遍历一次，一个连接如果600秒内未向服务器发送任何数据，此连接将被强制关闭
+        'heartbeat_idle_time'      => 600,
+        'heartbeat_check_interval' => 60,
         'daemonize'          => env('LARAVELS_DAEMONIZE', false),
         'dispatch_mode'      => env('LARAVELS_DISPATCH_MODE', 2),
         'reactor_num'        => env('LARAVELS_REACTOR_NUM', function_exists('swoole_cpu_num') ? swoole_cpu_num() : 8),

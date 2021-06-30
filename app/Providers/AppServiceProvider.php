@@ -22,7 +22,11 @@ class AppServiceProvider extends ServiceProvider
     {
 
         Schema::defaultStringLength(191);
-
+        $this->app->singleton('swoole', function ($app) {
+           # return new Server();
+            return new Server();
+           # return new \Modules\System\Services\Action();
+        });
     }
 
     /**

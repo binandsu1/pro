@@ -28,7 +28,7 @@
 <br>
 <br>
 <br>
-                    信息:<input type="text" value="" id="test">&nbsp;
+                    <input type="text" value="" id="test">&nbsp;
                     <input type="button" value="发送" class='btn btn-sm btn-success' id="bt">
 
 

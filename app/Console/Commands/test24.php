@@ -38,12 +38,11 @@ class test24 extends Command
     public function handle()
     {
 
-        $this->info("\n所有任务执行完毕!");die;
-        $fd = 1; // Find fd by userId from a map [userId=>fd].
+        $fd =1;// Find fd by userId from a map [userId=>fd].
         /**@var \Swoole\WebSocket\Server $swoole */
-        $swoole = new Server();
+        $swoole = app('swoole');
         dd($swoole);
-        $success = $swoole->push($fd, 'Push data to fd#1 in Controller');
+        $success = $swoole->push($fd,'Push data to fd#1 in Controller');
         var_dump($success);
 
 //        dd($user_class->get());

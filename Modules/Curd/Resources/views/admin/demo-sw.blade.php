@@ -2,13 +2,12 @@
 @section('content')
     <section class="content-header">
         <h1>
-            数据列表 - 横
+            Swool-websocket
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Laravel </a></li>
-            <li class="active">基础页面</li>
-            <li class="active">数据列表</li>
-            <li class="active">横</li>
+            <li class="active">Swool</li>
+            <li class="active">websocket</li>
         </ol>
     </section>
     <section class="content">
@@ -29,7 +28,7 @@
 <br>
 <br>
 <br>
-                    测试一下啊：<input type="text" value="" id="test">&nbsp;
+                    信息:<input type="text" value="" id="test">&nbsp;
                     <input type="button" value="发送" class='btn btn-sm btn-success' id="bt">
 
 

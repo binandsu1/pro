@@ -27,11 +27,7 @@ class test24 extends Command
      *
      * @return void
      */
-    protected $user_class;
-    public function __construct()
-    {
-        parent::__construct();
-    }
+
 
     /**
      * Execute the console command.

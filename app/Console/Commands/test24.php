@@ -39,33 +39,34 @@ class test24 extends Command
      * @param XdoData $user_class
      * @return int
      */
-    public function handle(XdoData $user_class)
+    public function handle()
     {
 
-
+        $this->info("\n所有任务执行完毕!");die;
         $fd = 1; // Find fd by userId from a map [userId=>fd].
         /**@var \Swoole\WebSocket\Server $swoole */
         $swoole = new Server();
+        dd($swoole);
         $success = $swoole->push($fd, 'Push data to fd#1 in Controller');
         var_dump($success);
-        die;
+
 //        dd($user_class->get());
-            $headers = ['Name', 'Email'];
-            $users = $user_class::get(['id', 'name'])->toArray();
-            $this->table($headers, $users);
-
-        $users = $user_class::all();
-
-        $bar = $this->output->createProgressBar(count($users));
-
-        $bar->start();
-
-        foreach ($users as $user) {
-            sleep(3);   // 模拟执行耗时任务
-            $bar->advance();
-        }
-
-        $bar->finish();
+//            $headers = ['Name', 'Email'];
+//            $users = $user_class::get(['id', 'name'])->toArray();
+//            $this->table($headers, $users);
+//
+//        $users = $user_class::all();
+//
+//        $bar = $this->output->createProgressBar(count($users));
+//
+//        $bar->start();
+//
+//        foreach ($users as $user) {
+//            sleep(3);   // 模拟执行耗时任务
+//            $bar->advance();
+//        }
+//
+//        $bar->finish();
         $this->info("\n所有任务执行完毕!");
 
 //        $all = $this->option();

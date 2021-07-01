@@ -1,0 +1,13 @@
+{
+    "name": "Swoole",
+    "alias": "swoole",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Swoole\\Providers\\SwooleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -7,5 +7,6 @@
     "Curd": true,
     "Laravel": true,
     "Total": true,
-    "Mongo": true
+    "Mongo": true,
+    "Swoole": true
 }

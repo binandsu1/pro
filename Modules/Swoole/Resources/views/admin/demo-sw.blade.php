@@ -2,11 +2,11 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Swool-websocket
+            Swoole-websocket
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Laravel </a></li>
-            <li class="active">Swool</li>
+            <li class="active">Swoole</li>
             <li class="active">websocket</li>
         </ol>
     </section>
@@ -40,6 +40,7 @@
     </section>
 
     <script>
+
         var wsServer = 'ws://124.70.81.74:9501';
         var websocket = new WebSocket(wsServer);
         websocket.onopen = function (evt) {

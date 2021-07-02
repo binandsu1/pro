@@ -23,7 +23,7 @@ class test24 extends Command
 
     public function handle()
     {
-
+        #0000开放所有客户端
         $server = new Server("0.0.0.0", 9501);
 
         //连接成功回调
@@ -31,7 +31,7 @@ class test24 extends Command
             $this->info($request->fd . '链接成功');
         });
 
-        //收到消息回调
+        //收到消息回调 1 参数 server 2 数据帧
         $server->on('message', function (\Swoole\WebSocket\Server $server, $frame) {
             $content = $frame->data;
 
@@ -45,7 +45,7 @@ class test24 extends Command
         $server->on('close', function ($ser, $fd) {
             $this->info($fd . '断开链接');
         });
-
+        #启动服务端
         $server->start();
     }
 }

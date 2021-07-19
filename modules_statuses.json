@@ -8,5 +8,6 @@
     "Laravel": true,
     "Total": true,
     "Mongo": true,
-    "Swoole": true
+    "Swoole": true,
+    "Es": true
 }

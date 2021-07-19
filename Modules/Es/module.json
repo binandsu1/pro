@@ -1,0 +1,13 @@
+{
+    "name": "Es",
+    "alias": "es",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Es\\Providers\\EsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

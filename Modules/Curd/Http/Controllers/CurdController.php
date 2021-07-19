@@ -5,6 +5,8 @@ namespace Modules\Curd\Http\Controllers;
 use App\Events\AddUserEvent;
 use App\Exports\CurdExport;
 use App\Http\Controllers\AdminController;
+use Basemkhirat\Elasticsearch\Facades\ES;
+use Elasticsearch\ClientBuilder;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Modules\Curd\Http\Middleware\XdoDataMidd;
@@ -23,6 +25,7 @@ class CurdController extends AdminController
     //* use Illuminate\Pagination\Paginator;
     public function demo1(Request $request)
     {
+
         $query = XdoData::orderBy('id','desc');
         $excel = $request->input('excel');
         $where = $this->getParasSel($request->all());

@@ -11,8 +11,7 @@ use Modules\Mongo\Models\MongData;
 class MongoController extends AdminController
 {
     /**
-     * @name mongo-介绍
-     * @is_menu 1
+     * @name elastic-search
      */
     public function index()
     {

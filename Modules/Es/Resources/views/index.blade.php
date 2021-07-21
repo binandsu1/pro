@@ -37,6 +37,7 @@
                     <p class="wa-txt">replicas复制 将索引 cp一份或者多分</p>
                     <p class="wa-txt">正向索引 从文档到索引</p>
                     <p class="wa-txt">反向索引 从索引到文档</p>
+                    <p class="wa-txt">version版本控制 乐观锁</p>
                 </div>
 
             </div>

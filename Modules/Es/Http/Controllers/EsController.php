@@ -2,9 +2,10 @@
 
 namespace Modules\Es\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
+use Basemkhirat\Elasticsearch\Facades\ES;
+use Elasticsearch\ClientBuilder;
 use Illuminate\Routing\Controller;
+use Illuminate\Http\Request;
 
 class EsController extends Controller
 {
@@ -16,6 +17,69 @@ class EsController extends Controller
     {
         return view('es::index');
     }
+    /**
+     * @name es操作
+     */
+    public function curd()
+    {
+        $hosts = [
+            [
+                'host' => '124.70.81.74',
+                'port' => '9200',
+                'scheme' => 'http',
+                'user' => 'esuser',
+                'pass' => ''
+            ]
+        ];
+
+        $client = ClientBuilder::create()->setHosts($hosts)->build();
+        $esSer = app('xdo.es');
+//        $a = $esSer->create_index('wwq');
+        $list = $client->indices()->getSettings();
+        dd($list);
+
+
+        $list = ES::connection("default")
+            ->index("myindex")
+            ->type("mytype")
+            ->get();
+        return view('es::curd',compact('list'));
+    }
+
+    /**
+     * @name 索引列表
+     * @is_menu 1
+     */
+    public function indexList()
+    {
+
+        $esSer = app('xdo.es');
+        $list = $esSer->index_list();
+        $nlist = [];
+        foreach ($list as $k=>$v){
+            if(!empty($v["settings"])){
+                $v["settings"]["index"]["creation_date"] = esTime($v["settings"]["index"]["creation_date"]);
+                $nlist[] = $v["settings"]["index"];
+            }
+        }
+        $alist = arraySort($nlist,'creation_date','desc');
+        return view('es::index-list',compact('alist'));
+    }
+
+    public function indexAdd(Request $request){
+        $name = $request->input('name');
+        $esSer = app('xdo.es');
+        $re = $esSer->create_index($name);
+        return $re;
+    }
+
+    public function indexDel(Request $request){
+        $name = $request->input('name');
+        $esSer = app('xdo.es');
+        $re = $esSer->index_del($name);
+        return $re;
+    }
+
 
 
 }

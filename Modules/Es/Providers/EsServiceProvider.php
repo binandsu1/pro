@@ -2,6 +2,7 @@
 
 namespace Modules\Es\Providers;
 
+use App\Services\EsService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
@@ -38,6 +39,9 @@ class EsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->app->singleton('xdo.es', function ($app) {
+            return new \Modules\Es\Services\EsService();
+        });
     }
 
     /**

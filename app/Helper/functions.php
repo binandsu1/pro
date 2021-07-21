@@ -112,6 +112,32 @@ function getIp(){
 
 }
 
+function eArrSort($data,$column){
+    $last_names = array_column($data,$column);
+    dd($last_names);
+    $retult = array_multisort($last_names,SORT_DESC,$data);
+    dd($retult);
+    return $retult;
+}
+
+function arraySort($array,$keys,$sort='asc') {
+    $newArr = $valArr = array();
+    foreach ($array as $key=>$value) {
+        $valArr[$key] = $value[$keys];
+    }
+    ($sort == 'asc') ?  asort($valArr) : arsort($valArr);
+    reset($valArr);
+    foreach($valArr as $key=>$value) {
+        $newArr[$key] = $array[$key];
+    }
+    return $newArr;
+}
+
+function esTime($time) {
+     $s_time  = substr($time, 0, 10);
+     $date = date("Y-m-h H:i:s",$s_time);
+     return $date;
+}
 
 
 

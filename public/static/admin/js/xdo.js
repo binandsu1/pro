@@ -128,9 +128,9 @@ function remoteForm(target) {
                                 }
                             } else {
                                 var requireClose = 0;
-                                    if (typeof xhr.data.isClose != undefined) {
-                                        requireClose = xhr.data.isClose
-                                    }
+                                    // if (typeof xhr.data.isClose != undefined) {
+                                    //     requireClose = xhr.data.isClose
+                                    // }
                                 if (requireClose == 1) {
                                     layer.closeAll()
                                 }
@@ -407,9 +407,9 @@ $(function () {
                     console.log(xhr);
                 } else {
                     var requireClose = 0;
-                    if (typeof xhr.data.isClose != undefined) {
-                        requireClose = xhr.data.isClose
-                    }
+                    // if (typeof xhr.data.isClose != undefined) {
+                    //     requireClose = xhr.data.isClose
+                    // }
                     if (requireClose == 1) {
                         layer.closeAll()
                     }

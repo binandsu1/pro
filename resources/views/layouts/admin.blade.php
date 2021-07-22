@@ -52,7 +52,7 @@
     <script src="<?=static_url("/libs/jquery-treetable/jquery.treetable.js", true)?>"></script>
     <script src="<?=static_url("/libs/select2/js/select2.full.min.js", true)?>"></script>
     <script src="<?=static_url("/libs/webuploader/webuploader.js", true)?>"></script>
-    <script src="<?=static_url('/admin/js/xdo.js?v=20200717', true)?>"></script>
+    <script src="<?=static_url('/admin/js/xdo.js?v=20200718', true)?>"></script>
     <script src="<?=static_url('/libs/layui/src/layui.js', true)?>"></script>
     <script src="<?=static_url('/libs/layui/dist/layui.js', true)?>"></script>
 

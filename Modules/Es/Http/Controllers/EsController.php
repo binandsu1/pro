@@ -80,6 +80,52 @@ class EsController extends Controller
         return $re;
     }
 
+    /**
+     * @name 文档列表
+     * @is_menu 1
+     */
+    public function documentIndex(){
+        $esSer = app('xdo.es');
+        $name = 'psf';
+        $result = $esSer->document_list($name);
+        $list = $result['hits']['hits'];
+        return view('es::index-document',compact('list'));
+    }
 
+    public function documentAdd(Request $request){
+
+        $para["index"] = $request->input('index');
+        $para["type"] = $request->input('type');
+        $para["id"] = $request->input('id');
+        $str = $request->input('body');
+
+        if($request->method() == 'POST'){
+
+            $ex_arr = explode(",",$str);
+            $aa = [];
+            foreach ($ex_arr as $k=>$v){
+                $na = [];
+                $na = explode("=",$v);
+                $aa[$na[0]] = $na[1];
+                $para["body"] = $aa;
+            }
+            $esSer = app('xdo.es');
+            $re = $esSer->document_add($para);
+            $re["status"] = 9999;
+            return $re;
+        }
+
+        return view('es::document-add');
+    }
+
+    public function documentDel(Request $request){
+         $my_index = $request->input('my_index');
+         $my_type = $request->input('my_type');
+         $my_id = $request->input('my_id');
+         $esSer = app('xdo.es');
+         $response = $esSer->document_del($my_index,$my_type,$my_id);
+         return $response;
+
+    }
 
 }

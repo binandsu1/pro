@@ -79,6 +79,7 @@
                                 <a  class="btn btn-xs btn-success" > 切换状态</a>
                                 <a class="btn btn-xs btn-info xdo-remote-form" href="{{route('admin.curd.demo-add',['id'=>$item->id])}}"> <i class="fa fa-pencil"></i> 编辑 </a>
                                 <a class="btn btn-xs btn-danger xdo-confirm" title="确定要删除数据" href="{{route('admin.curd.demo-del',['id'=>$item->id])}}"> <i  class="fa fa-trash"></i> 删除 </a>
+
                                 <a href="{{route('admin.curd.demo-sel',['id'=>$item->id])}}" data-size="large" class="btn btn-xs xdo-remote-content"> <i class="fa fa-eye" style="margin-right:.3em;"></i> 查看  </a>
                             </td>
                         </tr>

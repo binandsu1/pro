@@ -33,6 +33,7 @@ class EsService {
     }
 
     public function index_list($index_name = ''){
+
         if(!empty($index_name)){
             $params = ['index' => $index_name];
             return $this->client->indices()->getSettings($params);
@@ -45,5 +46,34 @@ class EsService {
         $response = $this->client->indices()->delete($params);
         return $response;
     }
+
+    public function document_add($params){
+        $response = $this->client->index($params);
+        return $response;
+    }
+
+    public function document_list($document_name){
+        $searchBody = [
+            "index" => $document_name,
+            "body" => [
+                "sort" => ["_id" =>"desc"],
+//                "from" => $from,
+                "size" => 100,
+//                "track_total_hits" => true
+            ]
+        ];
+        return $this->client->search($searchBody);
+    }
+
+    public function document_del($my_index,$my_type,$my_id){
+        $params = [
+            'index' => $my_index,
+            'type' => $my_type,
+            'id' => $my_id
+        ];
+        $response = $this->client->delete($params);
+        return $response;
+    }
+
 
 }

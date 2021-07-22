@@ -20,9 +20,11 @@ function ifelse($is, $v1, $v2 = '')
 
 #统一返回数据
 function return_data($data,$key){
-    return  empty($data) ? '' : isset($data->$key) ? $data->$key : '';
+    return empty($data) ? '' : isset($data->$key) ? $data->$key : '';
 }
-
+function return_data_arr($data,$key){
+    return empty($data) ? '' : isset($data[$key]) ? $data[$key] : '';
+}
 #下拉
 function genOptions($arr, $selected = null, $exclude_arr = array()){
     $tpl = '<option value="%s">%s</option>';

@@ -17,4 +17,7 @@ Route::prefix('es')->group(function() {
     Route::get('/index-list', 'EsController@indexList')->name('laravel.es.index-list');
     Route::get('/index-add', 'EsController@indexAdd')->name('laravel.es.index-add');
     Route::get('/index-del', 'EsController@indexDel')->name('laravel.es.index-del');
+    Route::get('/document-del', 'EsController@documentDel')->name('laravel.es.document-del');
+    Route::get('/document-index', 'EsController@documentIndex')->name('laravel.es.document-index');
+    Route::match(['get','post'],'/document-add', 'EsController@documentAdd')->name('laravel.es.document-add');
 });

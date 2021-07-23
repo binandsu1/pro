@@ -16,8 +16,11 @@
               <h3 class="box-title fw300"><small>快捷导航</small></h3>
             </div>
             <div class="box-body text-center">
-              <a class="btn btn-app" href="{{route('admin.menu')}}">
-                <i class="fa fa-refresh"></i> 目录脚本
+                <a class="btn btn-app" href="{{route('admin.menu')}}">
+                    <i class="fa fa-refresh"></i> 目录脚本
+                </a>
+              <a class="btn btn-app" target="_blank" href="https://www.showdoc.com.cn/1512186054190030/7287502298332912">
+                <i class="glyphicon glyphicon-dashboard"></i> 在线文档
               </a>
               @if($data->status == 2)
               <a class="btn btn-app" href="{{route('admin.debug-status',['status'=>1])}}">

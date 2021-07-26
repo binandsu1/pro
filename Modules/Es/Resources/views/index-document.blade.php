@@ -80,7 +80,7 @@
 
     <script>
         function pl(){
-            layer.msg('不是吧 不是吧 tm 单压也算押....');
+            layer.msg('不是吧 不是吧 tm 单押也算押....');
         }
         var vm = new Vue({
             el: '#px',

@@ -113,7 +113,7 @@ class AdminController extends Controller
         //时间 s
         $interval = 60;
         //每分钟流出的数量
-        $speed   = 20;
+        $speed   = 60;
         //用户
         $time = $redis::time();
         $key = $time[0].$time[1];
@@ -134,7 +134,7 @@ class AdminController extends Controller
                 echo "强行限制数据的平均传输速率<br>";
                 echo "令牌桶算法 除了能限制平均传输速率 新增一个保护机制 还允许某种程度的突发传输<br>";
                 echo "漏桶的话 下游只能按漏水速度取请求 在令牌桶算法里 下游可以一次过取很多请求<br>";
-                echo "你已经超过每分钟的访问10次 现在都访问 $outCount 次了  禁止访问了bro";die;
+                echo "你已经超过每分钟的访问30次 现在都访问 $outCount 次了  禁止访问了bro";die;
             }
         } else {
             #自增+1

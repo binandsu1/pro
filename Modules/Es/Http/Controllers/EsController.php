@@ -84,11 +84,20 @@ class EsController extends AdminController
      * @name 文档列表
      * @is_menu 1
      */
-    public function documentIndex(){
+    public function documentIndex(Request $request){
+
+
+        $es = $request->input('es');
         $esSer = app('xdo.es');
         $name = 'psf';
-        $result = $esSer->document_list($name);
+        if($es){
+            $result = $esSer->document_list($name,$es);
+        }else{
+            $result = $esSer->document_list($name);
+        }
         $list = $result['hits']['hits'];
+//        dd($list);
+
         return view('es::index-document',compact('list'));
     }
 

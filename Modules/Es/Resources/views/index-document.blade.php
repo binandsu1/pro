@@ -12,6 +12,21 @@
     </section>
     <section class="content" id="px">
         <div class="box box-solid">
+
+            <x-s :resetUrl="route('laravel.es.document-index')" >
+                <div class="form-group">
+                    <label class="control-label fw300"></label>
+                    <input type="text" name="es" style="width:200px;"
+                           class="form-control input-sm"
+                           placeholder="es search" value="<?=request('es')?>">
+                </div>
+
+
+                @slot('more')
+                @endslot
+            </x-s>
+
+
             <div class="box-header with-border">
                 <span class="">  &nbsp; </span>
                 <div class="box-tools pull-center" >
@@ -46,10 +61,10 @@
                                 <td class="tcc "> {{$val["_index"]}} </td>
                                 <td class="tcc ">{{$val["_type"]}}</td>
                                 <td class="tcc ">  {{$val["_score"]}} </td>
-                                <td class="tcc ">  {{return_data_arr($val["_source"],'title')}} </td>
-                                <td class="tcc ">  {{return_data_arr($val["_source"],'like')}} </td>
-                                <td class="tcc ">  {{return_data_arr($val["_source"],'price')}} </td>
-                                <td class="tcc ">  {{return_data_arr($val["_source"],'address')}} </td>
+                                <td class="tcc "> {!! str_replace(request('es'), "<span class='dt-txt'>".request('es').'</span>', return_data_arr($val["_source"],'title')) !!}  </td>
+                                <td class="tcc "> {!! str_replace(request('es'), "<span class='dt-txt'>".request('es').'</span>', return_data_arr($val["_source"],'like')) !!}   </td>
+                                <td class="tcc ">  {!! str_replace(request('es'), "<span class='dt-txt'>".request('es').'</span>', return_data_arr($val["_source"],'price')) !!} </td>
+                                <td class="tcc ">  {!! str_replace(request('es'), "<span class='dt-txt'>".request('es').'</span>', return_data_arr($val["_source"],'address')) !!} </td>
                                 <td class="tcc ">
                                     <a class="btn btn-xs btn-success xdo-remote-form" href="{{route('laravel.es.document-edit',['id'=>$val["_id"],'index'=>$val["_index"],'type'=>$val["_type"]])}}"> <i class="fa fa-pencil"></i> 编辑 </a>
                                     <button class="btn btn-xs btn-danger" title="确定要删除数据" v-on:click="deldocument('{{$val["_index"]}}','{{$val["_type"]}}','{{$val["_id"]}}')"  > <i class="fa fa-trash"></i> 删除文档 </button>

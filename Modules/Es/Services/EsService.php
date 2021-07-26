@@ -52,7 +52,8 @@ class EsService {
         return $response;
     }
 
-    public function document_list($document_name){
+    public function document_list($document_name,$es=''){
+
         $searchBody = [
             "index" => $document_name,
             "body" => [
@@ -62,6 +63,21 @@ class EsService {
 //                "track_total_hits" => true
             ]
         ];
+        if($es){
+            //and多字段查询
+//            $searchBody["body"]["query"]["bool"]["must"][]["match"]["like"] = $es;
+//            $searchBody["body"]["query"]["bool"]["must"][]["match"]["title"] = $es;
+//            $searchBody["body"]["query"]["bool"]["must"][]["match"]["price"] = 12;
+
+            //or 多字段查询
+            $searchBody["body"]["query"]["bool"]["should"][]["term"]["title"] = $es;
+            $searchBody["body"]["query"]["bool"]["should"][]["term"]["like"] = $es;
+            $searchBody["body"]["query"]["bool"]["should"][]["term"]["price"] = intval($es);
+            $searchBody["body"]["query"]["bool"]["should"][]["term"]["address"] = $es;
+
+//            $searchBody["body"]["query"]["match"]["like"] = $es;
+        }
+//        dd($searchBody);
         return $this->client->search($searchBody);
     }
 

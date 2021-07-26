@@ -141,6 +141,11 @@ function esTime($time) {
      return $date;
 }
 
+function delLastStr($str){
+    $newstr = substr($str,0,strlen($str)-1);
+    return $newstr;
+}
+
 
 
 

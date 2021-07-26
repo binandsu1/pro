@@ -20,4 +20,5 @@ Route::prefix('es')->group(function() {
     Route::get('/document-del', 'EsController@documentDel')->name('laravel.es.document-del');
     Route::get('/document-index', 'EsController@documentIndex')->name('laravel.es.document-index');
     Route::match(['get','post'],'/document-add', 'EsController@documentAdd')->name('laravel.es.document-add');
+    Route::match(['get','post'],'/document-edit', 'EsController@documentEdit')->name('laravel.es.document-edit');
 });

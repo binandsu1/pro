@@ -18,6 +18,8 @@
                     <a class='btn btn-sm btn-success xdo-remote-form'
                        href="{{route('laravel.es.document-add')}}"><i class="fa fa-plus"></i>
                         添加文档</a>
+                    <button class='btn btn-sm btn-success' onclick="pl()"><i class="fa fa-plus"></i>
+                       批量添加</button>
                 </div>
             </div>
 
@@ -33,8 +35,8 @@
                         <th width="5%" class="tcc">title</th>
                         <th width="5%" class="tcc">like</th>
                         <th width="5%" class="tcc">price</th>
-                        <th width="5%" class="tcc">address</th>
-                        <th width="5%" class="tcc">操作</th>
+                        <th width="15%" class="tcc">address</th>
+                        <th width="10%" class="tcc">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -49,6 +51,7 @@
                                 <td class="tcc ">  {{return_data_arr($val["_source"],'price')}} </td>
                                 <td class="tcc ">  {{return_data_arr($val["_source"],'address')}} </td>
                                 <td class="tcc ">
+                                    <a class="btn btn-xs btn-success xdo-remote-form" href="{{route('laravel.es.document-edit',['id'=>$val["_id"],'index'=>$val["_index"],'type'=>$val["_type"]])}}"> <i class="fa fa-pencil"></i> 编辑 </a>
                                     <button class="btn btn-xs btn-danger" title="确定要删除数据" v-on:click="deldocument('{{$val["_index"]}}','{{$val["_type"]}}','{{$val["_id"]}}')"  > <i class="fa fa-trash"></i> 删除文档 </button>
                                 </td>
                             </tr>
@@ -61,6 +64,9 @@
     </section>
 
     <script>
+        function pl(){
+            layer.msg('不是吧 不是吧 tm 单压也算押....');
+        }
         var vm = new Vue({
             el: '#px',
             data(){

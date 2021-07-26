@@ -75,5 +75,36 @@ class EsService {
         return $response;
     }
 
+    public function document_update($data){
+
+        $narr = [];
+        $arr = explode(',',$data['body']);
+        foreach ($arr as $k=>$v){
+            $psarr = explode("=",$v);
+            $narr[$psarr[0]] = $psarr[1];
+        }
+        $params = [
+            'index' => $data['index'],
+            'type' => $data['type'],
+            'id' => $data['id'],
+            'body' => [
+                'doc' => $narr
+            ]
+        ];
+
+        $response = $this->client->update($params);
+        return $response;
+    }
+
+    public function document_info($params){
+//        $params = [
+//            'index' => 'my_index',
+//            'type' => 'my_type',
+//            'id' => 'my_id'
+//        ];
+        $response = $this->client->get($params);
+        return $response;
+    }
+
 
 }

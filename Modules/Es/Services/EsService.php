@@ -26,7 +26,20 @@ class EsService {
     #创建索引
     public function create_index($index_name){
         $params = [
-            'index' => $index_name
+            'index' => $index_name,
+            'body' =>[
+                'settings' => [
+                    'number_of_shards' => 3,
+                    'number_of_replicas' =>2
+                ],
+                'mappings'=>[
+                    #默认鸳鸯村 true倒排索引
+                    '_source'=>[
+                        'enabled'=> true
+                    ]
+                ]
+
+            ]
         ];
         $response = $this->client->indices()->create($params);
         return $response;
@@ -64,16 +77,16 @@ class EsService {
             ]
         ];
         if($es){
-            //and多字段查询
+            //and多字段查询  must
 //            $searchBody["body"]["query"]["bool"]["must"][]["match"]["like"] = $es;
 //            $searchBody["body"]["query"]["bool"]["must"][]["match"]["title"] = $es;
 //            $searchBody["body"]["query"]["bool"]["must"][]["match"]["price"] = 12;
 
-            //or 多字段查询
-            $searchBody["body"]["query"]["bool"]["should"][]["term"]["title"] = $es;
-            $searchBody["body"]["query"]["bool"]["should"][]["term"]["like"] = $es;
-            $searchBody["body"]["query"]["bool"]["should"][]["term"]["price"] = intval($es);
-            $searchBody["body"]["query"]["bool"]["should"][]["term"]["address"] = $es;
+            //or 多字段查询 should
+            $searchBody["body"]["query"]["bool"]["should"][]["match"]["title"] = $es;
+            $searchBody["body"]["query"]["bool"]["should"][]["match"]["like"] = $es;
+            $searchBody["body"]["query"]["bool"]["should"][]["match"]["price"] = intval($es);
+            $searchBody["body"]["query"]["bool"]["should"][]["match"]["address"] = $es;
 
 //            $searchBody["body"]["query"]["match"]["like"] = $es;
         }

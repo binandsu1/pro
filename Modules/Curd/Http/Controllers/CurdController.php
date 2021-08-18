@@ -17,7 +17,6 @@ use Modules\Outbound\Exports\RecordLogExports;
 use Illuminate\Support\Facades\Cache;
 class CurdController extends AdminController
 {
-    use ta;
     public $data;
     /**
      * @name 数据列表-横

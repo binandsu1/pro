@@ -19,4 +19,5 @@ Route::prefix('curd')->group(function() {
     Route::match(['GET','POST'],'/demo-del', 'CurdController@demoDel')->name('admin.curd.demo-del');
     Route::match(['GET','POST'],'/demo-sel', 'CurdController@demoSel')->name('admin.curd.demo-sel');
     Route::get('/button', 'CurdController@button')->name('admin.curd.button');
+    Route::get('/rq', 'CurdController@rq')->name('admin.curd.rq');
 });

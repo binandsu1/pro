@@ -9,5 +9,6 @@
     "Total": true,
     "Mongo": true,
     "Swoole": true,
-    "Es": true
+    "Es": true,
+    "Www": true
 }

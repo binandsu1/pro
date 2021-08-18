@@ -5,6 +5,9 @@ namespace Modules\Curd\Providers;
 use App\Observers\LogObserver;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use Modules\Curd\Http\Controllers\bmw;
+use Modules\Curd\Http\Controllers\car;
+use Modules\Curd\Http\Controllers\dz;
 use Modules\Curd\Models\XdoData;
 
 class CurdServiceProvider extends ServiceProvider
@@ -42,6 +45,31 @@ class CurdServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+
+
+
+        //一种绑定形式 car接口 bmw里面的子类 好处是  里面的子类更换灵活
+//        $this->app->singleton(car::class, function ($app) {
+//            return $app->make(bmw::class);
+//        });
+        //简洁版
+        $this->app->bind(car::class,bmw::class);
+        $this->app->bind('asd',XdoData::class);
+
+
+        //二种绑定形式 里面可以绑定一切 model service
+        $this->app->singleton('xoddatamodel', function ($app) {
+            return new XdoData();
+        });
+
+        //绑定一个实例 可以是数组 对象啥的
+        $this->app->instance('ssss',[1,2,3]);
+
+//        $this->app->resolving(function ($object, $app) {
+//            dd($object);
+//            var_dump($app);
+//        });
+
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
-
+//1 创建应用实例
+//2 绑定内核至 APP 服务容器
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -9,8 +10,9 @@
 | which serves as the "glue" for all the components of Laravel, and is
 | the IoC container for the system binding all of the various parts.
 |
-*/
 
+*/
+//1 创建应用实例
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
@@ -25,19 +27,19 @@ $app = new Illuminate\Foundation\Application(
 | incoming requests to this application from both the web and CLI.
 |
 */
-
+//2 绑定内核至 APP 服务容器
 $app->singleton(
-    Illuminate\Contracts\Http\Kernel::class,
+    Illuminate\Contracts\Http\Kernel::class, //http内核
     App\Http\Kernel::class
 );
 
 $app->singleton(
-    Illuminate\Contracts\Console\Kernel::class,
+    Illuminate\Contracts\Console\Kernel::class, //console内核
     App\Console\Kernel::class
 );
 
 $app->singleton(
-    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    Illuminate\Contracts\Debug\ExceptionHandler::class, //debug内核
     App\Exceptions\Handler::class
 );
 

@@ -5,17 +5,20 @@ namespace Modules\Curd\Http\Controllers;
 use App\Events\AddUserEvent;
 use App\Exports\CurdExport;
 use App\Http\Controllers\AdminController;
+use App\Http\Traits\ta;
 use Basemkhirat\Elasticsearch\Facades\ES;
 use Elasticsearch\ClientBuilder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Maatwebsite\Excel\Facades\Excel;
 use Modules\Curd\Http\Middleware\XdoDataMidd;
 use Modules\Curd\Models\XdoData;
 use Modules\Outbound\Exports\RecordLogExports;
-
+use Illuminate\Support\Facades\Cache;
 class CurdController extends AdminController
 {
-
+    use ta;
+    public $data;
     /**
      * @name 数据列表-横
      * @is_menu 1
@@ -25,7 +28,20 @@ class CurdController extends AdminController
     //* use Illuminate\Pagination\Paginator;
     public function demo1(Request $request)
     {
-
+        //获取当前环境 .env里面有个APP_ENV
+//        $a = App::environment();
+//        $a = config('app.timezone');
+//        dd($a);
+        //echo $this->getta();die;
+        //echo $this->getinfo();die;
+//        XdoData::insert([
+//            'name' => Crypt::encryptString('123456')
+//        ]);
+//laravel 加密 解密  artisan key:  encryptString  decryptString
+//        $a = "eyJpdiI6Ik1UOTVrUGdJWWpUNktISmF3M2Z0RkE9PSIsInZhbHVlIjoiOWFBeWlPSHBuWWNtbHAwcmxqRlBPZz09IiwibWFjIjoiZTY2NzkyYjZhNjI1OTAwMDI0YjMwMjAwODc2Yjg0ZmFlZjYxNzc2YWU4OTYzNDU5NGJiMjliNWVhZjliMjE1ZSJ9";
+//        $b = Crypt::decryptString($a);
+//         echo $b;
+//        die;
         $query = XdoData::orderBy('id','desc');
         $excel = $request->input('excel');
         $where = $this->getParasSel($request->all());
@@ -115,5 +131,29 @@ class CurdController extends AdminController
         return view('curd::admin.demo-sw');
 
 
+    }
+    //Laravel 服务容器是一个用于管理类依赖和执行依赖注入的强大工具
+    public function __construct(XdoData $data)
+    {
+            $this->data = $data;
+    }
+
+    //new 和 make的区别 new的时候是直接实例化 make的是 直接用服务提供者已经绑定好的容器
+    //依赖注入是在方法的时候 直接饮用 app()->make == app
+    public function rq(car $ad){
+//          $service = app()->make(car::class);
+//          $service = app(car::class);
+//        $service = new bmw();
+//         $a = $service->name();
+
+//         $a = app('xoddatamodel');
+//         dd($a->find(1));
+        dd($ad->name());
+
+
+
+//        $s = app('asd');
+//        dd($s->find(1));
+        echo '容器';die;
     }
 }

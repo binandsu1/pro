@@ -1,5 +1,7 @@
 <?php
-
+//1 加载项目依赖
+//2 创建 Laravel 应用实例
+//3 接收请求并响应
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
@@ -30,7 +32,7 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 | into the script here so we don't need to manually load our classes.
 |
 */
-
+//1 加载项目依赖  注册并加载项目所依赖的第三方组件库
 require __DIR__.'/../vendor/autoload.php';
 
 /*
@@ -43,9 +45,10 @@ require __DIR__.'/../vendor/autoload.php';
 | to this client's browser, allowing them to enjoy our application.
 |
 */
-
+//2 创建 Laravel 应用实例 创建服务容器
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+//3 接收请求并响应
 $kernel = $app->make(Kernel::class);
 
 $response = tap($kernel->handle(

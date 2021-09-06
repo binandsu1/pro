@@ -27,6 +27,7 @@ class CurdController extends AdminController
     //* use Illuminate\Pagination\Paginator;
     public function demo1(Request $request)
     {
+
         //获取当前环境 .env里面有个APP_ENV
 //        $a = App::environment();
 //        $a = config('app.timezone');
@@ -140,13 +141,16 @@ class CurdController extends AdminController
     //new 和 make的区别 new的时候是直接实例化 make的是 直接用服务提供者已经绑定好的容器
     //依赖注入是在方法的时候 直接饮用 app()->make == app
     public function rq(car $ad){
-//          $service = app()->make(car::class);
+//
+//          $service = app()->make(dz::class);
+//          $service =new dz();
 //          $service = app(car::class);
 //        $service = new bmw();
 //         $a = $service->name();
 
 //         $a = app('xoddatamodel');
 //         dd($a->find(1));
+        $ad = app()->make(car::class);
         dd($ad->name());
 
 

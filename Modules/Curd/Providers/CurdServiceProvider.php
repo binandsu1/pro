@@ -53,9 +53,9 @@ class CurdServiceProvider extends ServiceProvider
 //            return $app->make(bmw::class);
 //        });
         //简洁版
-        $this->app->bind(car::class,bmw::class);
+        $this->app->singleton(car::class,bmw::class);
         $this->app->bind('asd',XdoData::class);
-
+//        $this->app->when(bmw::class)->needs('$name')->give(1111);
 
         //二种绑定形式 里面可以绑定一切 model service
         $this->app->singleton('xoddatamodel', function ($app) {

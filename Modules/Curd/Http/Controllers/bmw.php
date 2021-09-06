@@ -7,9 +7,16 @@ namespace Modules\Curd\Http\Controllers;
 class bmw implements car
 {
 
-    public function name()
+    public $name;
+
+    public function __construct($name = ''){
+        $this->name = $name;
+    }
+
+    public function name($as = '')
     {
-        echo '我是宝马';
+        echo $this->name = $as;
+        echo '我是宝马dddss';
     }
 
     public function color()

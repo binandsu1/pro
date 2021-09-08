@@ -54,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
                 $logs = [];
                 $sqlLog = [
                     'sql'         => vsprintf(str_replace("?", "'%s'", $query->sql), $query->bindings),
-                    'time'        => $query->time,
+                    'time'        => $query->time / 100,
                     'path'        => $request->path(),
                     'url'         =>  $request->url(),
 //                    'fingerprint' => $request->fingerprint()

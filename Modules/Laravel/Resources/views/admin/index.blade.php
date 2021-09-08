@@ -54,6 +54,17 @@
                     <p class="wa-txt">首先 所有提供者的 register 方法被调用 然后 所有提供者被注册之后 boot 方法被调用  </p>
                     <p class="wa-txt">启动组件 比如db cache queue route 验证器组件等 </p>
                     <p class="wa-txt">所有boot整完讲请求分配给路由 然后控制器 页面  </p>
+
+                    <p class="wa-txt">v3.0</p>
+                    <p class="wa-txt">public/index  verdor/autoload  bootstrap/app  </p>
+                    <p class="wa-txt">make application  register-path  register-app register-providers register-aliases </p>
+                    <p class="wa-txt">http  console debug  http</p>
+                    <p class="wa-txt">kenerl  global-middleware group-middleware route-middleware  httpkernel  bootstrappers  </p>
+                    <p class="wa-txt">error log  env  middlewarepriority  seesion csrf is_down</p>
+                    <p class="wa-txt">providers   register boot</p>
+                    <p class="wa-txt">cache queue  db  csrf</p>
+                    <p class="wa-txt">route  controller view</p>
+
                     <p class="wa-txt">over </p>
                 </div>
                 <div style="width:50%;float: right;margin-top: -1%">

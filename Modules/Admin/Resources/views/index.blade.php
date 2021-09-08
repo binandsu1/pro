@@ -104,7 +104,7 @@
             <div class="col-sm-4">
               <div class="box box-solid">
                 <div class="box-header with-border">
-                  <h3 class="box-title fw300"><small>赞助列表   &nbsp; 抱拳了 铁子~ </small></h3>
+                  <h3 class="box-title fw300"><small>赞助列表   &nbsp;  </small></h3>
                 </div>
                 <div class="box-body" style="min-height:310px;max-height:310px;overflow:auto;">
                     <ul class="layui-timeline" id="LAY_demo1" >

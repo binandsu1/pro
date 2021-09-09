@@ -26,6 +26,11 @@ class test24 extends Command
         #0000开放所有客户端
         $server = new Server("0.0.0.0", 9501);
 
+//        $server->set([
+//            'ssl_cert_file'=> '/etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem',
+//            'ssl_key_file' =>'/etc/letsencrypt/live/www.yyjadmin.com/privkey.pem'
+//        ]);
+
         //连接成功回调
         $server->on('open', function (\Swoole\WebSocket\Server $server, $request) {
             $this->info($request->fd . '链接成功');
@@ -33,10 +38,7 @@ class test24 extends Command
 //        ssl_certificate /etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem;
 //        ssl_certificate_key  /etc/letsencrypt/live/www.yyjadmin.com/privkey.pem;
 
-        $server->set([
-            'ssl_cert_file'=> '/etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem',
-            'ssl_key_file' =>'/etc/letsencrypt/live/www.yyjadmin.com/privkey.pem'
-        ]);
+
 
         //收到消息回调 1 参数 server 2 数据帧
         $server->on('message', function (\Swoole\WebSocket\Server $server, $frame) {

@@ -24,12 +24,14 @@ class test24 extends Command
     public function handle()
     {
         #0000开放所有客户端
-        $server = new Server("0.0.0.0", 9501);
+        $server = new Server("0.0.0.0", 9501, SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
 
-//        $server->set([
-//            'ssl_cert_file'=> '/etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem',
-//            'ssl_key_file' =>'/etc/letsencrypt/live/www.yyjadmin.com/privkey.pem'
-//        ]);
+        $server->set([
+            'daemonize' => false, //守护进程化。
+            //配置SSL证书和密钥路径
+            'ssl_cert_file' => "/etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem",
+            'ssl_key_file'  => "/etc/letsencrypt/live/www.yyjadmin.com/privkey.pem"
+        ]);
 
         //连接成功回调
         $server->on('open', function (\Swoole\WebSocket\Server $server, $request) {

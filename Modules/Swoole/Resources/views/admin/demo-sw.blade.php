@@ -41,8 +41,8 @@
 
     <script>
 
-        // var wsServer = 'wss://124.70.81.74:9501';
-        var wsServer = 'ws://124.70.81.74:9501';
+       var wsServer = 'wss://124.70.81.74:9501';
+       // var wsServer = 'ws://124.70.81.74:9501';
         var websocket = new WebSocket(wsServer);
         websocket.onopen = function (evt) {
             console.log("Connected to WebSocket server.");

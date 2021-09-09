@@ -12,7 +12,7 @@ class test24 extends Command
      *
      * @var string
      */
-    protected $signature = 'yan:test24 {--user=ss} {--target=para} {--arr=*}';
+    protected $signature = 'yan:swoole {--user=ss} {--target=para} {--arr=*}';
 
     /**
      * The console command description.
@@ -30,6 +30,13 @@ class test24 extends Command
         $server->on('open', function (\Swoole\WebSocket\Server $server, $request) {
             $this->info($request->fd . '链接成功');
         });
+//        ssl_certificate /etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem;
+//        ssl_certificate_key  /etc/letsencrypt/live/www.yyjadmin.com/privkey.pem;
+
+        $server->set([
+            'ssl_cert_file'=> '/etc/letsencrypt/live/www.yyjadmin.com/fullchain.pem',
+            'ssl_key_file' =>'/etc/letsencrypt/live/www.yyjadmin.com/privkey.pem'
+        ]);
 
         //收到消息回调 1 参数 server 2 数据帧
         $server->on('message', function (\Swoole\WebSocket\Server $server, $frame) {

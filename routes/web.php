@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\YqController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |->middleware('auth')
 */
+Route::get('/yan', [YqController::class,'y'])->name('yan');
 Route::get('/', function () {
     return redirect(route('admin'));
 })->middleware('auth');

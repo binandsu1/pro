@@ -13,6 +13,7 @@ class AdminController extends Controller
 
     function __construct()
     {
+
         //redis令牌桶算法 限流
         # $this->redisLimit();
         //redis漏桶算法 限流

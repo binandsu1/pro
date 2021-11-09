@@ -44,7 +44,7 @@ class ppp extends Command
 //        foreach ($arr as $k=>$v){
 //            echo $v.'--';
 //        }
-        $last_arr = $this->para(1,$arr);
+        $last_arr = $this->para(2,$arr);
 //        dd($last_arr);
         $result = [];
         foreach ($last_arr as $k=>$v){
@@ -77,7 +77,7 @@ class ppp extends Command
         $this->line('全部扫描结束 200 数量 '.count($arr200)." 个");
         $this->line('全部扫描结束 302 数量 '.count($arr302)." 个");
         $this->line('全部扫描结束 404 数量 '.count($arr404)." 个");
-       
+
     }
 
     function para($num,$arr=[]){

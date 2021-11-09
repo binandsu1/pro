@@ -6,6 +6,21 @@ use Illuminate\Http\Request;
 
 class YqController extends Controller
 {
+
+    public function shiwei(){
+        if('山东买房' and '三年结婚'){
+            echo '拒绝';
+        }else if('山东偷偷买房' and '三年结婚'){
+            echo '拒绝';
+        }else if('山东偷偷买房' and '一年结婚'){
+            echo '同意';
+        }else if('山东不买房' and '一年结婚'){
+            echo '乐呵的';
+        }else{
+            echo '去求了';
+        }
+
+    }
     public function y(){
 
         $arr = ['a','b','c','d','e','f','g','h','i','g','k','l','m','n','o','p','q','r','s','t','u','v','w','s','y','z'];

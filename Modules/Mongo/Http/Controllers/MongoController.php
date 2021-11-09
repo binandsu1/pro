@@ -42,7 +42,7 @@ class MongoController extends AdminController
         }
 
         for($i=1;$i<=$num;$i++){
-            MongoJob::dispatchNow($i);
+            MongoJob::dispatch($i);
         }
         return $this->returnSuccess();
     }

@@ -9,7 +9,9 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-curl": "*",
         "basemkhirat/elasticsearch": "^1.4",
+        "elasticsearch/elasticsearch": "~6.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "fzaninotto/faker": "^1.9",
@@ -24,10 +26,10 @@
         "livewire/livewire": "^2.0",
         "maatwebsite/excel": "^3.1",
         "nwidart/laravel-modules": "^8.1",
+        "overtrue/wechat": "^4.2",
         "predis/predis": "^1.1",
         "swooletw/laravel-swoole": "^2.8",
-        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.0",
-        "elasticsearch/elasticsearch": "~6.0"
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

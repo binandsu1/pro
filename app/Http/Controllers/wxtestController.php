@@ -21,7 +21,6 @@ class wxtestController extends Controller
         ];
 
         $app = Factory::officialAccount($options);
-
         $server = $app->server;
         $user = $app->user;
 
@@ -33,6 +32,8 @@ class wxtestController extends Controller
 
         $server->serve()->send();
     }
+
+
 
 //
 }

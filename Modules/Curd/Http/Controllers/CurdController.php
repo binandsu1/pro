@@ -6,6 +6,7 @@ use App\Events\AddUserEvent;
 use App\Exports\CurdExport;
 use App\Http\Controllers\AdminController;
 use App\Http\Traits\ta;
+use App\Models\User;
 use Basemkhirat\Elasticsearch\Facades\ES;
 use Elasticsearch\ClientBuilder;
 use Illuminate\Http\Request;
@@ -61,6 +62,7 @@ class CurdController extends AdminController
      */
     public function demo2(Request $request)
     {
+
         $query = XdoData::orderBy('id','desc');
         $where = $this->getParasSel($request->all());
         $list = $query->where($where)->paginate(10)->appends($request->all());

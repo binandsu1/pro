@@ -8,7 +8,8 @@ class wxtestController extends Controller
 {
 
     function index(){
-
+        return view('wx');
+        echo 123;die;
         $options = [
             'app_id'    => 'wx1647b3429377748f',
             'secret'    => '7c837f2ff2887845c13558742232a43d',
@@ -23,15 +24,14 @@ class wxtestController extends Controller
         $app = Factory::officialAccount($options);
         $server = $app->server;
         $user = $app->user;
-
         $server->push(function($message) use ($user) {
             $fromUser = $user->get($message['FromUserName']);
-
             return "{$fromUser->nickname} 您好！欢迎关注 overtrue!";
         });
 
         $server->serve()->send();
     }
+
 
 
 

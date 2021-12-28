@@ -2,7 +2,7 @@
 //1 asa加载项目依赖123
 //2 3asb创建 Larfffavel 应用实例
 //3 1ascc接收请求并响应aaa我是aaa
-//我提交到远程的as分支
+//我提交到远程的aswwwwwwwwww
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 define('LARAVEL_START', microtime(true));

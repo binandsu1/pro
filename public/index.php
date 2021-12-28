@@ -1,5 +1,5 @@
 <?php
-//1 加载项目依赖
+//1 加载项目依赖123
 //2 创建 Laravel 应用实例
 //3 接收请求并响应
 use Illuminate\Contracts\Http\Kernel;

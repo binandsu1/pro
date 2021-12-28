@@ -1,7 +1,7 @@
 <?php
 //1 加载项目依赖123
 //2 创建 Laravel 应用实例
-//3 接收请求并响应
+//3 接收请求并响应aaa
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 define('LARAVEL_START', microtime(true));

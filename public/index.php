@@ -1,7 +1,7 @@
 <?php
-//1 aaa加载项目依赖123
-//2 3bb创建 Larfffavel 应用实例
-//3 1cccc接收请求并响应aaa我是aaa
+//1 mmm加载项目依赖123
+//2 mmm创建 Larfffavel 应用实例
+//3 mmm接收请求并响应aaa我是aaa
 //我提交到远程的as分支
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
